@@ -1,14 +1,21 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public struct Player
+public class Player
 {
     public static int currentId = 0;
     public GameObject prefab;
     public Gamepad gamepad;
     public int id;
+
+    public static Player GetPlayer(string gamepadName, IEnumerable<Player> players)
+    {
+        return players.FirstOrDefault(player => player.gamepad.name == gamepadName);
+    }
 }
 
 public class InputTesting : MonoBehaviour
@@ -31,7 +38,7 @@ public class InputTesting : MonoBehaviour
         }
     }
 
-    private void Update()
+    /*private void Update()
     {
         foreach (Player player in players)
         {
@@ -52,5 +59,12 @@ public class InputTesting : MonoBehaviour
                 player.prefab.transform.position += Vector3.right * Time.deltaTime;
             }
         }
+    }*/
+
+    public void MoveCallback(InputAction.CallbackContext callbackContext)
+    {
+        Player.GetPlayer(callbackContext.control.parent.device, )
+        
+        Vector2 input = callbackContext.ReadValue<Vector2>();
     }
 }
