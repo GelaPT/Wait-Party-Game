@@ -12,6 +12,7 @@ public class AnimationTest : MonoBehaviour
     [Range(0, 2)] public int faceIndex = 0;
     [SerializeField] private Texture[] _faces;
     [SerializeField] private bool _changeFace = false;
+    [SerializeField] private bool _jump = false;
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -25,5 +26,6 @@ public class AnimationTest : MonoBehaviour
             _face.GetComponent<SkinnedMeshRenderer>().materials[0].mainTexture = _faces[faceIndex];
             _changeFace = false;
         }
+        _animator.SetBool("isJumping", _jump);
     }
 }
