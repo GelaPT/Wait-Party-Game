@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,11 +25,59 @@ public class InputTesting : MonoBehaviour
 
     private void Start()
     {
-        foreach (Gamepad gamepad in Gamepad.all)
+        InputSystem.onDeviceChange += (device, change) =>
+        {
+            Player p = new Player();
+
+            switch (change)
+            {
+                case InputDeviceChange.Added:
+                    p.gamepad = device as Gamepad;
+                    p.prefab = Instantiate(playerPrefab, Vector3.zero, quaternion.identity);
+                    p.id = Player.currentId++;
+
+                    players.Add(p);
+                    break;
+                case InputDeviceChange.Removed:
+                {
+                    p = players.FirstOrDefault(ply => ply.gamepad == device as Gamepad);
+                    if (p == null) return;
+
+                    Destroy(p.prefab);
+                    players.Remove(p);
+                    break;
+                }
+                case InputDeviceChange.Disconnected:
+                    Debug.Log("Device Disconnected");
+                    break;
+                case InputDeviceChange.Reconnected:
+                    Debug.Log("Device Reconnected");
+                    break;
+                case InputDeviceChange.Enabled:
+                    Debug.Log("Device Enabled");
+                    break;
+                case InputDeviceChange.Disabled:
+                    Debug.Log("Device Disabled");
+                    break;
+                case InputDeviceChange.UsageChanged:
+                    Debug.Log("Device Usage Changed");
+                    break;
+                case InputDeviceChange.ConfigurationChanged:
+                    Debug.Log("Device Configuration Changed");
+                    break;
+                case InputDeviceChange.Destroyed:
+                    Debug.Log("Device Destroyed");
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(change), change, null);
+            }
+        };
+
+        foreach (Gamepad gp in Gamepad.all)
         {
             Player player = new Player
             {
-                gamepad = gamepad,
+                gamepad = gp,
                 prefab = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity),
                 id = Player.currentId++
             };
@@ -38,33 +86,13 @@ public class InputTesting : MonoBehaviour
         }
     }
 
-    /*private void Update()
+    private void Update()
     {
         foreach (Player player in players)
         {
-            if (player.gamepad.leftStick.down.isPressed)
-            {
-                player.prefab.transform.position += Vector3.down * Time.deltaTime;
-            } 
-            else if (player.gamepad.leftStick.up.isPressed)
-            {
-                player.prefab.transform.position += Vector3.up * Time.deltaTime;
-            }
-            else if (player.gamepad.leftStick.left.isPressed)
-            {
-                player.prefab.transform.position += Vector3.left * Time.deltaTime;
-            }
-            else if (player.gamepad.leftStick.right.isPressed)
-            {
-                player.prefab.transform.position += Vector3.right * Time.deltaTime;
-            }
+            player.prefab.transform.position += Vector3.Normalize(Vector3.right * player.gamepad.leftStick.x.ReadValue()) * Time.deltaTime;
+            
+            player.prefab.transform.position += Vector3.Normalize(Vector3.up * player.gamepad.leftStick.y.ReadValue()) * Time.deltaTime;
         }
-    }*/
-
-    public void MoveCallback(InputAction.CallbackContext callbackContext)
-    {
-        Player.GetPlayer(callbackContext.control.parent.device, )
-        
-        Vector2 input = callbackContext.ReadValue<Vector2>();
     }
 }
