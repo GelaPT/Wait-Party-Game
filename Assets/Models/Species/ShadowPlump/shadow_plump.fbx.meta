@@ -1,48 +1,19 @@
 fileFormatVersion: 2
-guid: a11e2b2a4ad9afa4084cd1866d078cbd
+guid: 7299ae2b0831eae4a815bbecb4eaebcb
 ModelImporter:
   serializedVersion: 21202
-  internalIDToNameTable:
-  - first:
-      74: 3623281840351247363
-    second: Armature|A-Pose
-  - first:
-      74: -8945691123924629249
-    second: Armature|Idle
-  - first:
-      74: -4274770991410265338
-    second: Armature|Walking
-  - first:
-      74: -122700637640087502
-    second: Armature|A-Pose.001
-  - first:
-      74: 816921150603156060
-    second: Armature|A-Pose.002
-  - first:
-      74: 5341230413375539711
-    second: Armature|A-Pose.003
-  - first:
-      74: 4106399916549189888
-    second: Armature|Idle.001
-  - first:
-      74: -2108476173976532896
-    second: Armature|Walking.001
+  internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: ShadowCatBody
-    second: {fileID: 2100000, guid: 66a42b53108bc4745802bbea74daef99, type: 2}
+      name: ColorPalette
+    second: {fileID: 2100000, guid: 79e486123c218c94086a6a034b565a59, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: ShadowCatFace
-    second: {fileID: 2100000, guid: a38d8a83363e91246a1c7276d10a5ef1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ShadowCatFace.001
-    second: {fileID: 2100000, guid: a38d8a83363e91246a1c7276d10a5ef1, type: 2}
+      name: Fur
+    second: {fileID: 2100000, guid: d72f359028f632447a59c3ea030846ea, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -115,7 +86,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []

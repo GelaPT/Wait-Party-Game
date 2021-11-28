@@ -33,6 +33,15 @@ ModelImporter:
   - first:
       74: 5305954165682493293
     second: JumpEnd|Player
+  - first:
+      74: -7130173953309157469
+    second: JumpStart|Player
+  - first:
+      74: -6798894929176139803
+    second: JumpLoop|Player
+  - first:
+      74: 6517496867871864310
+    second: JumpEnd|Player
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -190,10 +199,10 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: JumpStart|Player
-      takeName: Armature|Jump
+      takeName: Armature|JumpStart
       internalID: 0
       firstFrame: 0
-      lastFrame: 10
+      lastFrame: 9
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -219,10 +228,10 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: JumpLoop|Player
-      takeName: Armature|Jump
+      takeName: Armature|JumpLoop
       internalID: 0
-      firstFrame: 10
-      lastFrame: 29
+      firstFrame: 0
+      lastFrame: 19
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -248,10 +257,10 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: JumpEnd|Player
-      takeName: Armature|Jump
+      takeName: Armature|JumpEnd
       internalID: 0
-      firstFrame: 30
-      lastFrame: 44
+      firstFrame: 0
+      lastFrame: 15
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
