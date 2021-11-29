@@ -1,56 +1,66 @@
 fileFormatVersion: 2
-guid: a11e2b2a4ad9afa4084cd1866d078cbd
+guid: be66c535b8ce8ba4a811af80d50bdeb8
 ModelImporter:
   serializedVersion: 21202
-<<<<<<< HEAD
-  internalIDToNameTable: []
-=======
   internalIDToNameTable:
   - first:
       74: 3623281840351247363
     second: Armature|A-Pose
   - first:
+      74: -3940031873545852154
+    second: Armature|Circle.001Action
+  - first:
+      74: -751813995980742648
+    second: Armature|EmptyAction
+  - first:
       74: -8945691123924629249
     second: Armature|Idle
   - first:
+      74: -2382795055912782974
+    second: Armature|Plane.001Action
+  - first:
+      74: -8434355280063164500
+    second: Armature|Plane.002Action
+  - first:
+      74: 6040656666567349231
+    second: Armature|Plane.002Action.002
+  - first:
+      74: 4887901778654112818
+    second: Armature|Plane.005Action
+  - first:
+      74: 1634893686381827764
+    second: Armature|Plane.006Action
+  - first:
+      74: 5997633809277741991
+    second: Armature|Plane.007Action
+  - first:
+      74: 2920023865792766560
+    second: Armature|PlaneAction
+  - first:
+      74: -3722548421079296135
+    second: Armature|PlaneAction.001
+  - first:
+      74: -3828583913261678786
+    second: Armature|Running
+  - first:
       74: -4274770991410265338
     second: Armature|Walking
-  - first:
-      74: -122700637640087502
-    second: Armature|A-Pose.001
-  - first:
-      74: 816921150603156060
-    second: Armature|A-Pose.002
-  - first:
-      74: 5341230413375539711
-    second: Armature|A-Pose.003
-  - first:
-      74: 4106399916549189888
-    second: Armature|Idle.001
-  - first:
-      74: -2108476173976532896
-    second: Armature|Walking.001
->>>>>>> shadow_cat
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: ShadowCatBody
-    second: {fileID: 2100000, guid: 66a42b53108bc4745802bbea74daef99, type: 2}
+      name: BodyBase
+    second: {fileID: 2100000, guid: 4b242bf24ede3a84aa6c45e9639ef3d8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: ShadowCatFace
-<<<<<<< HEAD
-    second: {fileID: 2100000, guid: f6e69ed4d3e5e1e4797c6ca99e924630, type: 2}
-=======
-    second: {fileID: 2100000, guid: a38d8a83363e91246a1c7276d10a5ef1, type: 2}
+      name: Clothes
+    second: {fileID: 2100000, guid: adc0e11cacb6a074d814d1808ddcbb13, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: ShadowCatFace.001
+      name: Face
     second: {fileID: 2100000, guid: a38d8a83363e91246a1c7276d10a5ef1, type: 2}
->>>>>>> shadow_cat
   materials:
     materialImportMode: 2
     materialName: 0
@@ -123,11 +133,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-<<<<<<< HEAD
-  importAnimation: 1
-=======
   importAnimation: 0
->>>>>>> shadow_cat
   humanDescription:
     serializedVersion: 3
     human: []
