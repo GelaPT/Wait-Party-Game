@@ -12,7 +12,17 @@ ModelImporter:
   - first:
       74: -4274770991410265338
     second: Armature|Walking
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShadowCatBody
+    second: {fileID: 2100000, guid: 66a42b53108bc4745802bbea74daef99, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShadowCatFace
+    second: {fileID: 2100000, guid: 79e486123c218c94086a6a034b565a59, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

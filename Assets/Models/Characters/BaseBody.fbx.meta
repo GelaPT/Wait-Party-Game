@@ -49,7 +49,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: FaceBase
-    second: {fileID: 2100000, guid: e680a019e8f0c874798d563573f59eed, type: 2}
+    second: {fileID: 2100000, guid: 79e486123c218c94086a6a034b565a59, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
