@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a11e2b2a4ad9afa4084cd1866d078cbd
+guid: fb591da588ca5ee449784bf6cfe0792e
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
@@ -7,8 +7,17 @@ ModelImporter:
       74: 3623281840351247363
     second: Armature|A-Pose
   - first:
+      74: -8987842279270866296
+    second: Armature|A-Pose.008
+  - first:
+      74: 9172120548187705551
+    second: Armature|A-Pose.026
+  - first:
       74: -8945691123924629249
     second: Armature|Idle
+  - first:
+      74: -3828583913261678786
+    second: Armature|Running
   - first:
       74: -4274770991410265338
     second: Armature|Walking
@@ -16,13 +25,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: ShadowCatBody
-    second: {fileID: 2100000, guid: 66a42b53108bc4745802bbea74daef99, type: 2}
+      name: Color_palette
+    second: {fileID: 2100000, guid: 79e486123c218c94086a6a034b565a59, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: ShadowCatFace
-    second: {fileID: 2100000, guid: 79e486123c218c94086a6a034b565a59, type: 2}
+      name: FloweyAcessories
+    second: {fileID: 2100000, guid: d3c6f8f25b9bc884a8189f4edc5e6feb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FloweyBody
+    second: {fileID: 2100000, guid: ef2814bdd4f411340af2d1bcc13b0e7a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -38,18 +52,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Armature|Idle' has import animation warnings
-      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'spine1' has translation animation that
-      will be discarded.\n\t'spine1' is inbetween humanoid transforms and has rotation
-      animation that will be discarded.\n\nClip 'Armature|Walking' has import animation
-      warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'spine1' has translation animation
-      that will be discarded.\n\t'spine1' is inbetween humanoid transforms and has
-      rotation animation that will be discarded.\n\t'spine3' is inbetween humanoid
-      transforms and has rotation animation that will be discarded.\n\t'l.leg1' has
-      translation animation that will be discarded.\n\t'r.leg1' has translation animation
-      that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -106,7 +109,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -322,7 +325,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 2
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
