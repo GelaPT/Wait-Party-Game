@@ -65,9 +65,6 @@ public class InputTesting : MonoBehaviour
                 case InputDeviceChange.ConfigurationChanged:
                     Debug.Log("Device Configuration Changed");
                     break;
-                case InputDeviceChange.Destroyed:
-                    Debug.Log("Device Destroyed");
-                    break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(change), change, null);
             }
