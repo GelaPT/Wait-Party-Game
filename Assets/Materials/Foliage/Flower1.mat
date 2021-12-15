@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Icosphere
+  m_Name: Flower1
   m_Shader: {fileID: -6465566751694194690, guid: 837554ba416982c4fb41dd712d54d5df, type: 3}
   m_ShaderKeywords: SHADOWS_SHADOWMASK _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS
     _ALPHATEST_ON _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _SHADOWS_SOFT
@@ -28,8 +28,7 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: TransparentCutout
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -63,7 +62,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Main_Texture:
-        m_Texture: {fileID: 2800000, guid: 11aeaacbfa8573242a7753bb04e8860c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1b307dd3e2f7ca7429387382752b54a0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -102,7 +101,7 @@ Material:
     - _AlphaClip: 1
     - _Bend_Noise: 10
     - _Bend_Speed: 0.1
-    - _Bend_Strength: 1
+    - _Bend_Strength: 5
     - _Blend: 0
     - _BlendOp: 0
     - _BumpScale: 1
