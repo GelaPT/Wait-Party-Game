@@ -779,7 +779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af6fafffb2ccf5c428548a93e778bdb0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.529
+      value: 0.98
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af6fafffb2ccf5c428548a93e778bdb0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1345,6 +1345,7 @@ GameObject:
   - component: {fileID: 1519989818}
   - component: {fileID: 1519989817}
   - component: {fileID: 1519989816}
+  - component: {fileID: 1519989820}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -1430,6 +1431,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1519989820
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519989815}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad1f1c11e2a6844429884d3cb1b0accd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1670658763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1626,7 +1647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb591da588ca5ee449784bf6cfe0792e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.223
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb591da588ca5ee449784bf6cfe0792e, type: 3}
       propertyPath: m_LocalPosition.z

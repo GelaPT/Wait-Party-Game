@@ -110,7 +110,7 @@ Material:
     - _RimAmount: 0.727
     - _RimForce: 2.21
     - _RimThreshold: 0
-    - _Rim_Amount: 0.3
+    - _Rim_Amount: 0.25
     - _Rim_Force: 0
     - _Rim_Threshold: 0.08
     - _SHADOWS_SOFT: 1

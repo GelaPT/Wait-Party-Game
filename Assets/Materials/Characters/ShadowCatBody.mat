@@ -117,7 +117,7 @@ Material:
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _Rim_Color: {r: 2, g: 2, b: 2, a: 1}
     - _SpecularColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Specular_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Specular_Color: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
     - _Tint: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &2617940601566928017
