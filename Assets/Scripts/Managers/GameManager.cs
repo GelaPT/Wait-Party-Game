@@ -1,22 +1,20 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[System.Serializable] public class EventGameState : UnityEvent<GameManager.GameState, GameManager.GameState> { }
+[System.Serializable] public class EventGameState : UnityEvent<StateManager.GameState, StateManager.GameState> { }
+
+[System.Serializable]
+public struct Manager
+{
+    public GameObject gameObject;
+    public Type type;
+}
 
 public class GameManager : Singleton<GameManager>
 {
     public GameObject[] managers;
-
-    public enum GameState { PreGame, Running, Paused };
-    [HideInInspector] public EventGameState onGameStateChanged;
-
-    private GameState currentGameState = GameState.PreGame;
-    public GameState CurrentGameState
-    {
-        get => currentGameState;
-        private set => currentGameState = value;
-    }
 
     private List<GameObject> instancedManagers;
 
@@ -26,6 +24,8 @@ public class GameManager : Singleton<GameManager>
         instancedManagers = new List<GameObject>();
 
         InstantiateManagers();
+
+        Pause(true);
     }
 
     private void InstantiateManagers()
@@ -43,5 +43,13 @@ public class GameManager : Singleton<GameManager>
         base.OnDestroy();
         for (var i = 0; i < instancedManagers.Count; i++) Destroy(instancedManagers[i]);
         instancedManagers.Clear();
+    }
+
+    public void Pause(bool pause)
+    {
+        if (stateManager == null) return;
+        if (stateManager.CurrentGameState == StateManager.GameState.PreGame) return;
+
+        stateManager.UpdateState(pause ? StateManager.GameState.Paused : StateManager.GameState.Running);
     }
 }
