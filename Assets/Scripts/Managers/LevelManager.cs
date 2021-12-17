@@ -2,13 +2,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-//Minigame Level Class
+public struct Minigame
+{
+    public string name;
+    public string scene;
+}
 
 public class LevelManager : Singleton<LevelManager>
 {
-    private string bootScene = "BootScene";
-    private string boardGame = "BoardScene";
-    //private List<string> minigames? = new();
+    public string bootScene = "BootScene";
+    public string boardGame = "BoardScene";
+    public List<Minigame> minigames = new();
+
     private string currentLevel = string.Empty;
 
     private List<AsyncOperation> loadOperations = new();
@@ -25,8 +30,6 @@ public class LevelManager : Singleton<LevelManager>
             loadOperations.Remove(ao);
 
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(currentLevel));
-
-            //Update State
         }
     }
 

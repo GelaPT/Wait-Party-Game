@@ -8,11 +8,8 @@ using UnityEngine.Events;
 
 public class GameManager : Singleton<GameManager>
 {
-    #region Managers' Instance
-    public StateManager stateManager { get; private set; }
-    public LevelManager levelManager { get; private set; }
-    #endregion
-
+    private StateManager stateManager;
+    private LevelManager levelManager;
 
     public GameObject[] managers;
 
@@ -25,7 +22,8 @@ public class GameManager : Singleton<GameManager>
 
         InstantiateManagers();
 
-        Pause(true);
+        stateManager = StateManager.Instance;
+        levelManager = LevelManager.Instance;
     }
 
     private void InstantiateManagers()
@@ -36,9 +34,6 @@ public class GameManager : Singleton<GameManager>
             managerInstance = Instantiate(managers[i]);
             instancedManagers.Add(managerInstance);
         }
-
-        stateManager = StateManager.Instance;
-        levelManager = LevelManager.Instance;
     }
 
     protected override void OnDestroy()
