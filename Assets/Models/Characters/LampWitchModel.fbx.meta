@@ -1,14 +1,101 @@
 fileFormatVersion: 2
-guid: ad1e9331de218374ab4e596adaa8eaa9
+guid: 6743c7be430a10b4a877f2f48580b35a
 ModelImporter:
   serializedVersion: 21202
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 3623281840351247363
+    second: Armature|A-Pose
+  - first:
+      74: 765500952442912253
+    second: Armature|BakeCake_Idle
+  - first:
+      74: -3553326307749769992
+    second: Armature|BakeCake_PressFront
+  - first:
+      74: 5583833982177244555
+    second: Armature|BakeCake_PressLeft
+  - first:
+      74: -6890283624013660424
+    second: Armature|BakeCake_PressRight
+  - first:
+      74: -4890042136472207714
+    second: Armature|BakeCake_PressWrong
+  - first:
+      74: -4673077595635963286
+    second: Armature|BasketHop_Idle
+  - first:
+      74: 1928014475942332385
+    second: Armature|BasketHop_ThrowBall
+  - first:
+      74: -6624871441636765449
+    second: Armature|Caught
+  - first:
+      74: -1970587153007140819
+    second: Armature|CaughtLoop
+  - first:
+      74: -7489721896243022055
+    second: Armature|Collision
+  - first:
+      74: 6589755540219670814
+    second: Armature|Crouch
+  - first:
+      74: -2400833351189193328
+    second: Armature|Defeat
+  - first:
+      74: -751813995980742648
+    second: Armature|EmptyAction
+  - first:
+      74: -8945691123924629249
+    second: Armature|Idle
+  - first:
+      74: -2910770974977611268
+    second: Armature|JumpBackup
+  - first:
+      74: 6517496867871864310
+    second: Armature|JumpEnd
+  - first:
+      74: -6798894929176139803
+    second: Armature|JumpLoop
+  - first:
+      74: -7130173953309157469
+    second: Armature|JumpStart
+  - first:
+      74: -3828583913261678786
+    second: Armature|Running
+  - first:
+      74: -7646926558962178391
+    second: Armature|Stunned
+  - first:
+      74: -1228952814471920847
+    second: Armature|Victory
+  - first:
+      74: -4274770991410265338
+    second: Armature|Walking
+  - first:
+      74: -5572541973309549404
+    second: Empty|EmptyAction
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 7f1426b91a8b14f47920812949dd0575, type: 2}
+      name: Body
+    second: {fileID: 2100000, guid: e3e3dfc5ff40baf44aa8d824e29e46a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LampClothing
+    second: {fileID: 2100000, guid: 841c8b3c4166f974eaeee6158e05febe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LampHat
+    second: {fileID: 2100000, guid: 105170ac5fb5e8e43bdc994653426f45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: a38d8a83363e91246a1c7276d10a5ef1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -81,7 +168,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human: []
