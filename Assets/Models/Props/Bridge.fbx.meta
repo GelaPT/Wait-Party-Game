@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a91df271f24aff743aa60a50df7e0b26
+guid: c0d289ef5d0f9f64cb52efd1cdf3e219
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,13 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: House
-    second: {fileID: 2100000, guid: 0903b2c46e7aad146b2b227b4ac067e5, type: 2}
+      name: Exterior
+    second: {fileID: 2100000, guid: f878064d14c6e54458c3a4a344f3b315, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: MushroomHead
-    second: {fileID: 2100000, guid: c24d0cf3498e8ef41ad2cd24c929b0c2, type: 2}
+      name: Interior
+    second: {fileID: 2100000, guid: 912ff4ec0c52d2d409744e480470913f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: f878064d14c6e54458c3a4a344f3b315, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

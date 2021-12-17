@@ -9,7 +9,22 @@ ModelImporter:
   - first:
       74: 3230937530204113680
     second: Botas|Plane.006Action
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Candle
+    second: {fileID: 2100000, guid: ecf83df29c4a0ea49b1d6bb571f2533f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Clothes
+    second: {fileID: 2100000, guid: 8393086b85f7c25428ebaa9aa7c184dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_Palette
+    second: {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
   materials:
     materialImportMode: 2
     materialName: 0
