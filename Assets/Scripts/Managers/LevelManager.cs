@@ -16,7 +16,7 @@ public class LevelManager : Singleton<LevelManager>
 
     private string currentLevel = string.Empty;
 
-    private List<AsyncOperation> loadOperations = new();
+    private readonly List<AsyncOperation> loadOperations = new();
 
     private void Start()
     {
