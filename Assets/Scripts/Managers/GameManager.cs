@@ -1,10 +1,5 @@
-using System;
-using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-
-[Serializable] public class EventGameState : UnityEvent<StateManager.GameState, StateManager.GameState> { }
 
 public class GameManager : Singleton<GameManager>
 {
@@ -49,6 +44,6 @@ public class GameManager : Singleton<GameManager>
 
         if (stateManager.CurrentGameState == StateManager.GameState.PreGame) return;
 
-        stateManager.UpdateState(pause ? StateManager.GameState.Paused : StateManager.GameState.Running);
+        stateManager.UpdateGameState(pause ? StateManager.GameState.Paused : StateManager.GameState.Running);
     }
 }
