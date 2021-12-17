@@ -50,17 +50,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: BodyBase
-    second: {fileID: 2100000, guid: 4b242bf24ede3a84aa6c45e9639ef3d8, type: 2}
+    second: {fileID: 2100000, guid: 50bb0f78279387f48937abe67bed943c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Clothes
-    second: {fileID: 2100000, guid: adc0e11cacb6a074d814d1808ddcbb13, type: 2}
+    second: {fileID: 2100000, guid: 8393086b85f7c25428ebaa9aa7c184dc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Face
-    second: {fileID: 2100000, guid: 79e486123c218c94086a6a034b565a59, type: 2}
+    second: {fileID: 2100000, guid: a38d8a83363e91246a1c7276d10a5ef1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

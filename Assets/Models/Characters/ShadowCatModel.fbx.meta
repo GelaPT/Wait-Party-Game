@@ -17,12 +17,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: ShadowCatBody
-    second: {fileID: 2100000, guid: 66a42b53108bc4745802bbea74daef99, type: 2}
+    second: {fileID: 2100000, guid: bcc00a83ea8e79e41a839dedad16bb3e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: ShadowCatFace
-    second: {fileID: 2100000, guid: 79e486123c218c94086a6a034b565a59, type: 2}
+    second: {fileID: 2100000, guid: a38d8a83363e91246a1c7276d10a5ef1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -38,18 +38,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Armature|Idle' has import animation warnings
-      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'spine1' has translation animation that
-      will be discarded.\n\t'spine1' is inbetween humanoid transforms and has rotation
-      animation that will be discarded.\n\nClip 'Armature|Walking' has import animation
-      warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'spine1' has translation animation
-      that will be discarded.\n\t'spine1' is inbetween humanoid transforms and has
-      rotation animation that will be discarded.\n\t'spine3' is inbetween humanoid
-      transforms and has rotation animation that will be discarded.\n\t'l.leg1' has
-      translation animation that will be discarded.\n\t'r.leg1' has translation animation
-      that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
