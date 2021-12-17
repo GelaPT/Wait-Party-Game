@@ -1,19 +1,19 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[System.Serializable] public class EventGameState : UnityEvent<StateManager.GameState, StateManager.GameState> { }
-
-[System.Serializable]
-public struct Manager
-{
-    public GameObject gameObject;
-    public Type type;
-}
+[Serializable] public class EventGameState : UnityEvent<StateManager.GameState, StateManager.GameState> { }
 
 public class GameManager : Singleton<GameManager>
 {
+    #region Managers' Instance
+    public StateManager stateManager { get; private set; }
+    public LevelManager levelManager { get; private set; }
+    #endregion
+
+
     public GameObject[] managers;
 
     private List<GameObject> instancedManagers;
@@ -36,6 +36,9 @@ public class GameManager : Singleton<GameManager>
             managerInstance = Instantiate(managers[i]);
             instancedManagers.Add(managerInstance);
         }
+
+        stateManager = StateManager.Instance;
+        levelManager = LevelManager.Instance;
     }
 
     protected override void OnDestroy()
@@ -47,7 +50,8 @@ public class GameManager : Singleton<GameManager>
 
     public void Pause(bool pause)
     {
-        if (stateManager == null) return;
+        StateManager stateManager = StateManager.Instance;
+
         if (stateManager.CurrentGameState == StateManager.GameState.PreGame) return;
 
         stateManager.UpdateState(pause ? StateManager.GameState.Paused : StateManager.GameState.Running);
