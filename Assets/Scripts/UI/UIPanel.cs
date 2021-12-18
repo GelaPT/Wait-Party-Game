@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,16 +10,20 @@ public class UIPanel : MonoBehaviour
 {
     public Selectable startSelectable;
 
-    private UnityEvent onPanelOpen = new();
-    private UnityEvent onPanelClose = new();
+    public UnityEvent onPanelOpen = new();
+    public UnityEvent onPanelClose = new();
 
     private Animator animator;
     private CanvasGroup canvasGroup;
 
-    void Start()
+    [HideInInspector] public List<Selectable> selectables = new();
+
+    protected virtual void Awake()
     {
         animator = GetComponent<Animator>();
         canvasGroup = GetComponent<CanvasGroup>();
+
+        GetComponentsInChildren(true, selectables);
 
         if (startSelectable) EventSystem.current.SetSelectedGameObject(startSelectable.gameObject);
     }
@@ -29,18 +32,21 @@ public class UIPanel : MonoBehaviour
     {
         if (onPanelOpen != null) onPanelOpen.Invoke();
 
-        HandleAnimator("Open");
+        HandleAnimator(true);
     }
 
     public virtual void ClosePanel()
     {
         if (onPanelClose != null) onPanelClose.Invoke();
 
-        HandleAnimator("Close");
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
+
+        HandleAnimator(false);
     }
 
-    private void HandleAnimator(string trigger)
+    protected void HandleAnimator(bool flag)
     {
-        animator?.SetTrigger(trigger);
+        animator?.SetBool("Opened", flag);
     }
 }

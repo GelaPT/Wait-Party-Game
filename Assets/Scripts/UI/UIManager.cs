@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class UIManager : Singleton<UIManager>
 {
-    [HideInInspector] public UnityEvent onPanelChanged = new();
+    public UnityEvent onPanelChanged = new();
 
     private List<UIPanel> panels = new();
 
@@ -15,14 +16,21 @@ public class UIManager : Singleton<UIManager>
     private UIPanel previousPanel;
     public UIPanel PreviousPanel { get => previousPanel; }
 
-    void Start()
+    protected override void Awake()
     {
+        base.Awake();
         GetComponentsInChildren(true, panels);
     }
 
+    private void Start()
+    {
+        SwitchPanel(panels[0]);
+    }
+    
     public void SwitchPanel(UIPanel uiPanel)
     {
         if (!uiPanel) return;
+        if (uiPanel == currentPanel) return;
 
         if (currentPanel)
         {
@@ -31,7 +39,6 @@ public class UIManager : Singleton<UIManager>
         }
 
         currentPanel = uiPanel;
-        currentPanel.gameObject.SetActive(true);
         currentPanel.OpenPanel();
 
         if(onPanelChanged != null)
@@ -45,15 +52,5 @@ public class UIManager : Singleton<UIManager>
         if (!previousPanel) return;
 
         SwitchPanel(previousPanel);
-    }
-
-    public void LoadPanel(UIPanel panel)
-    {
-        StartCoroutine(WaitForPanelLoaded(panel));
-    }
-
-    private IEnumerator WaitForPanelLoaded(UIPanel panel)
-    {
-        yield return null;
     }
 }
