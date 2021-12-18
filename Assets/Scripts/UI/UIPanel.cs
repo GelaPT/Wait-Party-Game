@@ -13,8 +13,10 @@ public class UIPanel : MonoBehaviour
     public UnityEvent onPanelOpen = new();
     public UnityEvent onPanelClose = new();
 
-    private Animator animator;
-    private CanvasGroup canvasGroup;
+    protected Animator animator;
+    protected CanvasGroup canvasGroup;
+
+    protected bool isOpened = false;
 
     [HideInInspector] public List<Selectable> selectables = new();
 
@@ -32,6 +34,8 @@ public class UIPanel : MonoBehaviour
     {
         if (onPanelOpen != null) onPanelOpen.Invoke();
 
+        isOpened = true;
+
         HandleAnimator(true);
     }
 
@@ -41,6 +45,8 @@ public class UIPanel : MonoBehaviour
 
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
+
+        isOpened = false;
 
         HandleAnimator(false);
     }

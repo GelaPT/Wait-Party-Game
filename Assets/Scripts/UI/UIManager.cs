@@ -10,6 +10,8 @@ public class UIManager : Singleton<UIManager>
 
     private List<UIPanel> panels = new();
 
+    public UIPanel openingPanel;
+
     private UIPanel currentPanel;
     public UIPanel CurrentPanel { get => currentPanel; }
 
@@ -24,7 +26,7 @@ public class UIManager : Singleton<UIManager>
 
     private void Start()
     {
-        SwitchPanel(panels[0]);
+        SwitchPanel(openingPanel);
     }
     
     public void SwitchPanel(UIPanel uiPanel)
