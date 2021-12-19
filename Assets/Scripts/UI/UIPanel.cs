@@ -11,6 +11,7 @@ public class UIPanel : MonoBehaviour
     public Selectable startSelectable;
 
     public UnityEvent onPanelOpen = new();
+    public UnityEvent onPanelFinishOpen = new();
     public UnityEvent onPanelClose = new();
 
     protected Animator animator;
@@ -32,7 +33,7 @@ public class UIPanel : MonoBehaviour
 
     public virtual void OpenPanel()
     {
-        if (onPanelOpen != null) onPanelOpen.Invoke();
+        onPanelOpen?.Invoke();
 
         isOpened = true;
 
@@ -41,7 +42,7 @@ public class UIPanel : MonoBehaviour
 
     public virtual void ClosePanel()
     {
-        if (onPanelClose != null) onPanelClose.Invoke();
+        onPanelClose?.Invoke();
 
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
@@ -49,6 +50,11 @@ public class UIPanel : MonoBehaviour
         isOpened = false;
 
         HandleAnimator(false);
+    }
+
+    public virtual void FinishedOpening()
+    {
+        onPanelFinishOpen?.Invoke();
     }
 
     protected void HandleAnimator(bool flag)

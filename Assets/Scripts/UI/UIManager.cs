@@ -6,17 +6,18 @@ using UnityEngine.InputSystem;
 
 public class UIManager : Singleton<UIManager>
 {
-    public UnityEvent onPanelChanged = new();
-
-    private List<UIPanel> panels = new();
-
-    public UIPanel openingPanel;
+    [HideInInspector] public List<UIPanel> panels = new();
 
     private UIPanel currentPanel;
     public UIPanel CurrentPanel { get => currentPanel; }
 
     private UIPanel previousPanel;
     public UIPanel PreviousPanel { get => previousPanel; }
+
+    public UIPanel openingPanel;
+
+    [Header("Events")]
+    public UnityEvent onPanelChanged = new();
 
     protected override void Awake()
     {
