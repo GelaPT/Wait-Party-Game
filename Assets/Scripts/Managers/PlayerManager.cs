@@ -25,5 +25,6 @@ public class PlayerManager : Singleton<PlayerManager>
     public void MakeHost(Gamepad hostGamepad)
     {
         host = new(hostGamepad);
+        players.Add(host);
     }
 }

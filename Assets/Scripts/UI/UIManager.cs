@@ -19,6 +19,8 @@ public class UIManager : Singleton<UIManager>
     [Header("Events")]
     public UnityEvent onPanelChanged = new();
 
+    private bool shouldStartListening = false;
+
     protected override void Awake()
     {
         base.Awake();
@@ -28,6 +30,7 @@ public class UIManager : Singleton<UIManager>
     private void Start()
     {
         SwitchPanel(openingPanel);
+        openingPanel.onPanelFinishOpen.AddListener(() => shouldStartListening = true);
     }
     
     public void SwitchPanel(UIPanel uiPanel)
