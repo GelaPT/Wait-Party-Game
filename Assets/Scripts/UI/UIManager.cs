@@ -1,11 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.InputSystem;
 
 public class UIManager : Singleton<UIManager>
 {
+    private PlayerManager playerManager;
+
     [HideInInspector] public List<UIPanel> panels = new();
 
     private UIPanel currentPanel;
@@ -32,7 +32,16 @@ public class UIManager : Singleton<UIManager>
         SwitchPanel(openingPanel);
         openingPanel.onPanelFinishOpen.AddListener(() => shouldStartListening = true);
     }
-    
+
+    private void Update()
+    {
+        if(shouldStartListening && playerManager.Host.gamepad.buttonNorth.isPressed)
+        {
+            SwitchPanel(panels[1]);
+            shouldStartListening = false;
+        }
+    }
+
     public void SwitchPanel(UIPanel uiPanel)
     {
         if (!uiPanel) return;
