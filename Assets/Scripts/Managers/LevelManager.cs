@@ -18,8 +18,9 @@ public class LevelManager : Singleton<LevelManager>
 
     private readonly List<AsyncOperation> loadOperations = new();
 
-    private void Start()
+    protected override void Awake()
     {
+        base.Awake();
         currentLevel = bootScene;
     }
 
