@@ -8,6 +8,8 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(CanvasGroup))]
 public class UIPanel : MonoBehaviour
 {
+    protected AudioManager audioManager;
+
     public Selectable startSelectable;
 
     public UnityEvent onPanelOpen = new();
@@ -23,6 +25,7 @@ public class UIPanel : MonoBehaviour
 
     protected virtual void Awake()
     {
+        audioManager = AudioManager.Instance;
         animator = GetComponent<Animator>();
         canvasGroup = GetComponent<CanvasGroup>();
 
@@ -36,6 +39,8 @@ public class UIPanel : MonoBehaviour
         onPanelOpen?.Invoke();
 
         isOpened = true;
+
+        audioManager?.PlaySound("Balloon Boy");
 
         HandleAnimator(true);
     }

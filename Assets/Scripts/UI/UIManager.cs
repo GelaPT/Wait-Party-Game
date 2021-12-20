@@ -1,6 +1,8 @@
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class UIManager : Singleton<UIManager>
 {
@@ -29,17 +31,24 @@ public class UIManager : Singleton<UIManager>
 
     private void Start()
     {
+        playerManager = PlayerManager.Instance;
         SwitchPanel(openingPanel);
         openingPanel.onPanelFinishOpen.AddListener(() => shouldStartListening = true);
     }
 
     private void Update()
     {
-        if(shouldStartListening && playerManager.Host.gamepad.buttonNorth.isPressed)
+        if (!shouldStartListening) return;
+        
+        foreach(var gamepad in Gamepad.all)
         {
-            SwitchPanel(panels[1]);
-            shouldStartListening = false;
+            if(gamepad.buttonSouth.ReadValue() == 1)
+            {
+                SwitchPanel(panels[1]);
+                shouldStartListening = false;
+            }
         }
+            
     }
 
     public void SwitchPanel(UIPanel uiPanel)
