@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 [System.Serializable]
 public class Sound
@@ -9,7 +7,7 @@ public class Sound
     public AudioClip clip;
     [Range(0f, 1f)]
     public float volume;
-    [Range(1f, 2f)]
+    [Range(0.5f, 1.5f)]
     public float pitch;
     public bool loop;
 

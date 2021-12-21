@@ -48,9 +48,6 @@ MonoBehaviour:
   - name: Balloon Boy
     clip: {fileID: 8300000, guid: e54b2f6bef9794e4a891123034ede860, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 1
     source: {fileID: 0}
-    onEndPlay:
-      m_PersistentCalls:
-        m_Calls: []
