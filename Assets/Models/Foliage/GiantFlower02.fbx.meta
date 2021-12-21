@@ -1,30 +1,14 @@
 fileFormatVersion: 2
-guid: af6fafffb2ccf5c428548a93e778bdb0
+guid: a5a1848e1a5acb14eb5737f46dc113de
 ModelImporter:
   serializedVersion: 21202
-  internalIDToNameTable:
-  - first:
-      74: 6852617097786577413
-    second: Girino|Plane.006Action
-  - first:
-      74: 3230937530204113680
-    second: Botas|Plane.006Action
+  internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Candle
-    second: {fileID: 2100000, guid: ecf83df29c4a0ea49b1d6bb571f2533f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Clothes
-    second: {fileID: 2100000, guid: 8393086b85f7c25428ebaa9aa7c184dc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Color_Palette
-    second: {fileID: 2100000, guid: a38d8a83363e91246a1c7276d10a5ef1, type: 2}
+      name: Material.001
+    second: {fileID: 2100000, guid: 1ba2d903832f1bd4c9c9bf91f472b1d9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
