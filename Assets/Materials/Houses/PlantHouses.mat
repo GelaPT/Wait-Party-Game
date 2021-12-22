@@ -121,7 +121,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Rim_Amount: 1
+    - _Rim_Amount: 0.23
     - _Rim_Force: 0
     - _Rim_Threshold: 0.1
     - _SHADOWS_SOFT: 1

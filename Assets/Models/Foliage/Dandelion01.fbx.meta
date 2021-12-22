@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: DandelionHead
+    second: {fileID: 2100000, guid: d391da81d6e2f6f419108589877cfff8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Material.001
-    second: {fileID: 2100000, guid: 1ba2d903832f1bd4c9c9bf91f472b1d9, type: 2}
+    second: {fileID: 2100000, guid: 976f7fe79dbc24e40aced73d5b0e6023, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

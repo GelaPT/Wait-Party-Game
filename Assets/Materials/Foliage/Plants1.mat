@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Flower1
+  m_Name: Plants1
   m_Shader: {fileID: -6465566751694194690, guid: 837554ba416982c4fb41dd712d54d5df, type: 3}
   m_ShaderKeywords: SHADOWS_SHADOWMASK _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS
     _ALPHATEST_ON _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _SHADOWS_SOFT
@@ -99,6 +99,8 @@ Material:
     - _ADDITIONAL_LIGHTS: 1
     - _ADDITIONAL_LIGHT_SHADOWS: 1
     - _AlphaClip: 1
+    - _AlphaCorrection: 1
+    - _Alpha_Clip: 0.8
     - _Bend_Noise: 5
     - _Bend_Speed: 0.2
     - _Bend_Strength: 3
