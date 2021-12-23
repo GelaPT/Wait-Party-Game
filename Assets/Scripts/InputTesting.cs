@@ -1,3 +1,4 @@
+/*
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -5,18 +6,6 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player
-{
-    public static int currentId = 0;
-    public GameObject prefab;
-    public Gamepad gamepad;
-    public int id;
-
-    public static Player GetPlayer(string gamepadName, IEnumerable<Player> players)
-    {
-        return players.FirstOrDefault(player => player.gamepad.name == gamepadName);
-    }
-}
 
 public class InputTesting : MonoBehaviour
 {
@@ -92,4 +81,4 @@ public class InputTesting : MonoBehaviour
             player.prefab.transform.position += Vector3.Normalize(Vector3.up * player.gamepad.leftStick.y.ReadValue()) * Time.deltaTime;
         }
     }
-}
+}*/
