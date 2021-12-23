@@ -12,3 +12,4 @@ public class Player
         this.gamepad = gamepad;
 
     }
+}
