@@ -47,12 +47,6 @@
         },
         {
             "m_Id": "857336d73f0e44d8bb39bf4340b6225e"
-        },
-        {
-            "m_Id": "98b141ddf29b42f1a76143af518aaea5"
-        },
-        {
-            "m_Id": "0b1a1ae2da194288b58a25b175c518e6"
         }
     ],
     "m_Keywords": [
@@ -2257,33 +2251,6 @@
 }
 
 {
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
-    "m_ObjectId": "0b1a1ae2da194288b58a25b175c518e6",
-    "m_Guid": {
-        "m_GuidSerialized": "ad2be82f-a2ca-49c8-b98b-69fef3f4c8b4"
-    },
-    "m_Name": "AlphaCorrection",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "AlphaCorrection",
-    "m_DefaultReferenceName": "_AlphaCorrection",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": 1.0,
-    "m_FloatType": 1,
-    "m_RangeValues": {
-        "x": 0.0,
-        "y": 1.0
-    }
-}
-
-{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "0b933ff489d44f6097f12ed13d3f1433",
@@ -2540,12 +2507,6 @@
         },
         {
             "m_Id": "8339ddc550aa45d2af23a80dc8177de1"
-        },
-        {
-            "m_Id": "98b141ddf29b42f1a76143af518aaea5"
-        },
-        {
-            "m_Id": "0b1a1ae2da194288b58a25b175c518e6"
         }
     ]
 }
@@ -7754,33 +7715,6 @@
         "e31": 0.0,
         "e32": 0.0,
         "e33": 1.0
-    }
-}
-
-{
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
-    "m_ObjectId": "98b141ddf29b42f1a76143af518aaea5",
-    "m_Guid": {
-        "m_GuidSerialized": "bfa36cd4-b384-4c1a-89ba-6aff660f2662"
-    },
-    "m_Name": "Alpha Clip",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Alpha Clip",
-    "m_DefaultReferenceName": "_Alpha_Clip",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": 0.800000011920929,
-    "m_FloatType": 1,
-    "m_RangeValues": {
-        "x": 0.0,
-        "y": 1.0
     }
 }
 
