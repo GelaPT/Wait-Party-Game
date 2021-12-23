@@ -127,9 +127,9 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Rim_Amount: 1
+    - _Rim_Amount: 0.41
     - _Rim_Force: 0
-    - _Rim_Threshold: 0.1
+    - _Rim_Threshold: 0.32
     - _SHADOWS_SOFT: 1
     - _SampleGI: 0
     - _Smoothness: 0
@@ -143,7 +143,7 @@ Material:
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - _Ambient_Color: {r: 0.3921569, g: 0.3921569, b: 0.3921569, a: 1}
+    - _Ambient_Color: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Bend_Direction: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
