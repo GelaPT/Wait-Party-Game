@@ -17,6 +17,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: GrassLow
+    second: {fileID: 2100000, guid: 14d5e5df83a05fe48a0e8b943c4a0acd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Terrain
     second: {fileID: 2100000, guid: 14d5e5df83a05fe48a0e8b943c4a0acd, type: 2}
   materials:

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5981140325725938931
+--- !u!114 &-2429019775001143517
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,10 +20,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TerrainGrass
-  m_Shader: {fileID: -6465566751694194690, guid: b6efa15191956874ebae8a8486d3d54e, type: 3}
-  m_ShaderKeywords: SHADOWS_SHADOWMASK _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS
-    _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _SHADOWS_SOFT
+  m_Name: Terrain
+  m_Shader: {fileID: -6465566751694194690, guid: bd8435585f7aa884baaf81d30b0e89f0, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -34,7 +33,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 8cea3e9a5e1912b42a808a90b5be6809, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -54,15 +53,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 8cea3e9a5e1912b42a808a90b5be6809, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 8cea3e9a5e1912b42a808a90b5be6809, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Main_Texture:
-        m_Texture: {fileID: 2800000, guid: 09a1e4110f0c9394c900f01c410733a1, type: 3}
+    - _MainTexture:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -95,9 +94,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - SHADOWS_SHADOWMASK: 1
-    - _ADDITIONAL_LIGHTS: 1
-    - _ADDITIONAL_LIGHT_SHADOWS: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -107,40 +103,50 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
+    - _DissolveAmount: 0
+    - _DissolveSpeed: 3.39
     - _DstBlend: 0
+    - _EmissionEdge: -0.53
     - _EnvironmentReflections: 1
+    - _FoamAmount: 16.76
+    - _FoamCutoff: 2.07
+    - _FoamScale: 3
+    - _FoamSpeed: 1
+    - _FresnelPower: 0.8
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
-    - _MAIN_LIGHT_SHADOWS: 1
-    - _MAIN_LIGHT_SHADOWS_CASCADE: 1
+    - _InnerTransparency: -0.08
     - _Metallic: 0
     - _Mode: 0
+    - _NoiseScale: 30.73
+    - _NoiseSeed: 28.71
+    - _NormalStrength: 0.05
     - _OcclusionStrength: 1
+    - _OutterTransparency: 1
     - _Parallax: 0.02
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Rim_Amount: 0
-    - _Rim_Force: 0
-    - _Rim_Threshold: 1
-    - _SHADOWS_SOFT: 1
-    - _Smoothness: 0
+    - _Scale: 92.22
+    - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Speed: 0
     - _SrcBlend: 1
     - _Surface: 0
-    - _TintStrength: 20.3
     - _UVSec: 0
+    - _WaterDepth: 7.4
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _Ambient_Color: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Rim_Color: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
+    - _BaseColor: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
+    - _Color: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
+    - _DeepWater: {r: 0, g: 0.05, b: 0.17, a: 0.9019608}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FoamColor: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - _InnerColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutterColor: {r: 0, g: 0, b: 0, a: 0}
+    - _ShallowWater: {r: 0.05, g: 0.2, b: 0.44, a: 0.5019608}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Specular_Color: {r: 2.670157, g: 2.670157, b: 2.670157, a: 1}
-    - _Tint: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
