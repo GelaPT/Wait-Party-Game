@@ -5,7 +5,7 @@ using System.Linq;
 
 public class AudioManager : Singleton<AudioManager>
 {
-    [SerializeField] private List<Sound> sounds;
+    [SerializeField] private readonly List<Sound> sounds = new();
 
     protected override void Awake()
     {
