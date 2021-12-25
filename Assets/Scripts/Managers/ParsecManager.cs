@@ -12,10 +12,21 @@ public class ParsecManager : Singleton<ParsecManager>
     {
         base.Awake();
 
-        streamer = GameObject.Find("Main Camera").GetComponent<ParsecStreamFull>();
+        streamer = GetComponent<ParsecStreamFull>();
         if(streamer)
         {
-            //streamer.
+            streamer.GuestConnected += StreamerGuestConnected;
+            streamer.GuestDisconnected += StreamerGuestDisconnected;
         }
+    }
+
+    private void StreamerGuestConnected(object sender, Parsec.ParsecGuest guest)
+    {
+
+    }
+
+    private void StreamerGuestDisconnected(object sender, Parsec.ParsecGuest guest)
+    {
+
     }
 }
