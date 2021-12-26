@@ -132,6 +132,7 @@ Material:
     - _Rim_Threshold: 0.32
     - _SHADOWS_SOFT: 1
     - _SampleGI: 0
+    - _Saturation: 0.8
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

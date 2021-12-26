@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BushDarker
+  m_Name: DryGrass
   m_Shader: {fileID: -6465566751694194690, guid: 837554ba416982c4fb41dd712d54d5df, type: 3}
   m_ShaderKeywords: SHADOWS_SHADOWMASK _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS
     _ALPHATEST_ON _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _SHADOWS_SOFT
@@ -62,7 +62,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Main_Texture:
-        m_Texture: {fileID: 2800000, guid: 11aeaacbfa8573242a7753bb04e8860c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1b307dd3e2f7ca7429387382752b54a0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -100,10 +100,10 @@ Material:
     - _ADDITIONAL_LIGHT_SHADOWS: 1
     - _AlphaClip: 1
     - _AlphaCorrection: 1
-    - _Alpha_Clip: 0.8
-    - _Bend_Noise: 10
-    - _Bend_Speed: 0.1
-    - _Bend_Strength: 5
+    - _Alpha_Clip: 0.64
+    - _Bend_Noise: 5
+    - _Bend_Speed: 0.2
+    - _Bend_Strength: 3
     - _Blend: 0
     - _BlendOp: 0
     - _BumpScale: 1
@@ -127,12 +127,12 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Rim_Amount: 0.29
+    - _Rim_Amount: 0
     - _Rim_Force: 0
-    - _Rim_Threshold: 0.03
+    - _Rim_Threshold: -1
     - _SHADOWS_SOFT: 1
     - _SampleGI: 0
-    - _Saturation: 0.25
+    - _Saturation: 0.55
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -144,10 +144,10 @@ Material:
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - _Ambient_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Ambient_Color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Bend_Direction: {r: 1, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.3529412, g: 0.36862746, b: 0.15686275, a: 1}
+    - _Color: {r: 0.627451, g: 0.56078434, b: 0.23137257, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Rim_Color: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
