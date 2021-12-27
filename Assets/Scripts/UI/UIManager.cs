@@ -21,8 +21,6 @@ public class UIManager : Singleton<UIManager>
     [Header("Events")]
     public UnityEvent onPanelChanged = new();
 
-    private bool shouldStartListening = false;
-
     protected override void Awake()
     {
         base.Awake();
@@ -33,19 +31,17 @@ public class UIManager : Singleton<UIManager>
     {
         playerManager = PlayerManager.Instance;
         SwitchPanel(openingPanel);
-        openingPanel.onPanelFinishOpen.AddListener(() => shouldStartListening = true);
     }
 
     private void Update()
     {
-        if (!shouldStartListening) return;
+        if (currentPanel != openingPanel) return;
         
         foreach(var gamepad in Gamepad.all)
         {
             if(gamepad.buttonSouth.ReadValue() == 1)
             {
                 SwitchPanel(panels[1]);
-                shouldStartListening = false;
             }
         }
             
@@ -76,5 +72,10 @@ public class UIManager : Singleton<UIManager>
         if (!previousPanel) return;
 
         SwitchPanel(previousPanel);
+    }
+
+    public void RunParsec()
+    {
+        ParsecManager.Instance.GetAccessCode();
     }
 }
