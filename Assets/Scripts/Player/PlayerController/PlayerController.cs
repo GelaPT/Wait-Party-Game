@@ -12,5 +12,11 @@ public abstract class PlayerController : MonoBehaviour
 
     public Vector3 Velocity { get; set; }
 
+    public abstract void Respawn();
+
+    public abstract void Kill();
+
     public abstract void Update();
+
+    public abstract void FixedUpdate();
 }

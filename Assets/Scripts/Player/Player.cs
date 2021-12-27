@@ -9,10 +9,17 @@ public class Player
     public bool parsec = false;
     public ParsecGaming.Parsec.ParsecGuest assignedGuest;
 
+    public PlayerController controller;
+    public CameraController cameraController;
+
     public Player(Gamepad gamepad)
     {
         id = currentId++;
         this.gamepad = gamepad;
 
+        //controller = BasicController
+
     }
+
+    //Deactivate / Activate / Update
 }

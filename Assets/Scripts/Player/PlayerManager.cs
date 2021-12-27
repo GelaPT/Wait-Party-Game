@@ -14,4 +14,6 @@ public class PlayerManager : Singleton<PlayerManager>
         host = new(hostGamepad);
         players.Add(host);
     }
+
+    // TODO : Implementar
 }
