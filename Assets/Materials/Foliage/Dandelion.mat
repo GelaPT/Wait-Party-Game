@@ -99,7 +99,7 @@ Material:
     - _ADDITIONAL_LIGHTS: 1
     - _ADDITIONAL_LIGHT_SHADOWS: 1
     - _AlphaClip: 1
-    - _AlphaCorrection: 0.38
+    - _AlphaCorrection: 0.5
     - _Alpha_Clip: 0
     - _Bend_Noise: 0
     - _Bend_Speed: 0
