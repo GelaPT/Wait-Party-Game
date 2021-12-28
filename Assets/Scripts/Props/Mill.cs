@@ -6,7 +6,8 @@ public class Mill : MonoBehaviour
 {
     public GameObject blades;
     private float xRotation;
-    [Range(0,10)]public float speed = 0.2f;
+    [Range(0,10)] public float speed = 0.2f;
+    
     void Start()
     {
         xRotation = Random.Range(0, 359);
