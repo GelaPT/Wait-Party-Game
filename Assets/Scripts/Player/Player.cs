@@ -3,7 +3,8 @@ using UnityEngine.InputSystem;
 [System.Serializable]
 public class Player
 {
-    public int id;
+    public int CurrentID { get; private set; } = 0;
+    public int ID { get; private set; }
     public Gamepad gamepad;
     public GamepadScheme gamepadScheme;
     public bool parsec = false;
@@ -21,18 +22,20 @@ public class Player
     public Player(Gamepad gamepad)
     {
         this.gamepad = gamepad;
+        ID = CurrentID++;
 
         //controller = BasicController
 
     }
 
+    /*
     public Player(int player, ParsecGaming.Parsec.ParsecGuest guest)
     {
-        id = player;
+        ID = player;
         assignedGuest = guest;
         parsec = true;
-        ParsecUnity.ParsecInput.AssignGuestToPlayer(assignedGuest, id);
-    }
+        ParsecUnity.ParsecInput.AssignGuestToPlayer(assignedGuest, ID);
+    }*/
 
     //Deactivate / Activate / Update
 }

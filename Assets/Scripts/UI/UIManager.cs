@@ -39,9 +39,10 @@ public class UIManager : Singleton<UIManager>
         
         foreach(var gamepad in Gamepad.all)
         {
-            if(gamepad.buttonSouth.ReadValue() == 1)
+            if(gamepad.startButton.ReadValue() == 1)
             {
                 SwitchPanel(panels[1]);
+                playerManager.MakeHost(gamepad);
             }
         }
             
@@ -72,10 +73,5 @@ public class UIManager : Singleton<UIManager>
         if (!previousPanel) return;
 
         SwitchPanel(previousPanel);
-    }
-
-    public void RunParsec()
-    {
-        ParsecManager.Instance.GetAccessCode();
     }
 }

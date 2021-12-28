@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -102,3 +102,4 @@ public class ParsecManager : Singleton<ParsecManager>
         if (streamer != null) streamer.StopParsec();
     }
 }
+*/
