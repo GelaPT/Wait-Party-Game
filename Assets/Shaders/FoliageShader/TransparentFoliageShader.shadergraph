@@ -372,6 +372,9 @@
         },
         {
             "m_Id": "4b791bdcf33740b4823a7fb84cf10341"
+        },
+        {
+            "m_Id": "a4a79ad8a1d044c6aed4f26649af9d25"
         }
     ],
     "m_GroupDatas": [
@@ -1742,6 +1745,9 @@
             },
             {
                 "m_Id": "96066f1ad1564b3c9a74348abf6f38c6"
+            },
+            {
+                "m_Id": "a4a79ad8a1d044c6aed4f26649af9d25"
             }
         ]
     },
@@ -4936,10 +4942,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -0.00001811981201171875,
-            "y": 390.9999694824219,
-            "width": 128.0000457763672,
-            "height": 34.000030517578128
+            "x": -233.00001525878907,
+            "y": 340.0,
+            "width": 128.00001525878907,
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -8198,6 +8204,21 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "9b69d06d929641ebbd465e3721f33460",
+    "m_Id": 0,
+    "m_DisplayName": "Smoothness",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Smoothness",
+    "m_StageCapability": 2,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.5,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "9bb4a80d4400498b9c388859285290e0",
     "m_Id": 2,
@@ -8506,6 +8527,39 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
+    "m_ObjectId": "a4a79ad8a1d044c6aed4f26649af9d25",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SurfaceDescription.Smoothness",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "9b69d06d929641ebbd465e3721f33460"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedDescriptor": "SurfaceDescription.Smoothness"
 }
 
 {
