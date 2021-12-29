@@ -24,9 +24,15 @@ public enum InputButton : int
 
 public class InputManager : Singleton<InputManager>
 {
-
-    public Vector2 RightAxis { get; private set; }
-    public Vector2 LeftAxis { get; private set; }
+    private Vector2 GetAxis(Player player, string axis)
+    {
+        return axis switch
+        {
+            "right" => player.gamepad.rightStick.ReadValue(),
+            "left" => player.gamepad.rightStick.ReadValue(),
+            _ => Vector2.zero
+        };
+    }
 
     public bool GetButton(Player player, InputButton button) => button switch
     {

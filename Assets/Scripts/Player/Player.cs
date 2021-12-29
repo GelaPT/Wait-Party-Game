@@ -3,29 +3,15 @@ using UnityEngine.InputSystem;
 [System.Serializable]
 public class Player
 {
-    public int CurrentID { get; private set; } = 0;
-    public int ID { get; private set; }
     public Gamepad gamepad;
-    public GamepadScheme gamepadScheme;
-    public bool parsec = false;
-    public ParsecGaming.Parsec.ParsecGuest assignedGuest;
-    public int gamepadNumber;
+    public GamepadScheme gamepadScheme = GamepadScheme.Xbox;
 
-    public PlayerController controller;
-    public CameraController cameraController;
-
-    public Player()
-    {
-
-    }
+    public PlayerController PlayerController { get; private set; }
+    public CameraController CameraController { get; private set; }
 
     public Player(Gamepad gamepad)
     {
         this.gamepad = gamepad;
-        ID = CurrentID++;
-
-        //controller = BasicController
-
     }
 
     /*
@@ -38,4 +24,10 @@ public class Player
     }*/
 
     //Deactivate / Activate / Update
+
+    public void Respawn(PlayerController playerController, CameraController cameraController)
+    {
+        PlayerController = playerController;
+        CameraController = cameraController;
+    }
 }

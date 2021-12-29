@@ -1,20 +1,14 @@
-using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.InputSystem;
 
 public class UIManager : Singleton<UIManager>
 {
-    private PlayerManager playerManager;
-
     [HideInInspector] public List<UIPanel> panels = new();
 
-    private UIPanel currentPanel;
-    public UIPanel CurrentPanel { get => currentPanel; }
+    public UIPanel CurrentPanel { get; private set; }
 
-    private UIPanel previousPanel;
-    public UIPanel PreviousPanel { get => previousPanel; }
+    public UIPanel PreviousPanel { get; private set; }
 
     public UIPanel openingPanel;
 
@@ -29,38 +23,22 @@ public class UIManager : Singleton<UIManager>
 
     private void Start()
     {
-        playerManager = PlayerManager.Instance;
         SwitchPanel(openingPanel);
-    }
-
-    private void Update()
-    {
-        if (currentPanel != openingPanel) return;
-        
-        foreach(var gamepad in Gamepad.all)
-        {
-            if(gamepad.startButton.ReadValue() == 1)
-            {
-                SwitchPanel(panels[1]);
-                playerManager.MakeHost(gamepad);
-            }
-        }
-            
     }
 
     public void SwitchPanel(UIPanel uiPanel)
     {
         if (!uiPanel) return;
-        if (uiPanel == currentPanel) return;
+        if (uiPanel == CurrentPanel) return;
 
-        if (currentPanel)
+        if (CurrentPanel)
         {
-            currentPanel.ClosePanel();
-            previousPanel = currentPanel;
+            CurrentPanel.ClosePanel();
+            PreviousPanel = CurrentPanel;
         }
 
-        currentPanel = uiPanel;
-        currentPanel.OpenPanel();
+        CurrentPanel = uiPanel;
+        CurrentPanel.OpenPanel();
 
         if(onPanelChanged != null)
         {
@@ -70,8 +48,8 @@ public class UIManager : Singleton<UIManager>
 
     public void SwitchToPreviousPanel()
     {
-        if (!previousPanel) return;
+        if (!PreviousPanel) return;
 
-        SwitchPanel(previousPanel);
+        SwitchPanel(PreviousPanel);
     }
 }
