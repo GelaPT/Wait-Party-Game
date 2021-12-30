@@ -117,6 +117,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
+    - _Tiling: 7.67
     - _TintStrength: 4.7
     - _WorkflowMode: 1
     - _ZWrite: 1
