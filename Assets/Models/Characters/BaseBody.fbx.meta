@@ -59,19 +59,19 @@ ModelImporter:
     second: Stunned|Player
   - first:
       74: 8252902713708113763
-    second: BakeCake_Idle|Player
+    second: ThinkFast_Idle|Player
   - first:
       74: 8670323482832624686
-    second: BakeCake_PressFront|Player
+    second: ThinkFast_PressFront|Player
   - first:
       74: 7154530330683921934
-    second: BakeCake_PressLeft|Player
+    second: ThinkFast_PressLeft|Player
   - first:
       74: -2195607771197724146
     second: BakeCake_PressRight|Player
   - first:
       74: -9222924149298979790
-    second: BakeCake_PressWrong|Player
+    second: ThinkFast_PressWrong|Player
   - first:
       74: 4100828691912207701
     second: DefeatStart|Player
@@ -120,6 +120,9 @@ ModelImporter:
   - first:
       74: -2284440478505220673
     second: DodgeBall_Walking|Player
+  - first:
+      74: -2569345950604734089
+    second: ThinkFast_PressRight|Player
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -508,7 +511,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: BakeCake_Idle|Player
+      name: ThinkFast_Idle|Player
       takeName: Armature|BakeCake_Idle
       internalID: 0
       firstFrame: 0
@@ -537,7 +540,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: BakeCake_PressFront|Player
+      name: ThinkFast_PressFront|Player
       takeName: Armature|BakeCake_PressFront
       internalID: 0
       firstFrame: 0
@@ -566,7 +569,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: BakeCake_PressLeft|Player
+      name: ThinkFast_PressLeft|Player
       takeName: Armature|BakeCake_PressLeft
       internalID: 0
       firstFrame: 0
@@ -595,7 +598,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: BakeCake_PressRight|Player
+      name: ThinkFast_PressRight|Player
       takeName: Armature|BakeCake_PressRight
       internalID: 0
       firstFrame: 0
@@ -624,7 +627,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: BakeCake_PressWrong|Player
+      name: ThinkFast_PressWrong|Player
       takeName: Armature|BakeCake_PressWrong
       internalID: 0
       firstFrame: 0
