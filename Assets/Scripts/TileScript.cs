@@ -21,6 +21,8 @@ public class TileScript : MonoBehaviour
     public GameObject[] previousTile;
     public GameObject[] nextTile;
     public GameObject teleportToTile;
+
+    public bool[] hasToJump = new bool[] {false};
     
     void Start()
     {
@@ -35,9 +37,10 @@ public class TileScript : MonoBehaviour
     #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
-        foreach (GameObject tile in nextTile)
+        for (int i = 0; i< nextTile.Length; i++)
         {
-            Handles.DrawLine(transform.position, tile.transform.position);
+            Handles.color = hasToJump[i] ? Color.red : Color.white;
+            Handles.DrawLine(transform.position, nextTile[i].transform.position);
         }
     }
     #endif
