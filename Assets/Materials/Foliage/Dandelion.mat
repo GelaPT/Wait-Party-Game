@@ -99,7 +99,7 @@ Material:
     - _ADDITIONAL_LIGHTS: 1
     - _ADDITIONAL_LIGHT_SHADOWS: 1
     - _AlphaClip: 1
-    - _AlphaCorrection: 0.5
+    - _AlphaCorrection: 0.35
     - _Alpha_Clip: 0
     - _Bend_Noise: 0
     - _Bend_Speed: 0
@@ -151,5 +151,5 @@ Material:
     - _Rim_Color: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Specular_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Tint: {r: 0, g: 0, b: 0, a: 1}
+    - _Tint: {r: 1.1486983, g: 1.1486983, b: 1.1486983, a: 1}
   m_BuildTextureStacks: []
