@@ -101,7 +101,7 @@ Material:
     - _AlphaClip: 0
     - _Bend_Noise: 5
     - _Bend_Speed: 0.2
-    - _Bend_Strength: 3
+    - _Bend_Strength: 0.3
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
