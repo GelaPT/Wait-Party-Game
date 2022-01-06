@@ -1,7 +1,5 @@
 using UnityEngine;
 
-public enum GamepadScheme { Xbox, Nintendo }
-
 public enum InputButton : int
 {
     A = 0,
@@ -36,10 +34,10 @@ public class InputManager : Singleton<InputManager>
 
     public bool GetButton(Player player, InputButton button) => button switch
     {
-        InputButton.A => player.gamepadScheme == GamepadScheme.Xbox ? player.gamepad.buttonSouth.isPressed : player.gamepad.buttonEast.isPressed,
-        InputButton.B => player.gamepadScheme == GamepadScheme.Xbox ? player.gamepad.buttonEast.isPressed : player.gamepad.buttonSouth.isPressed,
-        InputButton.Y => player.gamepadScheme == GamepadScheme.Xbox ? player.gamepad.buttonNorth.isPressed : player.gamepad.buttonWest.isPressed,
-        InputButton.X => player.gamepadScheme == GamepadScheme.Xbox ? player.gamepad.buttonWest.isPressed : player.gamepad.buttonNorth.isPressed,
+        InputButton.A => player.gamepad.buttonSouth.isPressed,
+        InputButton.B => player.gamepad.buttonEast.isPressed,
+        InputButton.Y => player.gamepad.buttonNorth.isPressed,
+        InputButton.X => player.gamepad.buttonWest.isPressed,
         InputButton.Start => player.gamepad.startButton.isPressed,
         InputButton.Select => player.gamepad.selectButton.isPressed,
         InputButton.Up => player.gamepad.dpad.up.isPressed,

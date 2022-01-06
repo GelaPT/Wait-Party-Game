@@ -40,8 +40,6 @@ public class UIPanel : MonoBehaviour
 
         isOpened = true;
 
-        audioManager?.PlaySound("Balloon Boy");
-
         HandleAnimator(true);
     }
 

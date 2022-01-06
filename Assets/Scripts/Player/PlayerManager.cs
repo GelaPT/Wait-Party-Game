@@ -4,8 +4,7 @@ using System.Collections.Generic;
 
 public class PlayerManager : Singleton<PlayerManager>
 {
-    private Player host;
-    public Player Host { get => host; }
+    public Player Host { get; private set; }
 
     private Player[] players = new Player[4];
 
