@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a73a5ab151b788c478f73dd8e52483b4
+guid: 2965ce5cc896bc54aa960ef224c97485
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,18 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: f878064d14c6e54458c3a4a344f3b315, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 16525a7ba516c1248af73c8c647e86f8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.002
+      name: capela
     second: {fileID: 2100000, guid: a38d8a83363e91246a1c7276d10a5ef1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gradiente
+    second: {fileID: 2100000, guid: 4b063e690bd9031428141e3cf24152fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: janela
+    second: {fileID: 2100000, guid: 83d93e5ada368a04aa7a148e88ea3a8c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
