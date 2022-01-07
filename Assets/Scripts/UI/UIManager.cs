@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class UIManager : Singleton<UIManager>
 {
@@ -51,6 +52,11 @@ public class UIManager : Singleton<UIManager>
         if (!PreviousPanel) return;
 
         SwitchPanel(PreviousPanel);
+    }
+
+    public void LoadScene(string scene)
+    {
+        SceneManager.LoadScene(scene, LoadSceneMode.Additive);
     }
 
     public void QuitGame()
