@@ -52,4 +52,9 @@ public class UIManager : Singleton<UIManager>
 
         SwitchPanel(PreviousPanel);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
