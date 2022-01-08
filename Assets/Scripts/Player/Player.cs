@@ -5,6 +5,8 @@ public class Player
 {
     public Gamepad gamepad;
 
+    public Character Character { get; private set; }
+
     public PlayerController PlayerController { get; private set; }
     public CameraController CameraController { get; private set; }
 
@@ -12,9 +14,7 @@ public class Player
     {
         this.gamepad = gamepad;
     }
-
    
-
     //Deactivate / Activate / Update
 
     public void Respawn(PlayerController playerController, CameraController cameraController)
