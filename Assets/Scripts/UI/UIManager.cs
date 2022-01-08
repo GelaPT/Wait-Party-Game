@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : Singleton<UIManager>
 {
+    public Camera UICamera;
+
     [HideInInspector] public List<UIPanel> panels = new();
 
     public UIPanel CurrentPanel { get; private set; }
@@ -56,6 +58,7 @@ public class UIManager : Singleton<UIManager>
 
     public void LoadScene(string scene)
     {
+        UICamera.gameObject.SetActive(false);
         SceneManager.LoadScene(scene, LoadSceneMode.Additive);
     }
 

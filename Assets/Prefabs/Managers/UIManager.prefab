@@ -905,7 +905,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3870346922175751450}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &3870346922175751448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1457,6 +1457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001693dcd60d0e54e9c92ff2402306bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UICamera: {fileID: 3870346922175751454}
   panels: []
   openingPanel: {fileID: 5844614316548145729}
   onPanelChanged:
