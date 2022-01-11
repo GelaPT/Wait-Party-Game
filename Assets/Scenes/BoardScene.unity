@@ -9011,6 +9011,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 579158665, guid: 2f7139930e533d542b8becb45d40e5dd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.2274103
+      objectReference: {fileID: 0}
+    - target: {fileID: 579158665, guid: 2f7139930e533d542b8becb45d40e5dd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.255782
+      objectReference: {fileID: 0}
+    - target: {fileID: 579158665, guid: 2f7139930e533d542b8becb45d40e5dd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 579158665, guid: 2f7139930e533d542b8becb45d40e5dd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.38
+      objectReference: {fileID: 0}
     - target: {fileID: 8524564432547395731, guid: 2f7139930e533d542b8becb45d40e5dd, type: 3}
       propertyPath: m_Name
       value: Board
