@@ -175,7 +175,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 85}
+  m_SizeDelta: {x: 195, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4869941996135991317
 CanvasRenderer:
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 8
+  m_PixelsPerUnitMultiplier: 4
 --- !u!114 &4270772094694688953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,8 +235,8 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 33.5, y: 33.5}
-  m_Spacing: {x: 5, y: 5}
+  m_CellSize: {x: 42, y: 42}
+  m_Spacing: {x: 4, y: 9.5}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &3782759688991163346
@@ -688,7 +688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f1e7453a58df4419aede614deef210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiCharacterName: 
+  uiCharacterIndex: 0
 --- !u!1 &9080990182672391230
 GameObject:
   m_ObjectHideFlags: 0
