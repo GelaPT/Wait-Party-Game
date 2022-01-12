@@ -16,11 +16,11 @@ public class UICharacter : MonoBehaviour
         }
     }
 
-    public void ChangeModel(int index)
+    public void ChangeModel(GameObject character)
     {
-        for (int i = 0; i < characters.Length; i++)
+        foreach(GameObject _char in characters)
         {
-            characters[i].SetActive(i == index);
+            _char.SetActive(_char.ToString() == character.ToString());
         }
     }
 }

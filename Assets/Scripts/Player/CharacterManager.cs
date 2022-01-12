@@ -9,7 +9,9 @@ public class Character
 }
 
 
-public class CharacterManager : MonoBehaviour
+public class CharacterManager : Singleton<CharacterManager>
 {
     public Character[] Characters;
+
+    public UICharacter[] uiCharacters;
 }

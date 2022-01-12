@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : Singleton<UIManager>
 {
-    public Camera UICamera;
+    public Animator CameraAnimator;
 
     [HideInInspector] public List<UIPanel> panels = new();
 
@@ -22,6 +22,7 @@ public class UIManager : Singleton<UIManager>
     {
         base.Awake();
         GetComponentsInChildren(true, panels);
+        CameraAnimator = GameObject.Find("CameraAnchor").GetComponent<Animator>();
     }
 
     private void Start()
@@ -56,9 +57,13 @@ public class UIManager : Singleton<UIManager>
         SwitchPanel(PreviousPanel);
     }
 
+    public void PlayCameraTrigger(string trigger)
+    {
+        CameraAnimator.SetTrigger(trigger);
+    }
+
     public void LoadScene(string scene)
     {
-        UICamera.gameObject.SetActive(false);
         SceneManager.LoadScene(scene, LoadSceneMode.Additive);
     }
 

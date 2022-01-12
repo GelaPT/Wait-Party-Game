@@ -4,22 +4,11 @@ using UnityEngine;
 
 public class UICharacterSelection : MonoBehaviour {
 
-    private List<UICharacter> characters = new();
+    public int uiCharacterIndex;
+    
 
-    public void FindCharacters()
+    public void ChangeCharacter(GameObject character)
     {
-        for (int i = 0; i < 4; i++)
-        {
-            UICharacter character = GameObject.Find("P" + (i+1) + "Char").GetComponent<UICharacter>();
-            characters.Add(character);
-        }
+        CharacterManager.Instance.uiCharacters[uiCharacterIndex].ChangeModel(character);
     }
-
-    public void ChangeModel(string Id_CharIndex)
-    {
-        int id = int.Parse(Id_CharIndex.Split('_')[0]);
-        int charIndex = int.Parse(Id_CharIndex.Split('_')[1]);
-
-        characters[id-1].ChangeModel(charIndex);
-    } 
 }
