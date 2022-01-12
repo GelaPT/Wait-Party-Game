@@ -20,19 +20,19 @@ public enum InputButton : int
     LS = 15  // Left Stick
 }
 
-public class InputManager : Singleton<InputManager>
+public class InputManager
 {
-    private Vector2 GetAxis(Player player, string axis)
+    public static Vector2 GetAxis(Player player, string axis)
     {
         return axis switch
         {
             "right" => player.gamepad.rightStick.ReadValue(),
-            "left" => player.gamepad.rightStick.ReadValue(),
+            "left" => player.gamepad.leftStick.ReadValue(),
             _ => Vector2.zero
         };
     }
 
-    public bool GetButton(Player player, InputButton button) => button switch
+    public static bool GetButton(Player player, InputButton button) => button switch
     {
         InputButton.A => player.gamepad.buttonSouth.isPressed,
         InputButton.B => player.gamepad.buttonEast.isPressed,

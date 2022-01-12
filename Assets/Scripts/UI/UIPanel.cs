@@ -28,10 +28,11 @@ public class UIPanel : MonoBehaviour
         audioManager = AudioManager.Instance;
         animator = GetComponent<Animator>();
         canvasGroup = GetComponent<CanvasGroup>();
+    }
 
-        GetComponentsInChildren(true, selectables);
-
-        if (startSelectable) EventSystem.current.SetSelectedGameObject(startSelectable.gameObject);
+    protected virtual void Update()
+    {
+        if (UIManager.Instance.CurrentPanel != this) return;
     }
 
     public virtual void OpenPanel()
@@ -58,6 +59,7 @@ public class UIPanel : MonoBehaviour
     public virtual void FinishedOpening()
     {
         onPanelFinishOpen?.Invoke();
+        if (startSelectable) EventSystem.current.SetSelectedGameObject(startSelectable.gameObject);
     }
 
     protected void HandleAnimator(bool flag)
