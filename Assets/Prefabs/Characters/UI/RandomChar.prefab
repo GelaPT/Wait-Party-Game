@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3499965445285435020}
   m_Layer: 0
-  m_Name: UnidentifiedChar
+  m_Name: RandomChar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

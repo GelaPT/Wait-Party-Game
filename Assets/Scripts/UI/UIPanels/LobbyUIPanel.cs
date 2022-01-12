@@ -52,11 +52,4 @@ public class LobbyUIPanel : UIPanel
 
         if(oldSystem) oldSystem.SetActive(true);
     }
-
-    public void ChangeCharacter(int playerID, string characterName)
-    {
-        // Mudar Character de Player
-    }
 }
-
-// Class character possui sprites/models/texturas/etc.
