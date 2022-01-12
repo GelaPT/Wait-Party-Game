@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -174,66 +174,3 @@ MonoBehaviour:
   - {fileID: 2985058077462775793, guid: 67e3d382957f5834fbe7f4c137b23866, type: 3}
   - {fileID: 3870346923401024070, guid: 7f0c0d944f5856e49a4dfb5394743a7d, type: 3}
   - {fileID: 8956325105558333062, guid: 6154385b48091b94a8f4955dfb71fb7e, type: 3}
---- !u!1 &1931830092
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1931830093}
-  - component: {fileID: 1931830094}
-  m_Layer: 0
-  m_Name: CharacterManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1931830093
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1931830092}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1931830094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1931830092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3199f06e21dba654ca3c1af2fb12d00d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Characters:
-  - name: Unknown
-    UIModelPrefab: {fileID: 6068038938727071673, guid: 0200b68ab1260cd4585210ff2a528963, type: 3}
-    playablePrefab: {fileID: 0}
-  - name: Bunree
-    UIModelPrefab: {fileID: 9183251627504014088, guid: 990009caf8a7e294c8f7ad5f9e5969cf, type: 3}
-    playablePrefab: {fileID: 0}
-  - name: Florix
-    UIModelPrefab: {fileID: 9183251627504014088, guid: 77c098f62b780d14aaa7727c7cff0f06, type: 3}
-    playablePrefab: {fileID: 0}
-  - name: Pecko
-    UIModelPrefab: {fileID: 9183251627504014088, guid: 6c3aabe5decb4024f9431de67bda18ff, type: 3}
-    playablePrefab: {fileID: 0}
-  - name: ShadowCat
-    UIModelPrefab: {fileID: 9183251627504014088, guid: fb06e8741d3c4aa438f25bac63dafafd, type: 3}
-    playablePrefab: {fileID: 0}
-  - name: Witchon
-    UIModelPrefab: {fileID: 9183251627504014088, guid: d24e18c818c0a7f4a9b185606bfa3dfd, type: 3}
-    playablePrefab: {fileID: 0}

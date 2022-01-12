@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -22,7 +23,13 @@ public class UIManager : Singleton<UIManager>
     {
         base.Awake();
         GetComponentsInChildren(true, panels);
-        CameraAnimator = GameObject.Find("CameraAnchor").GetComponent<Animator>();
+        StartCoroutine("TryFindCamera");
+    }
+
+    IEnumerator TryFindCamera()
+    {
+        yield return new WaitUntil(() => LobbySceneManager.Instance != null);
+        CameraAnimator = LobbySceneManager.Instance.cameraAnimator;
     }
 
     private void Start()

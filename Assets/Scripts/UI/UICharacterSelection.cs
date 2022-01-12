@@ -16,6 +16,6 @@ public class UICharacterSelection : MonoBehaviour {
     }
     public void ChangeCharacter(GameObject character)
     {
-        CharacterManager.Instance.uiCharacters[uiCharacterIndex].ChangeModel(character);
+        LobbySceneManager.Instance.uiCharacters[uiCharacterIndex].ChangeModel(character);
     }
 }

@@ -19,6 +19,7 @@ public class GameManager : Singleton<GameManager>
 
         stateManager = StateManager.Instance;
         levelManager = LevelManager.Instance;
+        levelManager.LoadLevel("LobbyScene");
     }
 
     private void InstantiateManagers()

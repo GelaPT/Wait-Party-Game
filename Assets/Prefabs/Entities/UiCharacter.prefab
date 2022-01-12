@@ -29,11 +29,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1599715991120586849}
   - {fileID: 7529015983863343931}
   - {fileID: 2848505054388281815}
   - {fileID: 5987562021550726345}
   - {fileID: 3441261695667000463}
-  - {fileID: 1599715991120586849}
   - {fileID: 4368194206414737381}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,11 +52,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characters:
   - {fileID: 8257126111779012948}
-  - {fileID: 5432942053012159930}
-  - {fileID: 4016215448064849404}
-  - {fileID: 4837865481463793890}
-  - {fileID: 6357552394602342096}
   - {fileID: 925508832473924110}
+  - {fileID: 4837865481463793890}
+  - {fileID: 4016215448064849404}
+  - {fileID: 5432942053012159930}
+  - {fileID: 6357552394602342096}
   PlayerId: 0
 --- !u!1001 &2783564527183101677
 PrefabInstance:
@@ -67,7 +67,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3499965445285435020, guid: 52e43bddc556bb0419fbea043ad98938, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3499965445285435020, guid: 52e43bddc556bb0419fbea043ad98938, type: 3}
       propertyPath: m_LocalPosition.x
@@ -201,7 +201,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2005535562749344317, guid: 15593bca583db574580e9178ff6ab64d, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2005535562749344317, guid: 15593bca583db574580e9178ff6ab64d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -268,7 +268,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2005535562749344317, guid: ec82278ee67ea2940993edbf6e234f49, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2005535562749344317, guid: ec82278ee67ea2940993edbf6e234f49, type: 3}
       propertyPath: m_LocalPosition.x
@@ -335,7 +335,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2005535562749344317, guid: e95d600030878e4409eb07c227122d5a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2005535562749344317, guid: e95d600030878e4409eb07c227122d5a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -402,7 +402,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2005535562749344317, guid: cebed22cd91064a4eb5f45669167b27e, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2005535562749344317, guid: cebed22cd91064a4eb5f45669167b27e, type: 3}
       propertyPath: m_LocalPosition.x
