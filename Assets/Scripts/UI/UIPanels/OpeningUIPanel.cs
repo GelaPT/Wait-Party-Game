@@ -2,9 +2,9 @@ using UnityEngine.InputSystem;
 
 public class OpeningUIPanel : UIPanel
 {
-    protected override void Update()
+    private void Update()
     {
-        base.Update();
+        if (UIManager.Instance.CurrentPanel != this) return;
 
         foreach (var gamepad in Gamepad.all)
         {

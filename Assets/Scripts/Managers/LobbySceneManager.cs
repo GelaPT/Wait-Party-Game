@@ -2,6 +2,6 @@ using UnityEngine;
 
 public class LobbySceneManager : Singleton<LobbySceneManager>
 {
-    public UICharacter[] uiCharacters;
+    public UICharacterParent[] UICharacterParents;
     public Animator cameraAnimator;
 }

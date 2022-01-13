@@ -1,6 +1,4 @@
-using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections.Generic; 
 
 public class PlayerManager : Singleton<PlayerManager>
 {
@@ -12,6 +10,13 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         Players[0] = new(hostGamepad);
         Host = Players[0];
+    }
+
+    public void ClearPlayers()
+    {
+        for(int i = 1; i < Players.Length; i++) {
+            Players[i] = null;
+        }
     }
 
     public int AddPlayer(Gamepad gamepad)
@@ -28,6 +33,17 @@ public class PlayerManager : Singleton<PlayerManager>
     public void RemovePlayer(int playerID)
     {
         Players[playerID] = null;
+    }
+
+    public int GetPlayerID(Gamepad gamepad)
+    {
+        for(int i = 0; i < Players.Length;  i++)
+        {
+            if (Players[i] == null) continue;
+            if (Players[i].gamepad == gamepad) return i;
+        }
+
+        return -1;
     }
 
     public int GetFreePlayer()

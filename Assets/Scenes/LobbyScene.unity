@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3199f06e21dba654ca3c1af2fb12d00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiCharacters:
+  UICharacterParents:
   - {fileID: 1081350445}
   - {fileID: 1367041117}
   - {fileID: 684458932}

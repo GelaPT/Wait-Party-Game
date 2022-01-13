@@ -22,6 +22,8 @@ public enum InputButton : int
 
 public class InputManager
 {
+    public static float[,] playerButtonTimer = new float[4, 16];
+
     public static Vector2 GetAxis(Player player, string axis)
     {
         return axis switch
@@ -52,4 +54,25 @@ public class InputManager
         InputButton.LS => player.gamepad.leftStickButton.isPressed,
         _ => throw new System.NotImplementedException()
     };
+
+    public static bool GetButton(int playerID, InputButton inputButton, float delay)
+    {
+        return GetButton(PlayerManager.Instance.Players[playerID], inputButton) && CanPressAgain(playerID, inputButton, delay);
+    }
+
+    public static bool CanPressAgainRaw(int playerID, InputButton inputButton, float delay)
+    {
+        return Time.time - playerButtonTimer[playerID, (int)inputButton] > delay;
+    }
+
+    public static bool CanPressAgain(int playerID, InputButton inputButton, float delay)
+    {
+        if (Time.time - playerButtonTimer[playerID, (int)inputButton] > delay)
+        {
+            playerButtonTimer[playerID, (int)inputButton] = Time.time;
+            return true;
+        }
+
+        return false;
+    }
 }

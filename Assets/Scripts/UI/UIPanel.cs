@@ -30,11 +30,6 @@ public class UIPanel : MonoBehaviour
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
-    protected virtual void Update()
-    {
-        if (UIManager.Instance.CurrentPanel != this) return;
-    }
-
     public virtual void OpenPanel()
     {
         onPanelOpen?.Invoke();

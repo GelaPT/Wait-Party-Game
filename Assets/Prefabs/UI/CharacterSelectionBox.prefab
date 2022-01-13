@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
+    m_SelectOnUp: {fileID: 3877613093601577846}
     m_SelectOnDown: {fileID: 3877613093601577846}
     m_SelectOnLeft: {fileID: 7401470036150731372}
     m_SelectOnRight: {fileID: 7119753951840001644}
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
+    m_SelectOnUp: {fileID: 4362611892315096618}
     m_SelectOnDown: {fileID: 4362611892315096618}
     m_SelectOnLeft: {fileID: 5465704642192358102}
     m_SelectOnRight: {fileID: 1402224570800678198}
@@ -601,7 +601,7 @@ MonoBehaviour:
     m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 1402224570800678198}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnDown: {fileID: 1402224570800678198}
     m_SelectOnLeft: {fileID: 4362611892315096618}
     m_SelectOnRight: {fileID: 4362611892315096618}
   m_Transition: 1
@@ -1292,7 +1292,7 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
+    m_SelectOnUp: {fileID: 3877613093601577846}
     m_SelectOnDown: {fileID: 3877613093601577846}
     m_SelectOnLeft: {fileID: 7119753951840001644}
     m_SelectOnRight: {fileID: 7401470036150731372}
@@ -1426,7 +1426,7 @@ MonoBehaviour:
     m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 7119753951840001644}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnDown: {fileID: 7119753951840001644}
     m_SelectOnLeft: {fileID: 3877613093601577846}
     m_SelectOnRight: {fileID: 3877613093601577846}
   m_Transition: 1
@@ -1483,7 +1483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5720365358631064570
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1629,6 +1629,7 @@ MonoBehaviour:
   firstSelected: {fileID: 2577089137441652973}
   JoinPanel: {fileID: 4661225026412704761}
   SelectionPanel: {fileID: 3669928082156839562}
+  ReadyPanel: {fileID: 4718983653089153610}
   eventSystem: {fileID: 1260076351983456233}
   nameText: {fileID: 6423228740355563217}
   playerText: {fileID: 757608725446986389}
@@ -1724,7 +1725,7 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
+    m_SelectOnUp: {fileID: 3877613093601577846}
     m_SelectOnDown: {fileID: 3877613093601577846}
     m_SelectOnLeft: {fileID: 1402224570800678198}
     m_SelectOnRight: {fileID: 5465704642192358102}
