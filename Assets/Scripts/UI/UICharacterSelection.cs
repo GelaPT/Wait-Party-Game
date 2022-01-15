@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using TMPro;
 
@@ -11,6 +10,7 @@ public class UICharacterSelection : MonoBehaviour {
 
     public int UICharacterIndex;
     public GameObject firstSelected;
+    private GameObject lastSelected;
 
     public GameObject JoinPanel;
     public GameObject SelectionPanel;
@@ -21,92 +21,58 @@ public class UICharacterSelection : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI playerText;
 
-    private float lastLeftPressed;
-    private float lastRightPressed;
-    private float lastUpPressed;
-    private float lastDownPressed;
-
     private void Start()
     {
-        lastLeftPressed = Time.time;
-        lastRightPressed = Time.time;
-        lastUpPressed = Time.time;
-        lastDownPressed = Time.time;
         playerText.SetText("P"+(UICharacterIndex + 1));
 
         instances.Add(this);
-        buttons = GetComponentsInChildren<Button>();
+        buttons = SelectionPanel.GetComponentsInChildren<Button>();
     }
 
     private void Update()
     {
         if (!SelectionPanel.activeSelf) return;
 
-        if(!eventSystem.currentSelectedGameObject.GetComponent<Selectable>().interactable)
-        {
-            eventSystem.SetSelectedGameObject(firstSelected);
-        }
-
         Player player = PlayerManager.Instance.Players[UICharacterIndex];
 
-        Vector2 LeftStick = InputManager.GetAxis(player, "left");
+        SelectCharacter(player);
+    }
 
-        if ((LeftStick.x < -0.9f || InputManager.GetButton(player, InputButton.Left)) && (Time.time - lastLeftPressed) > 0.2f)
+    private void SelectCharacter(Player player)
+    {
+        if ((InputManager.GetAxisDir(player, InputAxis.Left, InputAxisDir.E) || InputManager.GetButton(player, InputButton.Right)) && InputManager.CanMoveAgainRaw(player, InputAxis.Left, InputAxisDir.E, 0.1f) && InputManager.CanPressAgainRaw(player, InputButton.Right, 0.1f))
         {
-            lastLeftPressed = Time.time;
+            InputManager.AddAxisTimer(player, InputAxis.Left, InputAxisDir.E, 0.1f);
+            InputManager.AddButtonTimer(player, InputButton.Right, 0.1f);
 
-            if (eventSystem.currentSelectedGameObject.GetComponent<Selectable>().FindSelectableOnLeft().interactable)
+            Selectable selectable = eventSystem.currentSelectedGameObject.GetComponent<Selectable>().FindSelectableOnRight();
+
+            while (!selectable.GetComponent<Button>().interactable)
             {
-                eventSystem.SetSelectedGameObject(eventSystem.currentSelectedGameObject.GetComponent<Selectable>().FindSelectableOnLeft().gameObject);
-                eventSystem.currentSelectedGameObject.GetComponent<Button>().onClick.Invoke();
+                selectable = selectable.FindSelectableOnRight();
             }
-            else
-            {
-                eventSystem.SetSelectedGameObject(firstSelected);
-            }
+
+            eventSystem.SetSelectedGameObject(selectable.gameObject);
+            eventSystem.currentSelectedGameObject.GetComponent<Button>().onClick.Invoke();
         }
 
-        if ((LeftStick.x > 0.9f || InputManager.GetButton(player, InputButton.Right)) && (Time.time - lastRightPressed) > 0.2f)
+        if ((InputManager.GetAxisDir(player, InputAxis.Left, InputAxisDir.W) || InputManager.GetButton(player, InputButton.Left)) && InputManager.CanMoveAgainRaw(player, InputAxis.Left, InputAxisDir.W, 0.1f) && InputManager.CanPressAgainRaw(player, InputButton.Left, 0.1f))
         {
-            lastRightPressed = Time.time;
-            if (eventSystem.currentSelectedGameObject.GetComponent<Selectable>().FindSelectableOnRight().interactable)
+            InputManager.AddAxisTimer(player, InputAxis.Left, InputAxisDir.W, 0.1f);
+            InputManager.AddButtonTimer(player, InputButton.Left, 0.1f);
+
+            Selectable selectable = eventSystem.currentSelectedGameObject.GetComponent<Selectable>().FindSelectableOnLeft();
+            
+            while(!selectable.GetComponent<Button>().interactable)
             {
-                eventSystem.SetSelectedGameObject(eventSystem.currentSelectedGameObject.GetComponent<Selectable>().FindSelectableOnRight().gameObject);
-                eventSystem.currentSelectedGameObject.GetComponent<Button>().onClick.Invoke();
+                selectable = selectable.FindSelectableOnLeft();
             }
-            else
-            {
-                eventSystem.SetSelectedGameObject(firstSelected);
-            }
+
+            eventSystem.SetSelectedGameObject(selectable.gameObject);
+            eventSystem.currentSelectedGameObject.GetComponent<Button>().onClick.Invoke();
         }
 
-        if ((LeftStick.y > 0.9f || InputManager.GetButton(player, InputButton.Up)) && (Time.time - lastUpPressed) > 0.2f)
-        {
-            lastUpPressed = Time.time;
-            if (eventSystem.currentSelectedGameObject.GetComponent<Selectable>().FindSelectableOnUp().interactable)
-            {
-                eventSystem.SetSelectedGameObject(eventSystem.currentSelectedGameObject.GetComponent<Selectable>().FindSelectableOnUp().gameObject);
-                eventSystem.currentSelectedGameObject.GetComponent<Button>().onClick.Invoke();
-            }
-            else
-            {
-                eventSystem.SetSelectedGameObject(firstSelected);
-            }
-        }
-
-        if ((LeftStick.y < -0.9f || InputManager.GetButton(player, InputButton.Down)) && (Time.time - lastDownPressed) > 0.2f)
-        {
-            lastDownPressed = Time.time;
-            if (eventSystem.currentSelectedGameObject.GetComponent<Selectable>().FindSelectableOnDown().interactable)
-            {
-                eventSystem.SetSelectedGameObject(eventSystem.currentSelectedGameObject.GetComponent<Selectable>().FindSelectableOnDown().gameObject);
-                eventSystem.currentSelectedGameObject.GetComponent<Button>().onClick.Invoke();
-            }
-            else
-            {
-                eventSystem.SetSelectedGameObject(firstSelected);
-            }
-        }
+        // TODO: Add Up and Down
     }
 
     public void RegisterPlayer()
@@ -114,6 +80,7 @@ public class UICharacterSelection : MonoBehaviour {
         JoinPanel.SetActive(false);
         SelectionPanel.SetActive(true);
         eventSystem.SetSelectedGameObject(firstSelected);
+        nameText.SetText("Random");
     }
 
     public void UnregisterPlayer()
@@ -127,9 +94,11 @@ public class UICharacterSelection : MonoBehaviour {
 
     public void ReadyPlayer()
     {
-        if(eventSystem.currentSelectedGameObject.name != "B1")
+        lastSelected = eventSystem.currentSelectedGameObject;
+
+        if (lastSelected.name != "B1")
         {
-            ToggleButtonInteractibility(false);
+            SetButtonInteractibility(lastSelected.name, false);
         }
 
         SelectionPanel.SetActive(false);
@@ -138,27 +107,52 @@ public class UICharacterSelection : MonoBehaviour {
 
     public void UnreadyPlayer()
     {
-        if(eventSystem.currentSelectedGameObject != null)
-        {
-            if (eventSystem.currentSelectedGameObject.name != "B1")
-            {
-                ToggleButtonInteractibility(true);
-            }
-        }
-
         SelectionPanel.SetActive(true);
         ReadyPanel.SetActive(false);
+
+        if(lastSelected != null)
+        {
+            if (lastSelected.name != "B1")
+            {
+                SetButtonInteractibility(lastSelected.name, true);
+            }
+
+            eventSystem.SetSelectedGameObject(firstSelected);
+            eventSystem.SetSelectedGameObject(lastSelected);
+        }
     }
 
-    public void ToggleButtonInteractibility(bool flag)
+    public void SetButtonInteractibility(string buttonName, bool interactable)
     {
+        
         foreach (UICharacterSelection characterSelection in instances)
         {
+            if(!interactable && characterSelection != this)
+            {
+                EventSystem characterSelectionEventSystem = characterSelection.eventSystem;
+                GameObject currentSelected = characterSelectionEventSystem.currentSelectedGameObject;
+                if(currentSelected != null)
+                {
+                    if (currentSelected.name == buttonName)
+                    {
+                        Selectable selectable = currentSelected.GetComponent<Selectable>().FindSelectableOnRight();
+
+                        while (!selectable.GetComponent<Button>().interactable)
+                        {
+                            selectable = selectable.FindSelectableOnRight();
+                        }
+
+                        characterSelectionEventSystem.SetSelectedGameObject(selectable.gameObject);
+                        characterSelectionEventSystem.currentSelectedGameObject.GetComponent<Button>().onClick.Invoke();
+                    }
+                }
+            }
+
             foreach (Button button in characterSelection.buttons)
             {
-                if (button.name == eventSystem.currentSelectedGameObject.name)
+                if (button.name == buttonName)
                 {
-                    button.interactable = flag;
+                    button.interactable = interactable;
                 }
             }
         }

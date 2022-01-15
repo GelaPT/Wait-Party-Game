@@ -46,6 +46,11 @@ public class PlayerManager : Singleton<PlayerManager>
         return -1;
     }
 
+    public int GetPlayerID(Player player)
+    {
+        return GetPlayerID(player.gamepad);
+    }
+
     public int GetFreePlayer()
     {
         for(int i = 0; i < Players.Length; i++)

@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -12,6 +11,8 @@ public class LobbyUIPanel : UIPanel
 
     private GameObject oldSystem;
 
+    public TextMeshProUGUI commandsText;
+
     protected override void Awake()
     {
         base.Awake();
@@ -20,41 +21,36 @@ public class LobbyUIPanel : UIPanel
     }
 
     private void Update() {
-        Debug.Log(InputManager.playerButtonTimer[0, (int)InputButton.B]);
         if (UIManager.Instance.CurrentPanel != this) return;
 
-        PlayerManager playerManager = PlayerManager.Instance;
+        RegisterNewPlayer();
 
+        HandlePlayerInput();
+    }
+
+    private void RegisterNewPlayer()
+    {
         foreach (Gamepad gamepad in Gamepad.all)
         {
-            if(gamepad.buttonSouth.wasPressedThisFrame)
+            if (gamepad.buttonSouth.wasPressedThisFrame)
             {
-                int playerID = playerManager.AddPlayer(gamepad);
+                int playerID = PlayerManager.Instance.AddPlayer(gamepad);
                 if (playerID == -1) break;
                 UICharacterSelections[playerID].RegisterPlayer();
+                InputManager.AddButtonTimer(playerID, InputButton.A, 0.3f);
             }
         }
+    }
 
-        for(int i = 0; i < 4; i++)
+    private void HandlePlayerInput()
+    {
+        for (int i = 0; i < 4; i++)
         {
-            if (i == 0)
+            if (PlayerManager.Instance.Players[i] != null)
             {
-                if(!readyPlayer[i])
+                if (readyPlayer[i])
                 {
                     if (InputManager.GetButton(i, InputButton.B, 0.3f))
-                    {
-                        UIManager.Instance.SwitchToPreviousPanel();
-                        UIManager.Instance.PlayCameraTrigger("Main");
-                        break;
-                    }
-                }
-            }
-
-            if(playerManager.Players[i] != null)
-            {
-                if(readyPlayer[i])
-                {
-                    if(InputManager.GetButton(i, InputButton.B, 0.3f))
                     {
                         UICharacterSelections[i].UnreadyPlayer();
                         readyPlayer[i] = false;
@@ -62,26 +58,56 @@ public class LobbyUIPanel : UIPanel
                 }
                 else
                 {
-                    if(InputManager.GetButton(i, InputButton.A, 0.3f))
+                    if (InputManager.GetButton(i, InputButton.A, 0.3f))
                     {
                         UICharacterSelections[i].ReadyPlayer();
                         readyPlayer[i] = true;
                     }
-                    if(InputManager.GetButton(i, InputButton.B, 0.3f))
+                    if (InputManager.GetButton(i, InputButton.B, 0.3f))
                     {
+                        if (i == 0)
+                        {
+                            UIManager.Instance.SwitchToPreviousPanel();
+                            UIManager.Instance.PlayCameraTrigger("Main");
+                            return;
+                        }
+
                         PlayerManager.Instance.RemovePlayer(i);
                         UICharacterSelections[i].UnregisterPlayer();
                     }
                 }
             }
         }
+
+        commandsText.SetText("[A] Select ");
+
+        for (int i = 0; i < 4; i++)
+        {
+            if(PlayerManager.Instance.Players[i] != null)
+            {
+                if (!readyPlayer[i]) return;
+            }
+        }
+
+        commandsText.SetText("P1 - [Y] Start ");
+
+        if (InputManager.GetButton(0, InputButton.Y))
+        {
+            StartGame();
+        }
+    }
+
+    private void StartGame()
+    {
+        // TODO: StartGame
+        // if random, choose random
     }
 
     public override void OpenPanel()
     {
         base.OpenPanel();
         UICharacterSelections[0].RegisterPlayer();
-        InputManager.SetButtonTimer(0, InputButton.A, Time.time + 0.5f);
+        InputManager.AddButtonTimer(0, InputButton.A, 0.3f);
         oldSystem = EventSystem.current.gameObject;
         oldSystem.SetActive(false);
 
