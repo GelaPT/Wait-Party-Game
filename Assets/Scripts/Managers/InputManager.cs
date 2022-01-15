@@ -225,4 +225,110 @@ public class InputManager
     }
 
     #endregion Gamepad
+
+    #region Helpers
+
+    public static bool GetAxisAndButton(Player player, InputAxis axis, InputAxisDir axisDir, InputButton button)
+    {
+        return GetAxisAndButton(PlayerManager.Instance.GetPlayerID(player), axis, axisDir, button);
+    }
+    public static bool GetAxisAndButton(int playerID, InputAxis axis, InputAxisDir axisDir, InputButton button)
+    {
+        return GetButton(playerID, button) || GetAxisDir(playerID, axis, axisDir);
+    }
+
+    public static bool GetAxisAndButton(Player player, InputAxis axis, InputAxisDir axisDir, InputButton button, float delay)
+    {
+        return GetAxisAndButton(PlayerManager.Instance.GetPlayerID(player), axis, axisDir, button, delay);
+    }
+    public static bool GetAxisAndButton(int playerID, InputAxis axis, InputAxisDir axisDir, InputButton button, float delay)
+    {
+        if ((GetButton(playerID, button) || GetAxisDir(playerID, axis, axisDir)) && CanPressAgainRaw(playerID, button, delay) && CanMoveAgainRaw(playerID, axis, axisDir, delay))
+        {
+            AddAxisTimer(0, InputAxis.Left, InputAxisDir.S, 0.1f);
+            AddButtonTimer(0, InputButton.Down, 0.1f);
+
+            return true;
+        }
+
+        return false;
+    }
+
+    public static bool GetAxisAndButtonRaw(Player player, InputAxis axis, InputAxisDir axisDir, InputButton button, float delay)
+    {
+        return GetAxisAndButtonRaw(PlayerManager.Instance.GetPlayerID(player), axis, axisDir, button, delay);
+    }
+    public static bool GetAxisAndButtonRaw(int playerID, InputAxis axis, InputAxisDir axisDir, InputButton button, float delay)
+    {
+        return (GetButton(playerID, button) || GetAxisDir(playerID, axis, axisDir)) && CanPressAgainRaw(playerID, button, delay) && CanMoveAgainRaw(playerID, axis, axisDir, delay);
+    }
+
+    public static bool GetAxes(Player player, InputAxisDir axesDir)
+    {
+        return GetAxes(PlayerManager.Instance.GetPlayerID(player), axesDir);
+    }
+    public static bool GetAxes(int playerID, InputAxisDir axesDir)
+    {
+        return GetAxes(playerID, axesDir, axesDir);
+    }
+
+    public static bool GetAxes(Player player, InputAxisDir leftAxisDir, InputAxisDir rightAxisDir)
+    {
+        return GetAxes(PlayerManager.Instance.GetPlayerID(player), leftAxisDir, rightAxisDir);
+    }
+    public static bool GetAxes(int playerID, InputAxisDir leftAxisDir, InputAxisDir rightAxisDir)
+    {
+        return GetAxisDir(playerID, InputAxis.Left, leftAxisDir) && GetAxisDir(playerID, InputAxis.Right, rightAxisDir);
+    }
+
+    public static bool GetButtons(Player player, params InputButton[] buttons)
+    {
+        return GetButtons(PlayerManager.Instance.GetPlayerID(player), buttons);
+    }
+    public static bool GetButtons(int playerID, params InputButton[] buttons)
+    {
+        foreach (InputButton button in buttons)
+        {
+            if (!GetButton(playerID, button)) return false;
+        }
+
+        return true;
+    }
+
+    public static bool GetButtons(Player player, float delay, params InputButton[] buttons)
+    {
+        return GetButtons(PlayerManager.Instance.GetPlayerID(player), delay, buttons);
+    }
+    public static bool GetButtons(int playerID, float delay, params InputButton[] buttons)
+    {
+        foreach (InputButton button in buttons)
+        {
+            if (!GetButton(playerID, button)) return false;
+            if (!CanPressAgainRaw(playerID, button, delay)) return false;
+        }
+
+        foreach (InputButton button in buttons)
+        {
+            AddButtonTimer(playerID, button, 0.0f);
+        }
+
+        return true;
+    }
+
+    public static bool GetButtonsRaw(Player player, float delay, params InputButton[] buttons)
+    {
+        return GetButtonsRaw(PlayerManager.Instance.GetPlayerID(player), delay, buttons);
+    }
+    public static bool GetButtonsRaw(int playerID, float delay, params InputButton[] buttons)
+    {
+        foreach (InputButton button in buttons)
+        {
+            if (!GetButton(playerID, button)) return false;
+            if (!CanPressAgainRaw(playerID, button, delay)) return false;
+        }
+
+        return true;
+    }
+
+    #endregion Helpers
 }
