@@ -34,6 +34,11 @@ public class InputManager
         };
     }
 
+    public static bool GetButton(int playerID, InputButton inputButton)
+    {
+        return GetButton(PlayerManager.Instance.Players[playerID], inputButton);
+    }
+
     public static bool GetButton(Player player, InputButton button) => button switch
     {
         InputButton.A => player.gamepad.buttonSouth.isPressed,
@@ -55,14 +60,19 @@ public class InputManager
         _ => throw new System.NotImplementedException()
     };
 
-    public static bool GetButton(int playerID, InputButton inputButton, float delay)
-    {
-        return GetButton(PlayerManager.Instance.Players[playerID], inputButton) && CanPressAgain(playerID, inputButton, delay);
-    }
-
     public static bool CanPressAgainRaw(int playerID, InputButton inputButton, float delay)
     {
         return Time.time - playerButtonTimer[playerID, (int)inputButton] > delay;
+    }
+
+    public static bool GetButton(int playerID, InputButton inputButton, float delay)
+    {
+        if(GetButton(playerID, inputButton))
+        {
+            return CanPressAgain(playerID, inputButton, delay);
+        }
+
+        return false;
     }
 
     public static bool CanPressAgain(int playerID, InputButton inputButton, float delay)
@@ -72,7 +82,11 @@ public class InputManager
             playerButtonTimer[playerID, (int)inputButton] = Time.time;
             return true;
         }
-
         return false;
+    }
+
+    public static void SetButtonTimer(int playerID, InputButton inputButton, float time)
+    {
+        playerButtonTimer[0, (int)InputButton.A] = Time.time + 0.5f;
     }
 }

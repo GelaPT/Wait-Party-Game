@@ -9,7 +9,6 @@ public class LobbyUIPanel : UIPanel
     private UICharacterSelection[] UICharacterSelections = new UICharacterSelection[4];
 
     private bool[] readyPlayer = new bool[4] { false, false, false, false };
-    private float[] playerTimer = new float[4];
 
     private GameObject oldSystem;
 
@@ -17,15 +16,11 @@ public class LobbyUIPanel : UIPanel
     {
         base.Awake();
 
-        for(int i = 0; i < playerTimer.Length; i++)
-        {
-            playerTimer[i] = Time.time;
-        }
-
         UICharacterSelections = GetComponentsInChildren<UICharacterSelection>();
     }
 
     private void Update() {
+        Debug.Log(InputManager.playerButtonTimer[0, (int)InputButton.B]);
         if (UIManager.Instance.CurrentPanel != this) return;
 
         PlayerManager playerManager = PlayerManager.Instance;
@@ -44,11 +39,14 @@ public class LobbyUIPanel : UIPanel
         {
             if (i == 0)
             {
-                if(InputManager.GetButton(i, InputButton.B, 0.3f) && !readyPlayer[0])
+                if(!readyPlayer[i])
                 {
-                    UIManager.Instance.SwitchToPreviousPanel();
-                    UIManager.Instance.PlayCameraTrigger("Main");
-                    break;
+                    if (InputManager.GetButton(i, InputButton.B, 0.3f))
+                    {
+                        UIManager.Instance.SwitchToPreviousPanel();
+                        UIManager.Instance.PlayCameraTrigger("Main");
+                        break;
+                    }
                 }
             }
 
@@ -83,7 +81,7 @@ public class LobbyUIPanel : UIPanel
     {
         base.OpenPanel();
         UICharacterSelections[0].RegisterPlayer();
-        playerTimer[0] = Time.time + 0.5f;
+        InputManager.SetButtonTimer(0, InputButton.A, Time.time + 0.5f);
         oldSystem = EventSystem.current.gameObject;
         oldSystem.SetActive(false);
 
