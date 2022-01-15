@@ -23,4 +23,20 @@ public class UICharacterParent : MonoBehaviour
             _char.SetActive(_char.ToString() == character.ToString());
         }
     }
+
+    public void PlayReadyAnimation()
+    {
+        foreach (GameObject _char in characters)
+        {
+            _char.GetComponentInChildren<Animator>().SetBool("isSelected", true);
+        }
+    }
+
+    public void StopReadyAnimation()
+    {
+        foreach (GameObject _char in characters)
+        {
+            _char.GetComponentInChildren<Animator>().SetBool("isSelected", false);
+        }
+    }
 }

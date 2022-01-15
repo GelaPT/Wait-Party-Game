@@ -103,6 +103,7 @@ public class UICharacterSelection : MonoBehaviour {
 
         SelectionPanel.SetActive(false);
         ReadyPanel.SetActive(true);
+        LobbySceneManager.Instance.UICharacterParents[UICharacterIndex].PlayReadyAnimation();
     }
 
     public void UnreadyPlayer()
@@ -120,6 +121,7 @@ public class UICharacterSelection : MonoBehaviour {
             eventSystem.SetSelectedGameObject(firstSelected);
             eventSystem.SetSelectedGameObject(lastSelected);
         }
+        LobbySceneManager.Instance.UICharacterParents[UICharacterIndex].StopReadyAnimation();
     }
 
     public void SetButtonInteractibility(string buttonName, bool interactable)

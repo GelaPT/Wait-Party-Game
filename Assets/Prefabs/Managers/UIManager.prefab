@@ -218,7 +218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[B] Back'
+  m_text: <sprite index= 1> Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ff677865b2c0c34899579d7126e3ec3, type: 2}
   m_sharedMaterial: {fileID: 8990355420700359615, guid: 3ff677865b2c0c34899579d7126e3ec3, type: 2}
@@ -237,7 +237,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: 83da6a3bd2bfce54e8009eb3a76fcdc4, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901
@@ -917,7 +917,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[A] Select '
+  m_text: <sprite index= 4>  Change Selection   <sprite index= 0>  Select
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ff677865b2c0c34899579d7126e3ec3, type: 2}
   m_sharedMaterial: {fileID: 8990355420700359615, guid: 3ff677865b2c0c34899579d7126e3ec3, type: 2}
@@ -936,7 +936,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: 83da6a3bd2bfce54e8009eb3a76fcdc4, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901
@@ -952,7 +952,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 4
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
