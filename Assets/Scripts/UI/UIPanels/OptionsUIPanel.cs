@@ -25,24 +25,61 @@ public class OptionsUIPanel : UIPanel
 
         EventSystem eventSystem = EventSystem.current;
 
-        if (InputManager.GetAxisAndButton(0, InputAxis.Left, InputAxisDir.S, InputButton.Down))
+        if (InputManager.GetAxisAndButton(0, InputAxis.Left, InputAxisDir.S, InputButton.Down, 0.1f))
         {
-            eventSystem.SetSelectedGameObject(eventSystem.currentSelectedGameObject.GetComponent<Button>().FindSelectableOnDown().gameObject);
+            Selectable selectable;
+            if((selectable = eventSystem.currentSelectedGameObject.GetComponent<Selectable>().FindSelectableOnDown()) != null)
+            {
+                eventSystem.SetSelectedGameObject(selectable.gameObject);
+            }
         }
 
-        if (InputManager.GetAxisAndButton(0, InputAxis.Left, InputAxisDir.N, InputButton.Up))
+        if (InputManager.GetAxisAndButton(0, InputAxis.Left, InputAxisDir.N, InputButton.Up, 0.1f))
         {
-            eventSystem.SetSelectedGameObject(eventSystem.currentSelectedGameObject.GetComponent<Button>().FindSelectableOnUp().gameObject);
+            Selectable selectable;
+            if((selectable = eventSystem.currentSelectedGameObject.GetComponent<Selectable>().FindSelectableOnUp()) != null)
+            {
+                eventSystem.SetSelectedGameObject(selectable.gameObject);
+            }
         }
 
-        if (InputManager.GetButton(0, InputButton.A, 0.3f))
+        if (eventSystem.currentSelectedGameObject.TryGetComponent(out Slider slider))
         {
-            eventSystem.currentSelectedGameObject.GetComponent<Button>().onClick.Invoke();
+            if (InputManager.GetAxisAndButton(0, InputAxis.Left, InputAxisDir.W, InputButton.Left, 0.1f))
+            {
+                slider.value -= 0.1f;
+            }
+
+            if (InputManager.GetAxisAndButton(0, InputAxis.Left, InputAxisDir.E, InputButton.Right, 0.1f))
+            {
+                slider.value += 0.1f;
+            }
         }
 
-        if(InputManager.GetButton(0, InputButton.B, 0.3f))
+        if (eventSystem.currentSelectedGameObject.TryGetComponent(out Toggle toggle))
         {
+            if (InputManager.GetButton(0, InputButton.A, 0.3f))
+            {
+                toggle.isOn = !toggle.isOn;
+            }
 
+            if(toggle.name != "Fullscreen")
+            {
+                if(InputManager.GetButton(0, InputButton.B, 0.1f)) { }
+            }
+        }
+
+        if(eventSystem.currentSelectedGameObject.TryGetComponent(out TMP_Dropdown dropdown))
+        {
+            if (InputManager.GetButton(0, InputButton.A, 0.3f))
+            {
+                dropdown.Show();
+            }
+        }
+
+        if (InputManager.GetButton(0, InputButton.B, 0.3f))
+        {
+            UIManager.Instance.SwitchToPreviousPanel();
         }
     }
 }

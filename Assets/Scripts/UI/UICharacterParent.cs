@@ -28,6 +28,7 @@ public class UICharacterParent : MonoBehaviour
     {
         foreach (GameObject _char in characters)
         {
+            if (!_char.activeSelf) continue;
             _char.GetComponentInChildren<Animator>().SetBool("isSelected", true);
         }
     }
@@ -36,6 +37,7 @@ public class UICharacterParent : MonoBehaviour
     {
         foreach (GameObject _char in characters)
         {
+            if (!_char.activeSelf) continue;
             _char.GetComponentInChildren<Animator>().SetBool("isSelected", false);
         }
     }
