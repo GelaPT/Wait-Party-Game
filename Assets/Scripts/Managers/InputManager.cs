@@ -245,8 +245,8 @@ public class InputManager
     {
         if ((GetButton(playerID, button) || GetAxisDir(playerID, axis, axisDir)) && CanPressAgainRaw(playerID, button, delay) && CanMoveAgainRaw(playerID, axis, axisDir, delay))
         {
-            AddAxisTimer(0, InputAxis.Left, InputAxisDir.S, 0.1f);
-            AddButtonTimer(0, InputButton.Down, 0.1f);
+            AddAxisTimer(playerID, axis, axisDir, delay);
+            AddButtonTimer(playerID, button, delay);
 
             return true;
         }
