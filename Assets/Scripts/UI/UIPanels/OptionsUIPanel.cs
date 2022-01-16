@@ -5,18 +5,36 @@ using TMPro;
 
 public class OptionsUIPanel : UIPanel
 {
+    public TMP_Dropdown resolutionDropdown;
+    public Slider musicVolumeSlider;
+    public Slider sfxVolumeSlider;
+    public Toggle fullscreenToggle;
+
     public override void ClosePanel()
     {
         base.ClosePanel();
 
-        // Save Options
+        SaveManager.SaveData(OptionsManager.Instance.gameOptions);
     }
 
     public override void OpenPanel()
     {
         base.OpenPanel();
 
-        // Load Options
+        GameOptions gameOptions = OptionsManager.Instance.gameOptions;
+
+        for(int i = 0; i < resolutionDropdown.options.Count; i++)
+        {
+            if (OptionsManager.Instance.allowedResolutions[i]) continue;
+
+            resolutionDropdown.options.RemoveAt(i);
+        }
+
+        resolutionDropdown.value = (int)gameOptions.resolution;
+
+        musicVolumeSlider.value = gameOptions.musicVolume;
+        sfxVolumeSlider.value = gameOptions.sfxVolume;
+        fullscreenToggle.isOn = gameOptions.fullscreen;
     }
 
     private void Update()
@@ -81,5 +99,26 @@ public class OptionsUIPanel : UIPanel
         {
             UIManager.Instance.SwitchToPreviousPanel();
         }
+    }
+
+    public void OnSFXSliderChanged(float value)
+    {
+        Debug.Log(value);
+        OptionsManager.Instance.ChangeSFXVolume(value);
+    }
+
+    public void OnMusicSliderChanged(float value)
+    {
+        OptionsManager.Instance.ChangeMusicVolume(value);
+    }
+
+    public void OnFullscreenChange(bool value)
+    {
+        OptionsManager.Instance.ChangeFullscreen(value);
+    }
+
+    public void OnDropdownChange(int value)
+    {
+        OptionsManager.Instance.ChangeResolution((Resolutions)value);
     }
 }

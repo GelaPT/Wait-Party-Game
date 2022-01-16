@@ -39,7 +39,7 @@ public enum InputButton : int
     LS = 15  // Left Stick
 }
 
-public class InputManager
+public static class InputManager
 {
     #region Axis
 
