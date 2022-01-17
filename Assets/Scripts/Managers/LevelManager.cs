@@ -2,17 +2,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public struct Minigame
-{
-    public string name;
-    public string scene;
-}
-
 public class LevelManager : Singleton<LevelManager>
 {
     public string bootScene = "BootScene";
     public string boardGame = "BoardScene";
-    public List<Minigame> minigames = new();
 
     private string currentLevel = string.Empty;
 
