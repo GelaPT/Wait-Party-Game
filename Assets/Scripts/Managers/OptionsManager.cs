@@ -17,6 +17,10 @@ public class OptionsManager : Singleton<OptionsManager>
             SaveManager.SaveData(gameOptions);
         }
 
+        for(int i = 0; i < allowedResolutions.Length; i++)
+        {
+            allowedResolutions[i] = true;
+        }
 
         for (int i = (int)gameOptions.resolution - 1; i >= 0; i--) {
             allowedResolutions[i] = false;

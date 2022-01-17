@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
+using System;
 
 public class OptionsUIPanel : UIPanel
 {
@@ -23,10 +24,11 @@ public class OptionsUIPanel : UIPanel
 
         GameOptions gameOptions = OptionsManager.Instance.gameOptions;
 
-        for(int i = 0; i < resolutionDropdown.options.Count; i++)
+        for (int i = 0; i < resolutionDropdown.options.Count; i++)
         {
             if (OptionsManager.Instance.allowedResolutions[i]) continue;
 
+            Debug.Log(i + ": " + resolutionDropdown.options[i].text);
             resolutionDropdown.options.RemoveAt(i);
         }
 
@@ -103,12 +105,13 @@ public class OptionsUIPanel : UIPanel
 
     public void OnSFXSliderChanged(float value)
     {
-        Debug.Log(value);
+        value = (float)Math.Round(value, 1);
         OptionsManager.Instance.ChangeSFXVolume(value);
     }
 
     public void OnMusicSliderChanged(float value)
     {
+        value = (float)Math.Round(value, 1);
         OptionsManager.Instance.ChangeMusicVolume(value);
     }
 
@@ -119,6 +122,7 @@ public class OptionsUIPanel : UIPanel
 
     public void OnDropdownChange(int value)
     {
+        Debug.Log(value);
         OptionsManager.Instance.ChangeResolution((Resolutions)value);
     }
 }

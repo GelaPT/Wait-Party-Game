@@ -33,4 +33,9 @@ public class GameOptions
 
         fullscreen = true;
     }
+
+    public override string ToString()
+    {
+        return "resolution: " + resolution + "| fullscreen: " + fullscreen + "| music: " + musicVolume + "| sfx: " + sfxVolume;
+    }
 }

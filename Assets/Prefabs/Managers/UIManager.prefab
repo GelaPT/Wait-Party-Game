@@ -1489,7 +1489,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1744666383612269279}
         m_TargetAssemblyTypeName: OptionsUIPanel, Assembly-CSharp
         m_MethodName: OnDropdownChange
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4845,7 +4845,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1744666383612269279}
         m_TargetAssemblyTypeName: OptionsUIPanel, Assembly-CSharp
         m_MethodName: OnFullscreenChange
-        m_Mode: 6
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5615,7 +5615,19 @@ MonoBehaviour:
   m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1744666383612269279}
+        m_TargetAssemblyTypeName: OptionsUIPanel, Assembly-CSharp
+        m_MethodName: OnSFXSliderChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8904796608525112207
 GameObject:
   m_ObjectHideFlags: 0
@@ -5710,7 +5722,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1744666383612269279}
         m_TargetAssemblyTypeName: OptionsUIPanel, Assembly-CSharp
         m_MethodName: OnMusicSliderChanged
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
