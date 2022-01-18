@@ -126,7 +126,8 @@ MonoBehaviour:
   - {fileID: 5437863966542210837}
   - {fileID: 8382196773833758764}
   wingRotationAlpha: 0.5
-  wingSpeed: 0.3
+  wingSpeed: 50
+  debug: 0
 --- !u!4 &2094854147032270561 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 504ab6dddd947c84e962ee4d4950db00, type: 3}

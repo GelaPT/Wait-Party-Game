@@ -12,7 +12,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Corpo.001
+    second: {fileID: 2100000, guid: a38d8a83363e91246a1c7276d10a5ef1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Fogo
+    second: {fileID: 2100000, guid: efbcca77b58526b44b34fb8ecdae5b58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fogo.001
     second: {fileID: 2100000, guid: efbcca77b58526b44b34fb8ecdae5b58, type: 2}
   materials:
     materialImportMode: 2
