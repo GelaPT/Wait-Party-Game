@@ -44,11 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f44eb17cd590b429de66d00435ab32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomCharacter: 0
+  bunreeCharacter: 0
+  florixCharacter: 0
+  peckoCharacter: 0
+  shadowCatCharacter: 0
+  witchonCharacter: 0
   characters:
   - name: Random
     characterUI: {fileID: 6068038938727071673, guid: 0200b68ab1260cd4585210ff2a528963, type: 3}
     characterPlayable: {fileID: 6068038938727071673, guid: 52e43bddc556bb0419fbea043ad98938, type: 3}
-    characterIcon: {fileID: 0}
+    characterIcon: {fileID: 21300000, guid: 23abd02151a2bb748bd9e91ace717f8d, type: 3}
   - name: Bunree
     characterUI: {fileID: 9183251627504014088, guid: 990009caf8a7e294c8f7ad5f9e5969cf, type: 3}
     characterPlayable: {fileID: 9183251627504014088, guid: cebed22cd91064a4eb5f45669167b27e, type: 3}
