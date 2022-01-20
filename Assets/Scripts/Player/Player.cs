@@ -6,7 +6,7 @@ public class Player
 {
     public Gamepad gamepad;
 
-    public GameObject Character { get; private set; }
+    public Character Character { get; set; }
 
     public PlayerController PlayerController { get; private set; }
     public CameraController CameraController { get; private set; }

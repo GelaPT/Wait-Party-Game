@@ -99,8 +99,18 @@ public class LobbyUIPanel : UIPanel
 
     private void StartGame()
     {
-        // TODO: StartGame
-        // if random, choose random
+        for(int i = 0; i < 4; i++)
+        {
+            if(PlayerManager.Instance.Players[i] != null)
+            {
+                // Player
+                continue;
+            }
+
+            // AI
+        }
+
+        LevelManager.Instance.LoadLevel("BoardScene");
     }
 
     public override void OpenPanel()

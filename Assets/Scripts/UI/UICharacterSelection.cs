@@ -126,7 +126,6 @@ public class UICharacterSelection : MonoBehaviour {
 
     public void SetButtonInteractibility(string buttonName, bool interactable)
     {
-        
         foreach (UICharacterSelection characterSelection in instances)
         {
             if(!interactable && characterSelection != this)
@@ -160,9 +159,11 @@ public class UICharacterSelection : MonoBehaviour {
         }
     }
 
-    public void ChangeCharacter(GameObject character)
+    public void ChangeCharacter(string characterName)
     {
-        LobbySceneManager.Instance.UICharacterParents[UICharacterIndex].ChangeModel(character);
-        nameText.SetText(character.name[0..^4]);
+        Character character = CharacterManager.Instance.GetCharacter(characterName);
+        PlayerManager.Instance.Players[UICharacterIndex].Character = character;
+        LobbySceneManager.Instance.UICharacterParents[UICharacterIndex].ChangeModel(character.characterUI);
+        nameText.SetText(characterName);
     }
 }

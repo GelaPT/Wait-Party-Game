@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1579025413359104381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1579025413359104378}
+  - component: {fileID: 1579025413359104379}
+  m_Layer: 0
+  m_Name: CharacterManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1579025413359104378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579025413359104381}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1579025413359104379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579025413359104381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f44eb17cd590b429de66d00435ab32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters:
+  - name: Random
+    characterUI: {fileID: 6068038938727071673, guid: 0200b68ab1260cd4585210ff2a528963, type: 3}
+    characterPlayable: {fileID: 6068038938727071673, guid: 52e43bddc556bb0419fbea043ad98938, type: 3}
+    characterIcon: {fileID: 0}
+  - name: Bunree
+    characterUI: {fileID: 9183251627504014088, guid: 990009caf8a7e294c8f7ad5f9e5969cf, type: 3}
+    characterPlayable: {fileID: 9183251627504014088, guid: cebed22cd91064a4eb5f45669167b27e, type: 3}
+    characterIcon: {fileID: 21300000, guid: 777723592a33b524498946d689616cbf, type: 3}
+  - name: Florix
+    characterUI: {fileID: 9183251627504014088, guid: 77c098f62b780d14aaa7727c7cff0f06, type: 3}
+    characterPlayable: {fileID: 9183251627504014088, guid: ec82278ee67ea2940993edbf6e234f49, type: 3}
+    characterIcon: {fileID: 21300000, guid: 25581460648afbe4cabbca195c245c8d, type: 3}
+  - name: Pecko
+    characterUI: {fileID: 9183251627504014088, guid: 6c3aabe5decb4024f9431de67bda18ff, type: 3}
+    characterPlayable: {fileID: 9183251627504014088, guid: e95d600030878e4409eb07c227122d5a, type: 3}
+    characterIcon: {fileID: 21300000, guid: 08aa6c7c5f08ac343ae1bb99627e9281, type: 3}
+  - name: ShadowCat
+    characterUI: {fileID: 9183251627504014088, guid: fb06e8741d3c4aa438f25bac63dafafd, type: 3}
+    characterPlayable: {fileID: 9183251627504014088, guid: 15593bca583db574580e9178ff6ab64d, type: 3}
+    characterIcon: {fileID: 21300000, guid: ec04c9c6643d6144e8c58393940dfbfc, type: 3}
+  - name: Witchon
+    characterUI: {fileID: 9183251627504014088, guid: d24e18c818c0a7f4a9b185606bfa3dfd, type: 3}
+    characterPlayable: {fileID: 9183251627504014088, guid: 8d4ae0c32a9a3d648b8982c3fffc1229, type: 3}
+    characterIcon: {fileID: 21300000, guid: f4a0ef275edcc5b4bbaf9e3f36dcd64e, type: 3}
+  characterChosen: 
