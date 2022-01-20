@@ -14,7 +14,7 @@ public class OptionsUIPanel : UIPanel
     public override void ClosePanel()
     {
         base.ClosePanel();
-
+        UIManager.Instance.PlayCameraTrigger("Main");
         SaveManager.SaveData(OptionsManager.Instance.gameOptions);
     }
 
