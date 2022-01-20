@@ -4085,7 +4085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3041496673416230343
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7121,6 +7121,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6398029733833797459}
     m_Modifications:
+    - target: {fileID: 2058448431258839279, guid: 206932ffa2ce02f42966c1b1af032a23, type: 3}
+      propertyPath: UICharacterIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7308388574811658092, guid: 206932ffa2ce02f42966c1b1af032a23, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8065,6 +8069,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6398029733833797459}
     m_Modifications:
+    - target: {fileID: 2058448431258839279, guid: 206932ffa2ce02f42966c1b1af032a23, type: 3}
+      propertyPath: UICharacterIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7308388574811658092, guid: 206932ffa2ce02f42966c1b1af032a23, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8167,6 +8175,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6398029733833797459}
     m_Modifications:
+    - target: {fileID: 2058448431258839279, guid: 206932ffa2ce02f42966c1b1af032a23, type: 3}
+      propertyPath: UICharacterIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7308388574811658092, guid: 206932ffa2ce02f42966c1b1af032a23, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
