@@ -13772,6 +13772,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 87d7b0f94d5e1f544bb5aa4fca9d42cf, type: 2}
     - {fileID: 11400000, guid: b5a8ca6bdb840304f9fd3464d9912891, type: 2}
     - {fileID: 11400000, guid: bef8fc573dd73b648b51035241083470, type: 2}
+    - {fileID: 11400000, guid: c2a75260a2b35a54f918e4f84742dd43, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -13813,7 +13814,7 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
@@ -13828,6 +13829,20 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2066939499}
+          m_TargetAssemblyTypeName: CutsceneSignalReciever, Assembly-CSharp
+          m_MethodName: EndDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
           m_CallState: 2
 --- !u!1001 &2075120658
 PrefabInstance:
