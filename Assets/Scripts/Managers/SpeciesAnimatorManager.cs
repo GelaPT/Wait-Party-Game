@@ -8,6 +8,14 @@ public class SpeciesAnimatorManager : MonoBehaviour
     //No componente chamado Animation, poe a animaçao que quer dar play la e pronto
 
     private Animation _anim;
+    public float minX = 0.7f;
+    public float maxX = 1.2f;
+    public float minY = 0.6f;
+    public float maxY = 1.2f;
+    public float minZ = 0.6f;
+    public float maxZ = 1.2f;
+    public float minSpeed = 0.5f;
+    public float maxSpeed = 1.5f;
 
     private void Start()
     {
@@ -16,13 +24,13 @@ public class SpeciesAnimatorManager : MonoBehaviour
         //alterar speed ao começar
         foreach (AnimationState state in _anim)
         {
-            state.speed = Random.Range(0.5f, 1.5f);
+            state.speed = Random.Range(minSpeed, maxSpeed);
         }
 
         //definir escala aleatoria
-        transform.localScale = new Vector3(Random.Range(0.7f, 1.2f),
-            Random.Range(0.6f, 1.2f),
-            Random.Range(0.6f, 1.2f));
+        transform.localScale = new Vector3(Random.Range(minX, maxX),
+            Random.Range(minY, maxY),
+            Random.Range(minZ, maxZ));
     }
 
     private void FixedUpdate()
@@ -33,7 +41,7 @@ public class SpeciesAnimatorManager : MonoBehaviour
         {
             foreach (AnimationState state in _anim)
             {
-                state.speed = Random.Range(0.5f, 1.5f);
+                state.speed = Random.Range(minSpeed, maxSpeed);
             }
         }
     }
