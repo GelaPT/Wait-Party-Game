@@ -6,11 +6,17 @@ public class DialogueUIPanel : UIPanel
 {
     public static DialogueUIPanel instance;
 
+    [Header("Texts")]
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI commandsText;
+    [Header("Images")]
     public Image dialogueBox;
     public Image npcSprite;
+    [Header("Transforms")]
     public RectTransform npcSpriteTransform;
+    [Header("Animators")]
+    public Animator dialogueBoxAnimator;
+    public Animator npcSpriteAnimator;
 
     private void Start()
     {
@@ -40,10 +46,16 @@ public class DialogueUIPanel : UIPanel
 
         if (dialogue.mode == DialogueMode.Player) commandsText.SetText("<sprite index= 0>  Next");
         else commandsText.SetText("");
+
+        //animator stuff
+        dialogueBoxAnimator.SetTrigger("FadeIn");
+        npcSpriteAnimator.SetTrigger("FadeIn");
     }
 
     public void UpdateDialogue(string text)
     {
+        dialogueText.SetText("");
+        dialogueBoxAnimator.SetTrigger("NextDialogue");
         dialogueText.SetText(text);
     }
 
@@ -54,10 +66,16 @@ public class DialogueUIPanel : UIPanel
         commandsText.SetText("");
         npcSprite.gameObject.SetActive(false);
         npcSpriteTransform.anchoredPosition = new Vector2(0, -32);
+
+        //animator stuff
+        dialogueBoxAnimator.SetTrigger("FadeOut");
+        npcSpriteAnimator.SetTrigger("FadeOut");
     }
 
     public void HideNpc(bool hide)
     {
-        npcSprite.gameObject.SetActive(!hide);
+        //npcSprite.gameObject.SetActive(!hide);
+        if (hide)
+            npcSpriteAnimator.SetTrigger("FadeOut");
     }
 }
