@@ -162,7 +162,10 @@ public class UICharacterSelection : MonoBehaviour {
     public void ChangeCharacter(string characterName)
     {
         Character character = CharacterManager.Instance.GetCharacter(characterName);
-        PlayerManager.Instance.Players[UICharacterIndex].Character = character;
+        if (PlayerManager.Instance.Players[UICharacterIndex] != null)
+        {
+            PlayerManager.Instance.Players[UICharacterIndex].Character = character;
+        }
         LobbySceneManager.Instance.UICharacterParents[UICharacterIndex].ChangeModel(character.characterUI);
         nameText.SetText(characterName);
     }

@@ -67,6 +67,7 @@ public class LobbyUIPanel : UIPanel
                     {
                         if (i == 0)
                         {
+                            ClearPlayers();
                             UIManager.Instance.SwitchToPreviousPanel();
                             UIManager.Instance.PlayCameraTrigger("Main");
                             return;
@@ -91,7 +92,7 @@ public class LobbyUIPanel : UIPanel
 
         commandsText.SetText("P1 - <sprite index= 3>  Start ");
 
-        if (InputManager.GetButton(0, InputButton.Y))
+        if (InputManager.GetButton(0, InputButton.Y, 0.3f))
         {
             StartGame();
         }
@@ -111,6 +112,9 @@ public class LobbyUIPanel : UIPanel
         }
 
         LevelManager.Instance.LoadLevel("BoardScene");
+        LevelManager.Instance.UnloadLevel("LobbyScene");
+
+        UIManager.Instance.SwitchPanel(DialogueUIPanel.instance);
     }
 
     public override void OpenPanel()
@@ -130,7 +134,12 @@ public class LobbyUIPanel : UIPanel
     public override void ClosePanel()
     {
         base.ClosePanel();
-        ClearPlayers();
+
+        foreach(UICharacterSelection selection in UICharacterSelections)
+        {
+            selection.eventSystem.gameObject.SetActive(false);
+        }
+
         if (oldSystem) oldSystem.SetActive(true);
     }
 
@@ -140,7 +149,6 @@ public class LobbyUIPanel : UIPanel
         {
             selection.UnreadyPlayer();
             selection.UnregisterPlayer();
-            selection.eventSystem.gameObject.SetActive(false);
         }
         PlayerManager.Instance.ClearPlayers();
     }

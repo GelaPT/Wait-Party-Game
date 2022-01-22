@@ -4153,8 +4153,7 @@ GameObject:
   - component: {fileID: 5203438478845052917}
   - component: {fileID: 8034422998118366923}
   - component: {fileID: 201217602401101783}
-  - component: {fileID: 6380216821664737209}
-  - component: {fileID: 9222448571267578510}
+  - component: {fileID: 2825363106837032801}
   m_Layer: 5
   m_Name: DialoguePanel
   m_TagString: Untagged
@@ -4226,7 +4225,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &6380216821664737209
+--- !u!114 &2825363106837032801
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4235,7 +4234,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4617766130038560252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2120653e1a98a374597796c5b56beaf1, type: 3}
+  m_Script: {fileID: 11500000, guid: 88ccbb01be19e7a419b358e3c614ffe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startSelectable: {fileID: 0}
@@ -4249,32 +4248,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   selectables: []
---- !u!114 &9222448571267578510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4617766130038560252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b72599f5a9963a40a71fc7ab21b3e7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   dialogueText: {fileID: 5598808350708768874}
   commandsText: {fileID: 1443742189708001936}
   dialogueBox: {fileID: 5298052984139784936}
   npcSprite: {fileID: 5846237632573808493}
   npcSpriteTransform: {fileID: 3258152081945523068}
-  animator: {fileID: 8034422998118366923}
-  npcSprites:
-  - {fileID: 21300000, guid: a58a9ba91f4261442a39c75540abc3ca, type: 3}
-  - {fileID: 21300000, guid: 03fb52da8422aab4a83c4f303dd9fc82, type: 3}
-  - {fileID: 21300000, guid: 33941348d091a754d90cb5abc7625216, type: 3}
-  - {fileID: 21300000, guid: 7486b55a6edd7be4c92faaf7a448e217, type: 3}
-  - {fileID: 21300000, guid: fc2189155f94f024fbfe893a399aca55, type: 3}
-  - {fileID: 21300000, guid: a58a9ba91f4261442a39c75540abc3ca, type: 3}
-  dialogue: []
 --- !u!1 &4703933097680176991
 GameObject:
   m_ObjectHideFlags: 0
@@ -6176,7 +6154,7 @@ MonoBehaviour:
         m_MethodName: SwitchPanel
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 6380216821664737209}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UIPanel, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0

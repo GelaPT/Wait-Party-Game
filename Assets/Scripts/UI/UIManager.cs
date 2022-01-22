@@ -37,6 +37,20 @@ public class UIManager : Singleton<UIManager>
         SwitchPanel(openingPanel);
     }
 
+    public void SwitchPanel(string panelName)
+    {
+        foreach(UIPanel panel in panels)
+        {
+            if(panel.name == panelName)
+            {
+                SwitchPanel(panel);
+                return;
+            }
+        }
+
+        Debug.LogError("Panel " + panelName + " not found");
+    }
+
     public void SwitchPanel(UIPanel uiPanel)
     {
         if (!uiPanel) return;
