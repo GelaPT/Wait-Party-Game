@@ -1,12 +1,13 @@
 using UnityEngine;
-using System.IO;
 
+[System.Serializable]
 public enum DialogueMode : int
 {
     Cutscene = 0,
     Player = 1
 }
 
+[System.Serializable]
 public enum DialogueNpcPosition : int
 {
     Left = 0,
@@ -14,6 +15,7 @@ public enum DialogueNpcPosition : int
     Right = 2
 }
 
+[System.Serializable]
 public enum DialogueNpcSprite : int
 {
     Mocho = 0,

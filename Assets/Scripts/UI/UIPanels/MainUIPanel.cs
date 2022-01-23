@@ -21,7 +21,7 @@ public class MainUIPanel : UIPanel
 
         if(InputManager.GetButton(0, InputButton.A, 0.3f))
         {
-            eventSystem.currentSelectedGameObject.GetComponent<Button>().onClick.Invoke();
+            eventSystem?.currentSelectedGameObject?.GetComponent<Button>().onClick.Invoke();
         }
     }
 }

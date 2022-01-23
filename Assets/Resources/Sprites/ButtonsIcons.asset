@@ -226,7 +226,7 @@ MonoBehaviour:
       m_Height: 200
       m_HorizontalBearingX: 0
       m_HorizontalBearingY: 130
-      m_HorizontalAdvance: 200
+      m_HorizontalAdvance: 225
     m_GlyphRect:
       m_X: 0
       m_Y: 400
@@ -241,7 +241,7 @@ MonoBehaviour:
       m_Height: 200
       m_HorizontalBearingX: 0
       m_HorizontalBearingY: 150
-      m_HorizontalAdvance: 200
+      m_HorizontalAdvance: 225
     m_GlyphRect:
       m_X: 200
       m_Y: 400
@@ -256,7 +256,7 @@ MonoBehaviour:
       m_Height: 200
       m_HorizontalBearingX: 0
       m_HorizontalBearingY: 150
-      m_HorizontalAdvance: 200
+      m_HorizontalAdvance: 225
     m_GlyphRect:
       m_X: 400
       m_Y: 400
@@ -271,7 +271,7 @@ MonoBehaviour:
       m_Height: 200
       m_HorizontalBearingX: 0
       m_HorizontalBearingY: 150
-      m_HorizontalAdvance: 200
+      m_HorizontalAdvance: 225
     m_GlyphRect:
       m_X: 600
       m_Y: 400
@@ -286,7 +286,7 @@ MonoBehaviour:
       m_Height: 200
       m_HorizontalBearingX: 0
       m_HorizontalBearingY: 150
-      m_HorizontalAdvance: 200
+      m_HorizontalAdvance: 225
     m_GlyphRect:
       m_X: 800
       m_Y: 400
@@ -301,7 +301,7 @@ MonoBehaviour:
       m_Height: 200
       m_HorizontalBearingX: 0
       m_HorizontalBearingY: 150
-      m_HorizontalAdvance: 200
+      m_HorizontalAdvance: 225
     m_GlyphRect:
       m_X: 0
       m_Y: 200
@@ -316,7 +316,7 @@ MonoBehaviour:
       m_Height: 200
       m_HorizontalBearingX: 0
       m_HorizontalBearingY: 150
-      m_HorizontalAdvance: 200
+      m_HorizontalAdvance: 225
     m_GlyphRect:
       m_X: 200
       m_Y: 200
@@ -330,14 +330,14 @@ MonoBehaviour:
       m_Width: 200
       m_Height: 200
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 135
-      m_HorizontalAdvance: 200
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 225
     m_GlyphRect:
       m_X: 0
       m_Y: 0
       m_Width: 200
       m_Height: 200
-    m_Scale: 1.5
+    m_Scale: 1.75
     m_AtlasIndex: 0
     sprite: {fileID: -2003965395, guid: 48abf8989bf92654494d0df2d407acec, type: 3}
   - m_Index: 14
@@ -345,14 +345,14 @@ MonoBehaviour:
       m_Width: 200
       m_Height: 200
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 135
-      m_HorizontalAdvance: 200
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 225
     m_GlyphRect:
       m_X: 200
       m_Y: 0
       m_Width: 200
       m_Height: 200
-    m_Scale: 1.5
+    m_Scale: 1.75
     m_AtlasIndex: 0
     sprite: {fileID: -1062378680, guid: 48abf8989bf92654494d0df2d407acec, type: 3}
   spriteInfoList: []
