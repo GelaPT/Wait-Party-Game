@@ -18,6 +18,7 @@ public enum DialogueNpcPosition : int
 [System.Serializable]
 public enum DialogueNpcSprite : int
 {
+    None = -1,
     Mocho = 0,
     Pontes = 1,
     Cogumelos = 2,

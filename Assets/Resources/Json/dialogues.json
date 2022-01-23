@@ -25,5 +25,258 @@
       "position": 1,
       "sprite": 0
     }
+	{
+      "name": "LuckTile",
+      "text": [
+        "",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 1,
+      "sprite": -1
+    }
+	{
+      "name": "PenaltyTile",
+      "text": [
+        "",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 1,
+      "sprite": -1
+    }
+	{
+      "name": "CoinTile",
+      "text": [
+        "",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 1,
+      "sprite": -1
+    }
+	{
+      "name": "Shop",
+      "text": [
+        "",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 1,
+      "sprite": -1
+    }
+	{
+      "name": "MinigameTile",
+      "text": [
+        "",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 1,
+      "sprite": -1
+    }
+	{
+      "name": "WarpTile",
+      "text": [
+        "",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 1,
+      "sprite": -1
+    }
+	{
+      "name": "PontesDonation",
+      "text": [
+        "Doe para as pontes",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 0,
+      "sprite": 1
+    }
+	{
+      "name": "CogumelosDonation",
+      "text": [
+        "Doe para os cogumelos",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 0,
+      "sprite": 2
+    }
+	{
+      "name": "JardimDonation",
+      "text": [
+        "Doe para o Jardim",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 1,
+      "sprite": 3
+    }
+	{
+      "name": "LagoDonation",
+      "text": [
+        "Doe para o lago",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 0,
+      "sprite": 4
+    }
+	{
+      "name": "CemiterioDonation",
+      "text": [
+        "Doe para o cemiterio",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 2,
+      "sprite": 5
+    }
+	{
+      "name": "PontesEvent01",
+      "text": [
+        "Evento do engarrafamento",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 0,
+      "sprite": 1
+    }
+	{
+      "name": "PontesEvent02",
+      "text": [
+        "Evento de agua suja",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 0,
+      "sprite": 1
+    }
+	{
+      "name": "PontesEvent03",
+      "text": [
+        "Evento a falta de mel pros plumps",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 0,
+      "sprite": 1
+    }
+	{
+      "name": "CogumelosEvent01",
+      "text": [
+        "Evento de desflorestaçao",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 0,
+      "sprite": 2
+    }
+	{
+      "name": "CogumelosEvent02",
+      "text": [
+        "Evento de smog",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 0,
+      "sprite": 2
+    }
+	{
+      "name": "JardimEvento01",
+      "text": [
+        "Evento especies invasoras",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 1,
+      "sprite": 3
+    }
+	{
+      "name": "JardimEvento02",
+      "text": [
+        "Evento destruiçao de habitats",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 1,
+      "sprite": 3
+    }
+	{
+      "name": "JardimEvento03",
+      "text": [
+        "Evento solo mau",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 1,
+      "sprite": 3
+    }
+	{
+      "name": "LagoEvento01",
+      "text": [
+        "Evento agua suja de microplasticos",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 0,
+      "sprite": 4
+    }
+	{
+      "name": "LagoEvento02",
+      "text": [
+        "Evento de inundação",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 0,
+      "sprite": 4
+    }
+	{
+      "name": "CemiterioEvento01",
+      "text": [
+        "Evento de smog",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 2,
+      "sprite": 5
+    }
+	{
+      "name": "CemiterioEvento02",
+      "text": [
+        "Evento de solo contaminado",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 2,
+      "sprite": 5
+    }
   ]
 }
