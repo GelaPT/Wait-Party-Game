@@ -28,9 +28,8 @@
 	  {
       "name": "LuckTile",
       "text": [
-        "",
-        "",
-        ""
+        "How lucky! You landed on a Luck Tile! You get a random Item.",
+        "Lucky!~ You landed on a Luck Tile. You get x <sprite index= 14><color=#F4F09C><b>Coins</b></color>."
       ],
       "mode": 1,
       "position": 1,
@@ -39,9 +38,9 @@
 	  {
       "name": "PenaltyTile",
       "text": [
-        "",
-        "",
-        ""
+        "Awn... you landed on a Penalty Tile... You lose x <sprite index= 14><color=#F4F09C><b>Coins</b></color>.",
+        "Welp, you landed on a Penalty Tile. You lose x <sprite index= 14><color=#F4F09C><b>Coins</b></color> and everyone else gets some of it.",
+        "Dang it! You landed on a Penalty Tile. Go back x tiles."
       ],
       "mode": 1,
       "position": 1,
@@ -50,20 +49,29 @@
 	  {
       "name": "CoinTile",
       "text": [
-        "",
-        "",
-        ""
+        "You landed on a Coin Tile! You get x <sprite index= 14><color=#F4F09C><b>Coins</b></color>."
       ],
       "mode": 1,
       "position": 1,
       "sprite": -1
     },
   	{
-      "name": "Shop",
+      "name": "ShopTileEnter",
       "text": [
-        "",
-        "",
-        ""
+        "Welcome welcome! Please, feel free to choose whatever you want for a fair price...",
+        "Welcome again! Don't hesitate, please choose something!",
+        "Welcome! Many good items for you to buy here!"
+      ],
+      "mode": 1,
+      "position": 1,
+      "sprite": -1
+    },
+    {
+      "name": "ShopTileExit",
+      "text": [
+        "Come again!",
+        "See you soon!",
+        "Bye bye~"
       ],
       "mode": 1,
       "position": 1,
@@ -72,9 +80,8 @@
   	{
       "name": "MinigameTile",
       "text": [
-        "",
-        "",
-        ""
+        "Wohoo! You landed on a Minigame Tile! Let's go!",
+        "Minigame time! Everybody, let's go!"
       ],
       "mode": 1,
       "position": 1,
@@ -83,9 +90,7 @@
   	{
       "name": "WarpTile",
       "text": [
-        "",
-        "",
-        ""
+        "You Landed on a Warp Tile. Do you want to pay x <sprite index= 14><color=#F4F09C><b>Coins</b></color> to skip this area?"
       ],
       "mode": 1,
       "position": 1,
@@ -94,9 +99,27 @@
   	{
       "name": "PontesDonation",
       "text": [
-        "Doe para as pontes",
-        "",
-        ""
+        "Hello, player. I'm Chareer, the guardian of the Shadowy Bridges.",
+        "Would you kindly help our population?"
+      ],
+      "mode": 1,
+      "position": 0,
+      "sprite": 1
+    },
+    {
+      "name": "PontesDonationSuccess",
+      "text": [
+        "Thank you very much. Your service is much appreciated.",
+        "I congratulate you with this prize, for being the most contributor."
+      ],
+      "mode": 1,
+      "position": 0,
+      "sprite": 1
+    },
+    {
+      "name": "PontesDonationFail",
+      "text": [
+        "Thank you very much. Your service is appreciated."
       ],
       "mode": 1,
       "position": 0,
@@ -105,9 +128,27 @@
   	{
       "name": "CogumelosDonation",
       "text": [
-        "Doe para os cogumelos",
-        "",
-        ""
+        "Hello, I'm Squidogh! Welcome to the Mushroom City!",
+        "We're accepting any donations to prevent our population from danger!"
+      ],
+      "mode": 1,
+      "position": 0,
+      "sprite": 2
+    },
+    {
+      "name": "CogumelosDonationSuccess",
+      "text": [
+        "Thank you very much!!! You really helped us!",
+        "Oh, and congratulations for being the best contributor! Here's your prize."
+      ],
+      "mode": 1,
+      "position": 0,
+      "sprite": 2
+    },
+    {
+      "name": "CogumelosDonationFail",
+      "text": [
+        "Thank you so much! This is going to help us a lot!"
       ],
       "mode": 1,
       "position": 0,
@@ -116,9 +157,27 @@
 	  {
       "name": "JardimDonation",
       "text": [
-        "Doe para o Jardim",
-        "",
-        ""
+        "Oh hello, there! I'm Miss Granbie, CEO of the Giant Flowers Garden!",
+        "You know how important bees are for the environment, right? If you'd like, please donate to our area!"
+      ],
+      "mode": 1,
+      "position": 1,
+      "sprite": 3
+    },
+    {
+      "name": "JardimDonationSuccess",
+      "text": [
+        "Oh my my, thank you very much! I can't thank you enough!",
+        "Here's a prize for being the most contributor to my area!"
+      ],
+      "mode": 1,
+      "position": 1,
+      "sprite": 3
+    },
+    {
+      "name": "JardimDonationFail",
+      "text": [
+        "Oh dear, thank you! My bees are going to be very happy!"
       ],
       "mode": 1,
       "position": 1,
@@ -126,6 +185,28 @@
     },
 	  {
       "name": "LagoDonation",
+      "text": [
+        "Doe para o lago",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 0,
+      "sprite": 4
+    },
+    {
+      "name": "LagoDonationSuccess",
+      "text": [
+        "Doe para o lago",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 0,
+      "sprite": 4
+    },
+    {
+      "name": "LagoDonationFail",
       "text": [
         "Doe para o lago",
         "",
@@ -146,8 +227,30 @@
       "position": 2,
       "sprite": 5
     },
+    {
+      "name": "CemiterioDonationSuccess",
+      "text": [
+        "Doe para o cemiterio",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 2,
+      "sprite": 5
+    },
+    {
+      "name": "CemiterioDonationFail",
+      "text": [
+        "Doe para o cemiterio",
+        "",
+        ""
+      ],
+      "mode": 1,
+      "position": 2,
+      "sprite": 5
+    },
   	{
-      "name": "PontesEvent01",
+      "name": "PontesEvento01",
       "text": [
         "Evento do engarrafamento",
         "",
@@ -158,7 +261,7 @@
       "sprite": 1
     },
 	  {
-      "name": "PontesEvent02",
+      "name": "PontesEvento02",
       "text": [
         "Evento de agua suja",
         "",
@@ -169,7 +272,7 @@
       "sprite": 1
     },
 	  {
-      "name": "PontesEvent03",
+      "name": "PontesEvento03",
       "text": [
         "Evento a falta de mel pros plumps",
         "",
@@ -180,9 +283,9 @@
       "sprite": 1
     },
 	  {
-      "name": "CogumelosEvent01",
+      "name": "CogumelosEvento01",
       "text": [
-        "Evento de desflorestaçao",
+        "Evento de desflorestação",
         "",
         ""
       ],
@@ -191,7 +294,7 @@
       "sprite": 2
     },
 	  {
-      "name": "CogumelosEvent02",
+      "name": "CogumelosEvento02",
       "text": [
         "Evento de smog",
         "",
