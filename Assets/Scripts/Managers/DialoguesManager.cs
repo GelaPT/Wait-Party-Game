@@ -1,19 +1,27 @@
 using UnityEngine;
-using System.Collections.Generic;
 using System.IO;
 
-public enum DialogueMode
+public enum DialogueMode : int
 {
-    None,
-    Cutscene,
-    Player
+    Cutscene = 0,
+    Player = 1
 }
 
-public enum DialogueNpcPosition
+public enum DialogueNpcPosition : int
 {
-    Left,
-    Center,
-    Right
+    Left = 0,
+    Center = 1,
+    Right = 2
+}
+
+public enum DialogueNpcSprite : int
+{
+    Mocho = 0,
+    Pontes = 1,
+    Cogumelos = 2,
+    Jardim = 3,
+    Lago = 4,
+    Cemiterio = 5
 }
 
 [System.Serializable]
@@ -23,42 +31,23 @@ public class Dialogue
     public string[] text;
     public DialogueMode mode;
     public DialogueNpcPosition position;
-    public Sprite sprite;
-
-    public void LoadDialogueFile()
-    {
-        string path = Application.dataPath + @"/Resources/DialogueFiles/" + name + ".txt";
-        if (File.Exists(path))
-        {
-            FileStream fs = new FileStream(path, FileMode.Open);
-            string content = "";
-            using (StreamReader read = new StreamReader(fs, true))
-            {
-                content = read.ReadToEnd();
-            }
-            text = new string[content.Split('\n').Length];
-            text = content.Split('\n');
-        }
-        else
-            text = new string[1];
-    }
+    public DialogueNpcSprite sprite;
 }
 
 public class DialoguesManager : Singleton<DialoguesManager>
 {
-    public Dialogue[] dialogues;
+    [HideInInspector] public Dialogue[] dialogues;
+    public Sprite[] npcSprites;
     
-    public Dialogue curDialogue = null;
+    [HideInInspector] public Dialogue curDialogue = null;
     private int dialogueIndex = 0;
     private int player;
 
     protected override void Awake()
     {
         base.Awake();
-        foreach(Dialogue dialogue in dialogues)
-        {
-            dialogue.LoadDialogueFile();
-        }
+
+        dialogues = JsonTools.GetDialogues();
     }
 
     private void Update()

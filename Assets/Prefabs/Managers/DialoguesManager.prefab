@@ -44,25 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b72599f5a9963a40a71fc7ab21b3e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
-  - name: Shop
-    text: []
-    mode: 2
-    position: 1
-    sprite: {fileID: 0}
-  - name: Tutorial
-    text: []
-    mode: 1
-    position: 1
-    sprite: {fileID: 21300000, guid: a58a9ba91f4261442a39c75540abc3ca, type: 3}
-  - name: Career
-    text: []
-    mode: 2
-    position: 1
-    sprite: {fileID: 21300000, guid: a58a9ba91f4261442a39c75540abc3ca, type: 3}
+  dialogues: []
+  npcSprites:
+  - {fileID: 21300000, guid: a58a9ba91f4261442a39c75540abc3ca, type: 3}
+  - {fileID: 21300000, guid: 03fb52da8422aab4a83c4f303dd9fc82, type: 3}
+  - {fileID: 21300000, guid: 33941348d091a754d90cb5abc7625216, type: 3}
+  - {fileID: 21300000, guid: 7486b55a6edd7be4c92faaf7a448e217, type: 3}
+  - {fileID: 21300000, guid: fc2189155f94f024fbfe893a399aca55, type: 3}
+  - {fileID: 21300000, guid: a58a9ba91f4261442a39c75540abc3ca, type: 3}
   curDialogue:
     name: 
     text: []
     mode: 0
     position: 0
-    sprite: {fileID: 0}
+    sprite: 0

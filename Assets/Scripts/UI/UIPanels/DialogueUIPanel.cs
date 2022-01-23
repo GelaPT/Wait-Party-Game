@@ -32,7 +32,7 @@ public class DialogueUIPanel : UIPanel
         dialogueText.SetText(dialogue.text[0]);
 
         npcSprite.gameObject.SetActive(true);
-        npcSprite.sprite = dialogue.sprite;
+        npcSprite.sprite = DialoguesManager.Instance.npcSprites[(int)dialogue.sprite];
 
         int pos = dialogue.position switch
         {

@@ -1,0 +1,29 @@
+{
+  "Dialogues": [
+    {
+      "name": "Tutorial",
+      "text": [
+        "Hoot~ Welcome players to Glade Party! My name is Kosmowl, and I am the guardian of our forest!",
+        "I have called you all here to aid us with many environmental problems that have been happening lately...",
+        "Without you, our community will be left with no water to drink, no air to breathe and no home to live in.",
+        "Press<sprite index = 0>to roll the dice and to advance along the board. There are many shortcuts you can take to go somewhere faster!",
+        "There are<sprite index = 6><color=#DBFF93><b>Coin Tiles</b></color> that give you<sprite index = 14><color=#F4F09C><b>Coins</b></color>,",
+        "<sprite index = 10><color = #DBFF9E><b>Luck Tiles</b></color> that give you good rewards",
+        "And<sprite index= 11><color=#DBFF9E><b>Penalty Tiles</b></color> that make something bad happen...",
+        "There are also<sprite index= 12><color=#DBFF9E><b>Shop Tiles</b></color> where you can buy items!",
+        "<sprite index= 9><color=#DBFF9E><b>Warp Tiles</b></color> that help you get around faster in the board",
+        "And<sprite index= 7><color=#DBFF9E><b>Minigame Tiles</b></color> that will allow you to play a random minigame to get more <color=#F4F09C><b>Coins</b></color>.",
+        "At last, there are<sprite index= 8><color=#DBFF9E><b>Event Tiles</b></color>, the <b>main</b> objective of the game!",
+        "When landing on an<sprite index= 8><color=#DBFF9E><b>Event Tile</b></color>, you can talk to that area’s guardian and donate your<sprite index= 14><color=#F4F09C><b>Coins</b></color> to prevent environmental disasters from happening.",
+        "The player who donates the most to an area will receive a <color=#DBFF9E><b>Bonus</b></color>, which will give you great help during your stay at Glade Party.",
+        "Each player can have a maximum of 2 bonuses, and you can steal them from each other by donating even more <sprite index= 14><color=#F4F09C><b>Coins</b></color>!",
+        "At the end of the game, these <color=#DBFF9E><b>Bonuses</b></color> will turn into<sprite index= 13><color=#F4F09C><b>Contribution Points</b></color>, the main collectible of the game!",
+        "When an active event is present somewhere, donate<sprite index= 14><color=#F4F09C><b>Coins</b></color> to the guardian of that area to put an end to the disaster and get 2<sprite index= 13><color=#F4F09C><b>Contribution Points</b></color>.",
+        "Hoot~ And that’s all the rules, my friends! Compete with each other to be the best contributor in each area and help preserve the wonderful forest that is Glade Party!"
+      ],
+      "mode": 0,
+      "position": 1,
+      "sprite":  0
+    }
+  ]
+}
