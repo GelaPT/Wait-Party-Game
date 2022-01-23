@@ -21,13 +21,13 @@ public class AnimationTest : MonoBehaviour
     
     void Update()
     {
-        _animator.SetFloat("MoveBlend", animatorBlend);
-        _animator.SetBool("isJumping", _jump);
-        _animator.SetBool("isStunned", _stun);
-        _animator.SetBool("isCrouching", _crouch);
-        _animator.SetBool("Victory", _victory);
-        _animator.SetBool("Defeated", _defeated);
-        _animator.SetBool("Caught", _caught);
-        _animator.SetInteger("AnimationTestInt", _animationTestInt);
+        _animator.SetLayerWeight(1, animatorBlend);
+        //_animator.SetBool("isJumping", _jump);
+        //_animator.SetBool("isStunned", _stun);
+        //_animator.SetBool("isCrouching", _crouch);
+        //_animator.SetBool("Victory", _victory);
+        //_animator.SetBool("Defeated", _defeated);
+        //_animator.SetBool("Caught", _caught);
+        //_animator.SetInteger("AnimationTestInt", _animationTestInt);
     }
 }
