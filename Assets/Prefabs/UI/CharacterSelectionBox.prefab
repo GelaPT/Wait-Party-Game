@@ -562,7 +562,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press  <sprite index= 0>  to join!
+  m_text: Press<sprite index= 0>to join!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ff677865b2c0c34899579d7126e3ec3, type: 2}
   m_sharedMaterial: {fileID: 8990355420700359615, guid: 3ff677865b2c0c34899579d7126e3ec3, type: 2}

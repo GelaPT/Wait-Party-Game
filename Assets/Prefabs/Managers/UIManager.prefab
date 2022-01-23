@@ -378,7 +378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <sprite index= 1> Back
+  m_text: <sprite index= 1>Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ff677865b2c0c34899579d7126e3ec3, type: 2}
   m_sharedMaterial: {fileID: 8990355420700359615, guid: 3ff677865b2c0c34899579d7126e3ec3, type: 2}
@@ -616,10 +616,10 @@ RectTransform:
   m_Father: {fileID: 1910463953313043188}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 26.4216}
-  m_SizeDelta: {x: -80, y: -134.5296}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 10}
+  m_SizeDelta: {x: 880, y: 151.8351}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4187951655600783432
 CanvasRenderer:
@@ -649,8 +649,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec fermentum
-    quam. Aenean non lorem neque. Curabitur non commodo sapien.
+  m_text: ' afas dfasf asf ds dsf adsf dsf dsa dsf dsf ds dsf n ndfso hh dosu diops
+    ds d hdoshfdosuh ds dsfjdoshfods 9dsf dosfjods fods fdshfdosfh dsouh dosfh dosfh
+    isfhisadh fidsh  ish isah ihsafh isfis ihdsi'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 27dd910766ccc9441b968c85ab4fce37, type: 2}
   m_sharedMaterial: {fileID: 8990355420700359615, guid: 27dd910766ccc9441b968c85ab4fce37, type: 2}
@@ -677,11 +678,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 32
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 32
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -1236,7 +1237,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <sprite index= 4>  Change Selection   <sprite index= 0>  Select
+  m_text: <sprite index= 4>Change Selection  <sprite index= 0>Select
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ff677865b2c0c34899579d7126e3ec3, type: 2}
   m_sharedMaterial: {fileID: 8990355420700359615, guid: 3ff677865b2c0c34899579d7126e3ec3, type: 2}
@@ -7170,7 +7171,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <sprite index= 0>  Next
+  m_text: aaa<sprite index= 0>Next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 27dd910766ccc9441b968c85ab4fce37, type: 2}
   m_sharedMaterial: {fileID: 8990355420700359615, guid: 27dd910766ccc9441b968c85ab4fce37, type: 2}

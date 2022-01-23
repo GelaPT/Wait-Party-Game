@@ -80,7 +80,7 @@ public class LobbyUIPanel : UIPanel
             }
         }
 
-        commandsText.SetText("<sprite index= 4>  Change Selection   <sprite index= 0>  Select");
+        commandsText.SetText("<sprite index= 4>Change Selection  <sprite index= 0>Select");
 
         for (int i = 0; i < 4; i++)
         {
@@ -90,7 +90,7 @@ public class LobbyUIPanel : UIPanel
             }
         }
 
-        commandsText.SetText("P1 - <sprite index= 3>  Start ");
+        commandsText.SetText("P1 - <sprite index= 3>Start ");
 
         if (InputManager.GetButton(0, InputButton.Y, 0.3f))
         {

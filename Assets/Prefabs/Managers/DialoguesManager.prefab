@@ -45,21 +45,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - name: Tutorial
-    text:
-    - Welcome to Glade Party!
-    - The forest is in danger and we need you to save it!
-    - You have to help the forest and stop the problems from showing up!
-    mode: 1
-    position: 1
-    sprite: {fileID: 21300000, guid: a58a9ba91f4261442a39c75540abc3ca, type: 3}
   - name: Shop
     text: []
     mode: 2
     position: 1
     sprite: {fileID: 0}
+  - name: Tutorial
+    text: []
+    mode: 1
+    position: 1
+    sprite: {fileID: 21300000, guid: a58a9ba91f4261442a39c75540abc3ca, type: 3}
   - name: Career
     text: []
     mode: 2
     position: 1
     sprite: {fileID: 21300000, guid: a58a9ba91f4261442a39c75540abc3ca, type: 3}
+  curDialogue:
+    name: 
+    text: []
+    mode: 0
+    position: 0
+    sprite: {fileID: 0}

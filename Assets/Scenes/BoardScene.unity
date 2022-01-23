@@ -24837,18 +24837,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6904782437669788594, guid: 9775df87fe1a89d44ae024595d4c9ac2, type: 3}
-      propertyPath: dialogues.Array.data[0].text.Array.data[0]
-      value: My sprite appears
-      objectReference: {fileID: 0}
-    - target: {fileID: 6904782437669788594, guid: 9775df87fe1a89d44ae024595d4c9ac2, type: 3}
-      propertyPath: dialogues.Array.data[0].text.Array.data[1]
-      value: the text has this awesome animation lucas did :)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6904782437669788594, guid: 9775df87fe1a89d44ae024595d4c9ac2, type: 3}
-      propertyPath: dialogues.Array.data[0].text.Array.data[2]
-      value: Now my sprite will disappear
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9775df87fe1a89d44ae024595d4c9ac2, type: 3}
 --- !u!1001 &7792634756470680433
