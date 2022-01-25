@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MinigamePanel : UIPanel
+public class MinigameUIPanel : UIPanel
 {
     public GameObject PlayerScorePanel;
     public GameObject TutorialPanel;

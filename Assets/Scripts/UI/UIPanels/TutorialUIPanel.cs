@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class TutorialPanel : MonoBehaviour
+public class TutorialUIPanel : MonoBehaviour
 {
     [System.Serializable]
     public class ControlCard
