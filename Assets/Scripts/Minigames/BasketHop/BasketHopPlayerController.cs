@@ -13,6 +13,8 @@ public class BasketHopPlayerController : PlayerController
             Animator.SetTrigger("ThrowBall");
             Rigidbody acorn = Instantiate(scriptableObject.acorn, transform.position + scriptableObject.offset, Random.rotation).GetComponent<Rigidbody>();
             acorn.AddForce(scriptableObject.force * acorn.mass, ForceMode.Impulse);
+
+            acorn.GetComponent<Acorn>().player = Player;
         }
     }
 

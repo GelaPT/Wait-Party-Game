@@ -32,7 +32,12 @@ public class MinigameManager : MonoBehaviour
         List<MinigameStats> notHandled = stats;
         List<MinigameStats> final = new();
 
-        for(int place = 1; place < 5; place++)
+        foreach (var stat in stats)
+        {
+            Debug.Log(stat.player.ID + ": " + stat.points + " points!");
+        }
+
+        for (int place = 1; place < 5; place++)
         {
             if (notHandled.Count == 1)
             {
@@ -68,6 +73,11 @@ public class MinigameManager : MonoBehaviour
             }
 
             if (notHandled.Count == 0) break;
+        }
+        
+        foreach(var fin in final)
+        {
+            if (fin.points == 0) fin.place = 4;
         }
 
         return final;

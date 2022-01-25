@@ -127,7 +127,7 @@ public class LobbyUIPanel : UIPanel
         {
             if (PlayerManager.Instance.Players[i] != null) continue;
 
-            PlayerManager.Instance.Players[i] = new Player();
+            PlayerManager.Instance.AddPlayer(new Gamepad());
 
             do {
                 PlayerManager.Instance.Players[i].Character = CharacterManager.Instance.Characters[Random.Range(0, CharacterManager.Instance.Characters.Length)];

@@ -10,6 +10,7 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         Players[0] = new(hostGamepad);
         Host = Players[0];
+        Host.ID = 0;
     }
 
     public void ClearPlayers()
@@ -26,6 +27,7 @@ public class PlayerManager : Singleton<PlayerManager>
         int playerID = GetFreePlayer();
 
         Players[playerID] = new Player(gamepad);
+        Players[playerID].ID = playerID;
 
         return playerID;
     }

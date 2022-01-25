@@ -22,11 +22,6 @@ public class Player
         Gamepad = gamepad;
     }
 
-    public Player()
-    {
-        Gamepad = Gamepad.current;
-    }
-
     public void Spawn<TOne, TTwo>(Transform playerPosition, RuntimeAnimatorController runtimeAnimatorController) 
         where TOne : PlayerController
         where TTwo : CameraController
