@@ -1,0 +1,15 @@
+{
+    "Items": [
+        {
+            "name": "Basket Hop",
+            "image": "baskethop",
+            "description": "In this game you have to compete to be the one who hits the most balls in the cesto",
+            "controls": [
+                {
+                    "description": "Throw",
+                    "button": 0
+                }
+            ]
+        }
+    ]
+}
