@@ -4,8 +4,6 @@ public class BasketHopPlayerController : PlayerController
 {
     public BasketHopScriptableObject scriptableObject;
 
-    public override void FixedUpdate() { }
-
     public override void Update()
     {
         if(InputManager.GetButton(Player.ID, InputButton.A, 1.0f))
@@ -17,6 +15,8 @@ public class BasketHopPlayerController : PlayerController
             acorn.GetComponent<Acorn>().player = Player;
         }
     }
+
+    public override void FixedUpdate() { }
 
     public override void Kill() { }
 
