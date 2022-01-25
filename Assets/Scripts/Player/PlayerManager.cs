@@ -40,7 +40,7 @@ public class PlayerManager : Singleton<PlayerManager>
         for(int i = 0; i < Players.Length;  i++)
         {
             if (Players[i] == null) continue;
-            if (Players[i].gamepad == gamepad) return i;
+            if (Players[i].Gamepad == gamepad) return i;
         }
 
         return -1;
@@ -48,7 +48,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public int GetPlayerID(Player player)
     {
-        return GetPlayerID(player.gamepad);
+        return GetPlayerID(player.Gamepad);
     }
 
     public int GetFreePlayer()
@@ -68,7 +68,7 @@ public class PlayerManager : Singleton<PlayerManager>
         foreach(Player player in Players)
         {
             if (player == null) continue;
-            if (player.gamepad == gamepad) return true;
+            if (player.Gamepad == gamepad) return true;
         }
 
         return false;

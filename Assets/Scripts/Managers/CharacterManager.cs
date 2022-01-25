@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public struct Character
+public class Character
 {
     public string name;
     public GameObject characterUI;

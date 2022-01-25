@@ -7,6 +7,9 @@ public class BoardManager : Singleton<BoardManager>
     public Camera TutorialCamera;
     public Camera BoardCamera;
 
+    public Transform[] preStartPos;
+    public Transform[] startPos;
+
     protected override void Awake()
     {
         base.Awake();
@@ -15,6 +18,11 @@ public class BoardManager : Singleton<BoardManager>
     private void Start()
     {
         dialoguesManager = DialoguesManager.Instance;
+        for(int i = 0; i < 4; i++)
+        {
+            Player player = PlayerManager.Instance.Players[i];
+            //player.Spawn<BoardPlayerController, BoardCameraController>();
+        }
     }
 
     public void BeginTutorial()

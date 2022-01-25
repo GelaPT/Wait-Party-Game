@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -100,18 +101,42 @@ public class LobbyUIPanel : UIPanel
 
     private void StartGame()
     {
+        List<string> usedCharacters = new();
+
         for(int i = 0; i < 4; i++)
         {
-            if(PlayerManager.Instance.Players[i] != null)
-            {
-                // Player
-                continue;
-            }
+            if (PlayerManager.Instance.Players[i] == null) continue;
 
-            // AI
+            if (PlayerManager.Instance.Players[i].Character.name != CharacterManager.Instance.RandomCharacter.name) usedCharacters.Add(PlayerManager.Instance.Players[i].Character.name);
         }
 
-        LevelManager.Instance.LoadLevel("BoardScene");
+        for(int i = 0; i < 4; i++)
+        {
+            if (PlayerManager.Instance.Players[i] == null) continue;
+            if (PlayerManager.Instance.Players[i].Character.name == CharacterManager.Instance.RandomCharacter.name)
+            {
+                do {
+                    PlayerManager.Instance.Players[i].Character = CharacterManager.Instance.Characters[Random.Range(0, CharacterManager.Instance.Characters.Length)];
+                } while (usedCharacters.Contains(PlayerManager.Instance.Players[i].Character.name) || PlayerManager.Instance.Players[i].Character.name == CharacterManager.Instance.RandomCharacter.name);
+
+                usedCharacters.Add(PlayerManager.Instance.Players[i].Character.name);
+            }
+        }
+
+        for(int i = 0; i < 4; i++)
+        {
+            if (PlayerManager.Instance.Players[i] != null) continue;
+
+            PlayerManager.Instance.Players[i] = new Player();
+
+            do {
+                PlayerManager.Instance.Players[i].Character = CharacterManager.Instance.Characters[Random.Range(0, CharacterManager.Instance.Characters.Length)];
+            } while (usedCharacters.Contains(PlayerManager.Instance.Players[i].Character.name) || PlayerManager.Instance.Players[i].Character.name == CharacterManager.Instance.RandomCharacter.name) ;
+
+            usedCharacters.Add(PlayerManager.Instance.Players[i].Character.name);
+        }
+
+        LevelManager.Instance.LoadLevel("BasketHopMinigame");
         LevelManager.Instance.UnloadLevel("LobbyScene");
 
         UIManager.Instance.SwitchPanel(DialogueUIPanel.instance);
@@ -121,6 +146,7 @@ public class LobbyUIPanel : UIPanel
     {
         base.OpenPanel();
         UICharacterSelections[0].RegisterPlayer();
+        UICharacterSelections[0].ChangeCharacter("Random");
         InputManager.AddButtonTimer(0, InputButton.A, 0.3f);
         oldSystem = EventSystem.current.gameObject;
         oldSystem.SetActive(false);

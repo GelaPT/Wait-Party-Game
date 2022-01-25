@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b77e56cea40414d8c2412df1c34ef1, type: 3}
+  m_Name: BasketHopScriptableObjects
+  m_EditorClassIdentifier: 
+  acorn: {fileID: 8571853363592596402, guid: d6a46e69e6990e4488f17c2987a23fc2, type: 3}
+  offset: {x: 0, y: 1.2, z: 0.8}
+  force: {x: 0, y: 12.5, z: 3}

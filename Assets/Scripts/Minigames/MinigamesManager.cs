@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class MinigameManager : Singleton<MinigameManager>
+public class MinigamesManager : Singleton<MinigamesManager>
 {
     public struct Minigame
     {

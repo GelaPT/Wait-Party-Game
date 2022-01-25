@@ -1,26 +1,48 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[System.Serializable]
+[Serializable]
 public class Player
 {
-    public Gamepad gamepad;
+    public int ID { get; set; }
+
+    public Gamepad Gamepad { get; set; }
 
     public Character Character { get; set; }
 
+    public GameObject PlayerGameObject { get; private set; }
+    
     public PlayerController PlayerController { get; private set; }
+
     public CameraController CameraController { get; private set; }
 
     public Player(Gamepad gamepad)
     {
-        this.gamepad = gamepad;
+        Gamepad = gamepad;
     }
-   
-    //Deactivate / Activate / Update
 
-    public void Respawn(PlayerController playerController, CameraController cameraController)
+    public Player()
     {
-        PlayerController = playerController;
-        CameraController = cameraController;
+        Gamepad = Gamepad.current;
+    }
+
+    public void Spawn<TOne, TTwo>(Transform playerPosition, RuntimeAnimatorController runtimeAnimatorController) 
+        where TOne : PlayerController
+        where TTwo : CameraController
+    {
+        PlayerGameObject = UnityEngine.Object.Instantiate(Character.characterPlayable, playerPosition.position, playerPosition.rotation);
+
+        PlayerController = PlayerGameObject.AddComponent<TOne>();
+        PlayerController.Init(this);
+        CameraController = PlayerGameObject.AddComponent<TTwo>();
+        CameraController.Init(this);
+        PlayerController.Animator = PlayerGameObject.GetComponentInChildren<Animator>();
+        PlayerController.Animator.runtimeAnimatorController = runtimeAnimatorController;
+    }
+
+    public void Kill()
+    {
+        UnityEngine.Object.Destroy(PlayerGameObject);
     }
 }

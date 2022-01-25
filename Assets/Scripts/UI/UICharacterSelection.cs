@@ -81,6 +81,7 @@ public class UICharacterSelection : MonoBehaviour {
         SelectionPanel.SetActive(true);
         eventSystem.SetSelectedGameObject(firstSelected);
         nameText.SetText("Random");
+        ChangeCharacter("Random");
     }
 
     public void UnregisterPlayer()

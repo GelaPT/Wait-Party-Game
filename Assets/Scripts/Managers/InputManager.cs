@@ -49,8 +49,8 @@ public static class InputManager
     {
         return axis switch
         {
-            InputAxis.Left => player.gamepad.leftStick.ReadValue(),
-            InputAxis.Right => player.gamepad.rightStick.ReadValue(),
+            InputAxis.Left => player.Gamepad.leftStick.ReadValue(),
+            InputAxis.Right => player.Gamepad.rightStick.ReadValue(),
             _ => Vector2.zero
         };
     }
@@ -150,22 +150,22 @@ public static class InputManager
     private static float[,] playerButtonTimer = new float[4, 16];
     public static bool GetButton(Player player, InputButton button) => button switch
     {
-        InputButton.A => player.gamepad.buttonSouth.isPressed,
-        InputButton.B => player.gamepad.buttonEast.isPressed,
-        InputButton.Y => player.gamepad.buttonNorth.isPressed,
-        InputButton.X => player.gamepad.buttonWest.isPressed,
-        InputButton.Start => player.gamepad.startButton.isPressed,
-        InputButton.Select => player.gamepad.selectButton.isPressed,
-        InputButton.Up => player.gamepad.dpad.up.isPressed,
-        InputButton.Down => player.gamepad.dpad.down.isPressed,
-        InputButton.Left => player.gamepad.dpad.left.isPressed,
-        InputButton.Right => player.gamepad.dpad.right.isPressed,
-        InputButton.RB => player.gamepad.rightShoulder.isPressed,
-        InputButton.RT => player.gamepad.rightTrigger.isPressed,
-        InputButton.RS => player.gamepad.rightStickButton.isPressed,
-        InputButton.LB => player.gamepad.leftShoulder.isPressed,
-        InputButton.LT => player.gamepad.leftTrigger.isPressed,
-        InputButton.LS => player.gamepad.leftStickButton.isPressed,
+        InputButton.A => player.Gamepad.buttonSouth.isPressed,
+        InputButton.B => player.Gamepad.buttonEast.isPressed,
+        InputButton.Y => player.Gamepad.buttonNorth.isPressed,
+        InputButton.X => player.Gamepad.buttonWest.isPressed,
+        InputButton.Start => player.Gamepad.startButton.isPressed,
+        InputButton.Select => player.Gamepad.selectButton.isPressed,
+        InputButton.Up => player.Gamepad.dpad.up.isPressed,
+        InputButton.Down => player.Gamepad.dpad.down.isPressed,
+        InputButton.Left => player.Gamepad.dpad.left.isPressed,
+        InputButton.Right => player.Gamepad.dpad.right.isPressed,
+        InputButton.RB => player.Gamepad.rightShoulder.isPressed,
+        InputButton.RT => player.Gamepad.rightTrigger.isPressed,
+        InputButton.RS => player.Gamepad.rightStickButton.isPressed,
+        InputButton.LB => player.Gamepad.leftShoulder.isPressed,
+        InputButton.LT => player.Gamepad.leftTrigger.isPressed,
+        InputButton.LS => player.Gamepad.leftStickButton.isPressed,
         _ => throw new System.NotImplementedException()
     };
     public static bool GetButton(int playerID, InputButton button)
