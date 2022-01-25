@@ -11,26 +11,22 @@ public class TutorialPanel : MonoBehaviour
         public string buttonActionText;
     }
 
+    public TextMeshProUGUI minigameName;
+    public TextMeshProUGUI minigameCategory;
     public Image tutorialImage;
-    public Sprite tutorialSprite;
-
-    public TextMeshProUGUI tutorialText;
-    public string tutorialString;
-
-    public ControlsCard controlCardPrefab;
-    public ControlCard[] controls;
+    public TextMeshProUGUI tutorialDescription;
+    public ControlsCard controlCard;
     public RectTransform controlPanelParent;
+    
+    public ControlCard[] controls;
     void Start()
     {
         foreach (ControlCard card in controls)
         {
-            ControlsCard newControlCard = Instantiate(controlCardPrefab, controlPanelParent);
+            ControlsCard newControlCard = Instantiate(controlCard, controlPanelParent);
             newControlCard.buttonIcon.sprite = card.buttonIcon;
             newControlCard.buttonActionText.SetText(card.buttonActionText);
         }
-
-        tutorialImage.sprite = tutorialSprite;
-        tutorialText.SetText(tutorialString);
     }
 
     // Update is called once per frame
