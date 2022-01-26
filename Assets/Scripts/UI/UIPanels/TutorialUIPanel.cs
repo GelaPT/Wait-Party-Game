@@ -1,37 +1,95 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 
-public class TutorialUIPanel : MonoBehaviour
+public enum GameButtonIcon : int
 {
-    [System.Serializable]
-    public class ControlCard
-    {
-        public Sprite buttonIcon;
-        public string buttonActionText;
-    }
+    A = 0,
+    B = 1,
+    X = 2,
+    Y = 3,
+    L = 4,
+    R = 5
+}
 
-    public TextMeshProUGUI minigameName;
+[System.Serializable]
+public class GameButton
+{
+    public string name;
+    public GameButtonIcon buttonIcon;
+}
+
+[System.Serializable]
+public class Minigame
+{
+    public string scene;
+    public string title;
+    public string image;
+    public string description;
+    public string category;
+    public GameButton[] buttons;
+}
+
+public class TutorialUIPanel : UIPanel
+{
+    public TextMeshProUGUI minigameTitle;
     public TextMeshProUGUI minigameCategory;
-    public Image tutorialImage;
-    public TextMeshProUGUI tutorialDescription;
-    public ControlsCard controlCard;
-    public RectTransform controlPanelParent;
-    
-    public ControlCard[] controls;
-    void Start()
+    public TextMeshProUGUI minigameDescription;
+    public Image minigameTutorial;
+    public RectTransform minigameControls;
+
+    public bool[] playersReady = new bool[4] { false, false, false, false };
+
+    private bool isTutorial;
+
+    private Minigame[] minigames;
+
+    protected override void Awake()
     {
-        foreach (ControlCard card in controls)
-        {
-            ControlsCard newControlCard = Instantiate(controlCard, controlPanelParent);
-            newControlCard.buttonIcon.sprite = card.buttonIcon;
-            newControlCard.buttonActionText.SetText(card.buttonActionText);
-        }
+        base.Awake();
+        minigames = JsonTools.GetMinigames();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void OpenPanel()
     {
-        
+        base.OpenPanel();
+
+        for (int i = 0; i < 4; i++)
+        {
+            playersReady[i] = false;
+        }
+
+        isTutorial = true;
+        gameObject.SetActive(true);
+    }
+
+    public override void FinishedOpening()
+    {
+        base.FinishedOpening();
+
+        Time.timeScale = 0;
+    }
+
+    private void Update()
+    {
+        if (!isOpened || !isTutorial) return;
+
+        for (int i = 0; i < PlayerManager.Instance.Players.Length; i++)
+        {
+            if (playersReady[i]) continue;
+            if (InputManager.GetButton(PlayerManager.Instance.Players[i], InputButton.A, 0.3f))
+            {
+                //ready
+                playersReady[i] = true;
+            }
+        }
+
+        if (playersReady.Contains(false)) return;
+
+        isTutorial = false;
+        gameObject.SetActive(false);
+        //MinigameManager.StartMinigame();
     }
 }

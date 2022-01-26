@@ -16,7 +16,7 @@ public class Hop : MonoBehaviour
     {
         speed += acceleration * Time.deltaTime;
 
-        rightSide = transform.position.x < -3 ? HopSide.Right : transform.position.x > 3 ? HopSide.Left : rightSide;
+        rightSide = transform.position.x < -3.5 ? HopSide.Right : transform.position.x > 3.5 ? HopSide.Left : rightSide;
 
         switch(rightSide)
         {

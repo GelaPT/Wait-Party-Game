@@ -1,11 +1,11 @@
 {
     "Items": [
         {
-            "name": "Basket Hop",
+            "scene": "BasketHopMinigame",
+            "title": "Basket Hop",
             "image": "baskethop",
             "description": "Score the most points by throwing the ball in the basket.",
             "category": "FFA",
-            "timer": true,
             "controls": [
                 {
                     "description": "Throw",
@@ -14,11 +14,11 @@
             ]
         },
         {
-            "name": "Cannon Dodge",
+            "scene": "CannonDodgeMinigame",
+            "title": "Cannon Dodge",
             "image": "canondodge",
             "description": "Be the last standing by avoiding the acorn cannon balls.",
             "category": "FFA",
-            "timer": false,
             "controls": [
                 {
                     "description": "Move",
@@ -27,11 +27,11 @@
             ]
         },
         {
-            "name": "Think Fast",
+            "scene": "CanoeingMinigame",
+            "title": "Think Fast",
             "image": "thinkfast",
             "description": "Be the fastest to press the buttons in the correct order.",
             "category": "FFA",
-            "timer": false,
             "controls": [
                 {
                     "description": "Square",
@@ -48,11 +48,11 @@
             ]
         },
         {
-            "name": "Lake Race",
+            "scene": "CarRaceMinigame",
+            "title": "Lake Race",
             "image": "lakerace",
             "description": "Be the first to complete 3 laps around the track.",
             "category": "FFA",
-            "timer": false,
             "controls": [
                 {
                     "description": "Steer",
@@ -69,11 +69,11 @@
             ]
         },
         {
-            "name": "Dance Party",
+            "scene": "DDRMinigame",
+            "title": "Dance Party",
             "image": "danceparty",
             "description": "Be the best dancer by tapping the buttons at the correct timing.",
             "category": "FFA",
-            "timer": true,
             "controls": [
                 {
                     "description": "Left",
@@ -94,11 +94,11 @@
             ]
         },
         {
-            "name": "Obstacle Disk",
-            "image": "obstacledisk",
+            "scene": "WipeOutMinigame",
+            "title": "Wipe Out",
+            "image": "wipeout",
             "description": "Be the last one standing by avoiding the obstacles.",
             "category": "FFA",
-            "timer": false,
             "controls": [
                 {
                     "description": "Move",
@@ -115,11 +115,11 @@
             ]
         },
         {
-            "name": "Dodgeball",
+            "scene": "DodgeBallMinigame",
+            "title": "Dodgeball",
             "image": "dodgeball",
             "description": "Try to hit your adversary by throwing the acorn across the field.",
             "category": "2v2",
-            "timer": false,
             "controls": [
                 {
                     "description": "Move",
@@ -136,11 +136,11 @@
             ]
         },
         {
-            "name": "Lake Fight",
-            "image": "lakefight",
+            "scene": "LakeBattleMinigame",
+            "title": "Lake Battle",
+            "image": "lakebattle",
             "description": "One player moves the boat while the other tries to shoot at the other team.",
             "category": "2v2",
-            "timer": false,
             "controls": [
                 {
                     "description": "Move/Aim",
@@ -153,11 +153,11 @@
             ]
         },
         {
-            "name": "Avoid the Light",
+            "scene": "AvoidTheLightMinigame",
+            "title": "Avoid the Light",
             "image": "avoidthelight",
             "description": "The team must avoid getting caught by the light the solo player controls.",
             "category": "1v3",
-            "timer": true,
             "controls": [
                 {
                     "description": "Move",
@@ -166,11 +166,11 @@
             ]
         },
         {
-            "name": "Just Act Natural",
+            "scene": "JustActNaturalMinigame",
+            "title": "Just Act Natural",
             "image": "justactnatural",
             "description": "The team must collect all acorns without being caught by the solo player.",
             "category": "1v3",
-            "timer": true,
             "controls": [
                 {
                     "description": "Move",
@@ -183,11 +183,11 @@
             ]
         },
         {
-            "name": "Messy Maze",
+            "scene": "MessyMazeMinigame",
+            "title": "Messy Maze",
             "image": "messymaze",
             "description": "Avoid the Mess Monster and collect all the acorns in the maze.",
             "category": "COOP",
-            "timer": false,
             "controls": [
                 {
                     "description": "Move",
@@ -196,11 +196,11 @@
             ]
         },
         {
-            "name": "Down the River",
+            "scene": "DownTheRiverMinigame",
+            "title": "Down the River",
             "image": "downtheriver",
             "description": "Avoid the obstacles by paddling together and reach the end of the river.",
             "category": "COOP",
-            "timer": false,
             "controls": [
                 {
                     "description": "Paddle",
