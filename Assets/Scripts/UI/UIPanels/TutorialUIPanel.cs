@@ -26,7 +26,7 @@ public class Minigame
 {
     public string scene;
     public string title;
-    public string image;
+    public string tutorial;
     public string description;
     public string category;
     public GameButton[] buttons;
@@ -45,6 +45,7 @@ public class TutorialUIPanel : UIPanel
     private bool isTutorial;
 
     private Minigame[] minigames;
+    private Minigame currentMinigame;
 
     protected override void Awake()
     {
@@ -60,6 +61,11 @@ public class TutorialUIPanel : UIPanel
         {
             playersReady[i] = false;
         }
+
+        minigameTitle.SetText(currentMinigame.title);
+        minigameCategory.SetText(currentMinigame.category);
+        minigameDescription.SetText(currentMinigame.description);
+        minigameTutorial.sprite = Resources.Load<Sprite>("Tutorials/" + currentMinigame.tutorial);
 
         isTutorial = true;
         gameObject.SetActive(true);

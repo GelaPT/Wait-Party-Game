@@ -3,7 +3,7 @@
         {
             "scene": "BasketHopMinigame",
             "title": "Basket Hop",
-            "image": "baskethop",
+            "tutorial": "baskethop",
             "description": "Score the most points by throwing the ball in the basket.",
             "category": "FFA",
             "controls": [
@@ -16,7 +16,7 @@
         {
             "scene": "CannonDodgeMinigame",
             "title": "Cannon Dodge",
-            "image": "canondodge",
+            "tutorial": "canondodge",
             "description": "Be the last standing by avoiding the acorn cannon balls.",
             "category": "FFA",
             "controls": [
@@ -29,7 +29,7 @@
         {
             "scene": "CanoeingMinigame",
             "title": "Think Fast",
-            "image": "thinkfast",
+            "tutorial": "thinkfast",
             "description": "Be the fastest to press the buttons in the correct order.",
             "category": "FFA",
             "controls": [
@@ -50,7 +50,7 @@
         {
             "scene": "CarRaceMinigame",
             "title": "Lake Race",
-            "image": "lakerace",
+            "tutorial": "lakerace",
             "description": "Be the first to complete 3 laps around the track.",
             "category": "FFA",
             "controls": [
@@ -71,7 +71,7 @@
         {
             "scene": "DDRMinigame",
             "title": "Dance Party",
-            "image": "danceparty",
+            "tutorial": "danceparty",
             "description": "Be the best dancer by tapping the buttons at the correct timing.",
             "category": "FFA",
             "controls": [
@@ -96,7 +96,7 @@
         {
             "scene": "WipeOutMinigame",
             "title": "Wipe Out",
-            "image": "wipeout",
+            "tutorial": "wipeout",
             "description": "Be the last one standing by avoiding the obstacles.",
             "category": "FFA",
             "controls": [
@@ -117,7 +117,7 @@
         {
             "scene": "DodgeBallMinigame",
             "title": "Dodgeball",
-            "image": "dodgeball",
+            "tutorial": "dodgeball",
             "description": "Try to hit your adversary by throwing the acorn across the field.",
             "category": "2v2",
             "controls": [
@@ -138,7 +138,7 @@
         {
             "scene": "LakeBattleMinigame",
             "title": "Lake Battle",
-            "image": "lakebattle",
+            "tutorial": "lakebattle",
             "description": "One player moves the boat while the other tries to shoot at the other team.",
             "category": "2v2",
             "controls": [
@@ -155,7 +155,7 @@
         {
             "scene": "AvoidTheLightMinigame",
             "title": "Avoid the Light",
-            "image": "avoidthelight",
+            "tutorial": "avoidthelight",
             "description": "The team must avoid getting caught by the light the solo player controls.",
             "category": "1v3",
             "controls": [
@@ -168,7 +168,7 @@
         {
             "scene": "JustActNaturalMinigame",
             "title": "Just Act Natural",
-            "image": "justactnatural",
+            "tutorial": "justactnatural",
             "description": "The team must collect all acorns without being caught by the solo player.",
             "category": "1v3",
             "controls": [
@@ -185,7 +185,7 @@
         {
             "scene": "MessyMazeMinigame",
             "title": "Messy Maze",
-            "image": "messymaze",
+            "tutorial": "messymaze",
             "description": "Avoid the Mess Monster and collect all the acorns in the maze.",
             "category": "COOP",
             "controls": [
@@ -198,7 +198,7 @@
         {
             "scene": "DownTheRiverMinigame",
             "title": "Down the River",
-            "image": "downtheriver",
+            "tutorial": "downtheriver",
             "description": "Avoid the obstacles by paddling together and reach the end of the river.",
             "category": "COOP",
             "controls": [

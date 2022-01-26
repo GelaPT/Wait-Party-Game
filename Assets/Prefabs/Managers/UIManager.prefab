@@ -173,7 +173,7 @@ RectTransform:
   - {fileID: 1820841032644489682}
   - {fileID: 1820841033459548978}
   m_Father: {fileID: 3870346922708680387}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3502,7 +3502,6 @@ RectTransform:
   - {fileID: 8229202336022816838}
   - {fileID: 3041496673416230343}
   - {fileID: 7037486008728402977}
-  - {fileID: 8805924690536339587}
   - {fileID: 2058423806}
   m_Father: {fileID: 3870346923401024071}
   m_RootOrder: 1
@@ -4305,103 +4304,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 5
---- !u!1 &3973946423126996530
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8805924690536339587}
-  - component: {fileID: 1641876488685212929}
-  - component: {fileID: 500499632819717057}
-  - component: {fileID: 1671749060437847267}
-  m_Layer: 5
-  m_Name: MinigamePanel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8805924690536339587
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3973946423126996530}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3870346922708680387}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &1641876488685212929
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3973946423126996530}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 739b5159cc719ac4a80178b3fbad0b46, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!225 &500499632819717057
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3973946423126996530}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
---- !u!114 &1671749060437847267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3973946423126996530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afac4da2fb485f54296b5e5b2fd471c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startSelectable: {fileID: 0}
-  onPanelOpen:
-    m_PersistentCalls:
-      m_Calls: []
-  onPanelFinishOpen:
-    m_PersistentCalls:
-      m_Calls: []
-  onPanelClose:
-    m_PersistentCalls:
-      m_Calls: []
-  selectables: []
-  tutorialPanel: {fileID: 0}
-  timer: {fileID: 0}
-  playersReady: 
 --- !u!1 &4022997412863038058
 GameObject:
   m_ObjectHideFlags: 0
@@ -6552,7 +6454,7 @@ GameObject:
   - component: {fileID: 7037486008417715031}
   - component: {fileID: 7037486008417715028}
   m_Layer: 5
-  m_Name: TutorialImage
+  m_Name: TutorialVideo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6694,6 +6596,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7037486008728402977}
   - component: {fileID: 7037486008728402979}
+  - component: {fileID: 5202783235667910979}
+  - component: {fileID: 8545582821464519269}
   - component: {fileID: 3990212041410469922}
   m_Layer: 5
   m_Name: TutorialPanel
@@ -6734,6 +6638,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7037486008728402982}
   m_CullTransparentMesh: 1
+--- !u!95 &5202783235667910979
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7037486008728402982}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &8545582821464519269
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7037486008728402982}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &3990212041410469922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6762,6 +6698,7 @@ MonoBehaviour:
   minigameDescription: {fileID: 7037486010055024340}
   minigameTutorial: {fileID: 7037486008417715028}
   minigameControls: {fileID: 7037486008445909129}
+  playersReady: 00000000
 --- !u!1 &7037486009078684025
 GameObject:
   m_ObjectHideFlags: 0
