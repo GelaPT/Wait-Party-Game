@@ -32,7 +32,7 @@ public class BoardManager : Singleton<BoardManager>
 
     public void StartBoardGame()
     {
-        dialoguesManager.EndDialogue();
+        //dialoguesManager.EndDialogue();
         TutorialCamera.gameObject.SetActive(false);
         BoardCamera.gameObject.SetActive(true);
         UIManager.Instance.SwitchPanel("BoardPanel");

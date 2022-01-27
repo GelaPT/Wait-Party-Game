@@ -136,7 +136,7 @@ public class LobbyUIPanel : UIPanel
             usedCharacters.Add(PlayerManager.Instance.Players[i].Character.name);
         }
 
-        LevelManager.Instance.LoadLevel("BasketHopMinigame");
+        LevelManager.Instance.LoadLevel("BoardScene");
         LevelManager.Instance.UnloadLevel("LobbyScene");
 
         UIManager.Instance.SwitchPanel(DialogueUIPanel.instance);

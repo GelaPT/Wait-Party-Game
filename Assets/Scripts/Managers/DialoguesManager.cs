@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Playables;
 
 [System.Serializable]
 public enum DialogueMode : int
@@ -55,7 +56,7 @@ public class DialoguesManager : Singleton<DialoguesManager>
 
     private void Update()
     {
-        if (UIManager.Instance.CurrentPanel != DialogueUIPanel.instance) return;
+        if (UIManager.Instance != null && UIManager.Instance.CurrentPanel != DialogueUIPanel.instance) return;
 
         if (curDialogue == null) return;
 
@@ -81,11 +82,18 @@ public class DialoguesManager : Singleton<DialoguesManager>
         curDialogue = dialogue;
         DialogueUIPanel.instance.StartDialogue(dialogue);
         this.player = player;
+        HideNpc(false);
     }
 
     public void HideNpc(bool hide)
     {
         DialogueUIPanel.instance.HideNpc(hide);
+    }
+
+    public void HideDialogue(bool hide)
+    {
+        DialogueUIPanel.instance.HideDialogue(hide);
+        if (!hide) NextDialogue();
     }
 
     public void NextDialogue()

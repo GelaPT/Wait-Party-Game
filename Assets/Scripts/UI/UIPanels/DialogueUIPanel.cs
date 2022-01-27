@@ -18,24 +18,23 @@ public class DialogueUIPanel : UIPanel
     [Header("Animators")]
     public Animator dialogueBoxAnimator;
     public Animator npcSpriteAnimator;
+    public Animator textAnimator;
 
     private void Start()
     {
         if (instance == null) instance = this;
 
-        EndDialogue();
+        //EndDialogue();
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
-        dialogueBox.gameObject.SetActive(true);
-
         dialogueText.SetText(dialogue.text[0]);
 
         if((int)dialogue.sprite != -1)
         {
-            npcSprite.gameObject.SetActive(true);
             npcSprite.sprite = DialoguesManager.Instance.npcSprites[(int)dialogue.sprite];
+            npcSpriteAnimator.SetTrigger("FadeIn");
         }
         else
             npcSprite.gameObject.SetActive(false);
@@ -61,27 +60,27 @@ public class DialogueUIPanel : UIPanel
     public void UpdateDialogue(string text)
     {
         dialogueText.SetText("");
-        dialogueBoxAnimator.SetTrigger("NextDialogue");
+        textAnimator.SetTrigger("NextDialogue");
         dialogueText.SetText(text);
+    }
+
+    public void HideDialogue(bool hide)
+    {
+        dialogueBoxAnimator.SetTrigger(hide ? "FadeOut" : "FadeIn");
+        if (!hide) textAnimator.SetTrigger("NextDialogue");
     }
 
     public void EndDialogue()
     {
-        dialogueText.SetText("");
-        dialogueBox.gameObject.SetActive(false);
-        commandsText.SetText("");
-        npcSprite.gameObject.SetActive(false);
-        npcSpriteTransform.anchoredPosition = new Vector2(0, -32);
-
         //animator stuff
         dialogueBoxAnimator.SetTrigger("FadeOut");
         npcSpriteAnimator.SetTrigger("FadeOut");
+
+        npcSpriteTransform.anchoredPosition = new Vector2(0, -32);
     }
 
     public void HideNpc(bool hide)
     {
-        //npcSprite.gameObject.SetActive(!hide);
-        if (hide)
-            npcSpriteAnimator.SetTrigger("FadeOut");
+        npcSpriteAnimator.SetTrigger(hide ? "FadeOut" : "FadeIn");
     }
 }

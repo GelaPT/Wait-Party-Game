@@ -907,6 +907,7 @@ GameObject:
   - component: {fileID: 1632954877237129594}
   - component: {fileID: 4187951655600783432}
   - component: {fileID: 5598808350708768874}
+  - component: {fileID: 2258196191148203749}
   - component: {fileID: 1917834804477762352}
   m_Layer: 5
   m_Name: DialogueText
@@ -932,8 +933,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 10}
-  m_SizeDelta: {x: 880, y: 152}
+  m_AnchoredPosition: {x: 0, y: 9.216}
+  m_SizeDelta: {x: 920.748, y: 169.239}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4187951655600783432
 CanvasRenderer:
@@ -963,9 +964,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' afas dfasf asf ds dsf adsf dsf dsa dsf dsf ds dsf n ndfso hh dosu diops
-    ds d hdoshfdosuh ds dsfjdoshfods 9dsf dosfjods fods fdshfdosfh dsouh dosfh dosfh
-    isfhisadh fidsh  ish isah ihsafh isfis ihdsi'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 27dd910766ccc9441b968c85ab4fce37, type: 2}
   m_sharedMaterial: {fileID: 8990355420700359615, guid: 27dd910766ccc9441b968c85ab4fce37, type: 2}
@@ -992,11 +991,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 32
+  m_fontSizeMin: 34
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -1034,6 +1033,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!95 &2258196191148203749
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726745817528642800}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 77ba5d66fc5dc75409ea9402694c0767, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!225 &1917834804477762352
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4821,6 +4840,7 @@ MonoBehaviour:
   npcSpriteTransform: {fileID: 3258152081945523068}
   dialogueBoxAnimator: {fileID: 6991734282005893611}
   npcSpriteAnimator: {fileID: 8587817508180615254}
+  textAnimator: {fileID: 2258196191148203749}
 --- !u!1 &4703933097680176991
 GameObject:
   m_ObjectHideFlags: 0
@@ -5467,7 +5487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
