@@ -20,7 +20,7 @@ public class BoardManager : Singleton<BoardManager>
         dialoguesManager = DialoguesManager.Instance;
         for(int i = 0; i < 4; i++)
         {
-            Player player = PlayerManager.Instance.Players[i];
+            //Player player = PlayerManager.Instance.Players[i];
             //player.Spawn<BoardPlayerController, BoardCameraController>();
         }
     }
