@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 [Serializable]
 public class Player
 {
+    public bool AI { get; set; }
+
     public int ID { get; set; }
 
     public Gamepad Gamepad { get; set; }
@@ -17,8 +19,14 @@ public class Player
 
     public CameraController CameraController { get; private set; }
 
+    public Player()
+    {
+        AI = true;
+    }
+
     public Player(Gamepad gamepad)
     {
+        AI = false;
         Gamepad = gamepad;
     }
 

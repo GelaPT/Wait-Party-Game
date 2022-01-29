@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
 
     public Animator Animator { get; set; }
 
+    public AIController AIController { get; set; }
+
     public virtual void Init(Player player, Vector3 position = new Vector3(), Quaternion rotation = new Quaternion(), Vector3 scale = new Vector3(), Vector3 BaseVelocity = new Vector3())
     {
         Player = player;
@@ -38,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
     public virtual void Update()
     {
-
+        if(Player.AI) AIController.UpdateAI();
     }
 
     public virtual void FixedUpdate()

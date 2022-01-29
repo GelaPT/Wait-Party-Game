@@ -21,9 +21,12 @@ public class MinigameManager : MonoBehaviour
 
     protected virtual void Init()
     {
-        foreach(Player player in PlayerManager.Instance.Players)
+        for(int i = 0; i < 4; i++)
         {
-            stats.Add(new MinigameStats(player));
+            if(PlayerManager.Instance.Players[i] != null)
+            {
+                stats.Add(new MinigameStats(PlayerManager.Instance.Players[i]));
+            }
         }
     }
 
@@ -62,7 +65,7 @@ public class MinigameManager : MonoBehaviour
             final.Add(notHandled[highestIndex]);
             notHandled.RemoveAt(highestIndex);
 
-            for(int i = 0; i < notHandled.Count; i++)
+            for(int i = notHandled.Count - 1; i >= 0; i--)
             {
                 if(notHandled[i].points == lastHighestPoint)
                 {

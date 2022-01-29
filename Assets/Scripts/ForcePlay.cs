@@ -19,6 +19,7 @@ public static class ForcePlay
 
         if(state == PlayModeStateChange.EnteredPlayMode)
         {
+            if (EditorSceneManager.GetActiveScene().buildIndex == 0) return;
             EditorSceneManager.LoadScene(0);
         }
     }

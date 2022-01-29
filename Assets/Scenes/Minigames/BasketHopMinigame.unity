@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 145147850}
   - component: {fileID: 145147849}
-  - component: {fileID: 145147848}
   m_Layer: 5
   m_Name: GamePanel
   m_TagString: Untagged
@@ -141,23 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &145147848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145147847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d33308d69c293c94fa12b3b382a2f3d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: 
-  image: 
-  description: 
-  category: 
-  timer: 0
 --- !u!222 &145147849
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -616,6 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b69053ad56df241ac3e800ec5b2b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Hop: {fileID: 1627930733}
   scriptableObject: {fileID: 11400000, guid: b84164d28da8d514b956c260eb48e0e3, type: 2}
   playerSpawns:
   - {fileID: 1258608424}
@@ -2102,6 +2085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   acceleration: 0.025
+  direction: 0
 --- !u!65 &1627930734
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -49,8 +49,8 @@ public static class InputManager
     {
         return axis switch
         {
-            InputAxis.Left => player.Gamepad.leftStick.ReadValue(),
-            InputAxis.Right => player.Gamepad.rightStick.ReadValue(),
+            InputAxis.Left => player.AI ? (player as AIPlayer).FakeInputAxis[(int)axis] : player.Gamepad.leftStick.ReadValue(),
+            InputAxis.Right => player.AI ? (player as AIPlayer).FakeInputAxis[(int)axis] : player.Gamepad.rightStick.ReadValue(),
             _ => Vector2.zero
         };
     }
@@ -150,22 +150,22 @@ public static class InputManager
     private static float[,] playerButtonTimer = new float[4, 16];
     public static bool GetButton(Player player, InputButton button) => button switch
     {
-        InputButton.A => player.Gamepad.buttonSouth.isPressed,
-        InputButton.B => player.Gamepad.buttonEast.isPressed,
-        InputButton.Y => player.Gamepad.buttonNorth.isPressed,
-        InputButton.X => player.Gamepad.buttonWest.isPressed,
-        InputButton.Start => player.Gamepad.startButton.isPressed,
-        InputButton.Select => player.Gamepad.selectButton.isPressed,
-        InputButton.Up => player.Gamepad.dpad.up.isPressed,
-        InputButton.Down => player.Gamepad.dpad.down.isPressed,
-        InputButton.Left => player.Gamepad.dpad.left.isPressed,
-        InputButton.Right => player.Gamepad.dpad.right.isPressed,
-        InputButton.RB => player.Gamepad.rightShoulder.isPressed,
-        InputButton.RT => player.Gamepad.rightTrigger.isPressed,
-        InputButton.RS => player.Gamepad.rightStickButton.isPressed,
-        InputButton.LB => player.Gamepad.leftShoulder.isPressed,
-        InputButton.LT => player.Gamepad.leftTrigger.isPressed,
-        InputButton.LS => player.Gamepad.leftStickButton.isPressed,
+        InputButton.A => player.AI ? (player as AIPlayer).FakeInput[(int)button] : player.Gamepad.buttonSouth.isPressed,
+        InputButton.B => player.AI ? (player as AIPlayer).FakeInput[(int)button] : player.Gamepad.buttonEast.isPressed,
+        InputButton.Y => player.AI ? (player as AIPlayer).FakeInput[(int)button] : player.Gamepad.buttonNorth.isPressed,
+        InputButton.X => player.AI ? (player as AIPlayer).FakeInput[(int)button] : player.Gamepad.buttonWest.isPressed,
+        InputButton.Start => player.AI ? (player as AIPlayer).FakeInput[(int)button] : player.Gamepad.startButton.isPressed,
+        InputButton.Select => player.AI ? (player as AIPlayer).FakeInput[(int)button] : player.Gamepad.selectButton.isPressed,
+        InputButton.Up => player.AI ? (player as AIPlayer).FakeInput[(int)button] : player.Gamepad.dpad.up.isPressed,
+        InputButton.Down => player.AI ? (player as AIPlayer).FakeInput[(int)button] : player.Gamepad.dpad.down.isPressed,
+        InputButton.Left => player.AI ? (player as AIPlayer).FakeInput[(int)button] : player.Gamepad.dpad.left.isPressed,
+        InputButton.Right => player.AI ? (player as AIPlayer).FakeInput[(int)button] : player.Gamepad.dpad.right.isPressed,
+        InputButton.RB => player.AI ? (player as AIPlayer).FakeInput[(int)button] : player.Gamepad.rightShoulder.isPressed,
+        InputButton.RT => player.AI ? (player as AIPlayer).FakeInput[(int)button] : player.Gamepad.rightTrigger.isPressed,
+        InputButton.RS => player.AI ? (player as AIPlayer).FakeInput[(int)button] : player.Gamepad.rightStickButton.isPressed,
+        InputButton.LB => player.AI ? (player as AIPlayer).FakeInput[(int)button] : player.Gamepad.leftShoulder.isPressed,
+        InputButton.LT => player.AI ? (player as AIPlayer).FakeInput[(int)button] : player.Gamepad.leftTrigger.isPressed,
+        InputButton.LS => player.AI ? (player as AIPlayer).FakeInput[(int)button] : player.Gamepad.leftStickButton.isPressed,
         _ => throw new System.NotImplementedException()
     };
     public static bool GetButton(int playerID, InputButton button)

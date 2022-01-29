@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class BasketHopManager : MGSingleton<BasketHopManager>
 {
+    public Hop Hop;
     public BasketHopScriptableObject scriptableObject;
     public Transform[] playerSpawns;
     public RuntimeAnimatorController animatorController;
@@ -37,6 +38,12 @@ public class BasketHopManager : MGSingleton<BasketHopManager>
                 Debug.Log(stat.player.ID + 1 + ": " + stat.place + " place with " + stat.points + " points!");
             }
         }
+    }
+
+    public override List<MinigameStats> EndMinigame()
+    {
+        Physics.gravity /= 2;
+        return base.EndMinigame();
     }
 
     public void Score(Player player)

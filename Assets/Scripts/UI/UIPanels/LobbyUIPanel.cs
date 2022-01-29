@@ -127,7 +127,7 @@ public class LobbyUIPanel : UIPanel
         {
             if (PlayerManager.Instance.Players[i] != null) continue;
 
-            PlayerManager.Instance.AddPlayer(new Gamepad());
+            PlayerManager.Instance.AddAI();
 
             do {
                 PlayerManager.Instance.Players[i].Character = CharacterManager.Instance.Characters[Random.Range(0, CharacterManager.Instance.Characters.Length)];
@@ -136,7 +136,7 @@ public class LobbyUIPanel : UIPanel
             usedCharacters.Add(PlayerManager.Instance.Players[i].Character.name);
         }
 
-        LevelManager.Instance.LoadLevel("BoardScene");
+        LevelManager.Instance.LoadLevel("BasketHopMinigame");
         LevelManager.Instance.UnloadLevel("LobbyScene");
 
         UIManager.Instance.SwitchPanel(DialogueUIPanel.instance);

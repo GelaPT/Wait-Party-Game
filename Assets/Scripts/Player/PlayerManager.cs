@@ -6,6 +6,20 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public Player[] Players { get; private set; } = new Player[4];
 
+    private void LateUpdate()
+    {
+        for(int i = 0; i < Players.Length; i++)
+        {
+            if(Players[i] != null)
+            {
+                if(Players[i].AI)
+                {
+                    (Players[i] as AIPlayer).InputLateUpdate();
+                }
+            }
+        }
+    }
+
     public void MakeHost(Gamepad hostGamepad)
     {
         Players[0] = new(hostGamepad);
@@ -18,6 +32,17 @@ public class PlayerManager : Singleton<PlayerManager>
         for(int i = 1; i < Players.Length; i++) {
             Players[i] = null;
         }
+    }
+
+    public int AddAI()
+    {
+        int playerID = GetFreePlayer();
+
+        Players[playerID] = new AIPlayer();
+        Players[playerID].AI = true;
+        Players[playerID].ID = playerID;
+
+        return playerID;
     }
 
     public int AddPlayer(Gamepad gamepad)
@@ -75,6 +100,4 @@ public class PlayerManager : Singleton<PlayerManager>
 
         return false;
     }
-
-    // TODO : Implementar
 }
