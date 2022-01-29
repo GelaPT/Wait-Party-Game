@@ -5,7 +5,7 @@ using UnityEngine;
 public class CannonDodgePlayerController : PlayerController
 {
     private Rigidbody rb;
-    private float speed = 750.0f;
+    private float speed = 75.0f;
     private bool isStunned = false;
 
     private void Start()
@@ -40,7 +40,7 @@ public class CannonDodgePlayerController : PlayerController
 
         Animator.SetFloat("MoveBlend", direction.magnitude);
 
-        BaseVelocity = Time.deltaTime * speed * new Vector3(direction.x, 0, direction.y);
+        BaseVelocity = speed * new Vector3(direction.x, 0, direction.y);
 
         Velocity = Vector3.Lerp(Velocity, BaseVelocity, 0.5f);
 
