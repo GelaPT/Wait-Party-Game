@@ -5,7 +5,7 @@ using UnityEngine;
 public class CannonDodgePlayerController : PlayerController
 {
     private Rigidbody rb;
-    private float speed = 75.0f;
+    private float speed = 5f;
     private bool isStunned = false;
 
     private void Start()
