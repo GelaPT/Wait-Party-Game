@@ -425,6 +425,7 @@ MonoBehaviour:
   - {fileID: 1818431696}
   - {fileID: 2094786256}
   onTutorial: 1
+  PlayerSmoke: {fileID: 1054937376455798752, guid: 416ab156eed482a4b9ce1ba7881c8ff5, type: 3}
   animatorController: {fileID: 9100000, guid: ec37c0e516bf4cf41a273ae5c444b2fe, type: 2}
   cannonSpawn: {fileID: 2039939889}
   cannon: {fileID: 8788551919248552631, guid: ab6d0b0521720bf4f941d37730005544, type: 3}

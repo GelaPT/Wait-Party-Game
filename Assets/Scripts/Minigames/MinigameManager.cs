@@ -9,6 +9,7 @@ public class MinigameManager : MonoBehaviour
 
     public bool onTutorial = true;
 
+    public GameObject PlayerSmoke;
     public class MinigameStats
     {
         public Player player;

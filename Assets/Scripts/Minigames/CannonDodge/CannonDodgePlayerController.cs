@@ -60,6 +60,7 @@ public class CannonDodgePlayerController : PlayerController
 
     private void DestroySelf()
     {
+        GameObject.Instantiate(CannonDodgeManager.Instance.PlayerSmoke, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
