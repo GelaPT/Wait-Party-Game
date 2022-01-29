@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Acorn : MonoBehaviour
+public class BasketHopAcorn : MonoBehaviour
 {
     private float lifeTime = 0.0f;
     public float lifeSpan = 5.0f;

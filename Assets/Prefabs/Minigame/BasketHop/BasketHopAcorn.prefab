@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8805732329376036605}
   - component: {fileID: 8805732329376036600}
   m_Layer: 0
-  m_Name: Acorn
+  m_Name: BasketHopAcorn
   m_TagString: Acorn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

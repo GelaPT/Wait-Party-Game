@@ -16,7 +16,7 @@
         {
             "scene": "CannonDodgeMinigame",
             "title": "Cannon Dodge",
-            "tutorial": "canondodge",
+            "tutorial": "cannondodge",
             "description": "Be the last standing by avoiding the acorn cannon balls.",
             "category": "FFA",
             "controls": [

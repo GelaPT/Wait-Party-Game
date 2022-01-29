@@ -33,6 +33,6 @@ public class Hop : MonoBehaviour
     {
         if (!other.CompareTag("Acorn")) return;
 
-        other.GetComponent<Acorn>().Score();
+        other.GetComponent<BasketHopAcorn>().Score();
     }
 }

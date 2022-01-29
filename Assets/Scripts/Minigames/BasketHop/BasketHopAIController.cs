@@ -14,7 +14,7 @@ public class BasketHopAIController : AIController
     {
         throwTimer += Time.deltaTime;
 
-        if (throwTimer < 1.2f) return;
+        if (throwTimer < 1.15f) return;
 
         Hop hop = BasketHopManager.Instance.Hop;
 

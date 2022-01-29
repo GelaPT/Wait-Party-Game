@@ -3,7 +3,11 @@ using System.Collections.Generic;
 
 public class MinigameManager : MonoBehaviour
 {
+    public Transform[] playerSpawns;
+
     public List<MinigameStats> stats = new();
+
+    public bool onTutorial = true;
 
     public class MinigameStats
     {
@@ -30,15 +34,15 @@ public class MinigameManager : MonoBehaviour
         }
     }
 
+    protected virtual void Update()
+    {
+        if (onTutorial) return;
+    }
+
     public virtual List<MinigameStats> EndMinigame()
     {
         List<MinigameStats> notHandled = stats;
         List<MinigameStats> final = new();
-
-        foreach (var stat in stats)
-        {
-            Debug.Log(stat.player.ID + ": " + stat.points + " points!");
-        }
 
         for (int place = 1; place < 5; place++)
         {

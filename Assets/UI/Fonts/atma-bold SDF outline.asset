@@ -57,11 +57,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: atma-bold SDF 2
+  m_Name: atma-bold SDF outline
   m_EditorClassIdentifier: 
-  hashCode: 1116687666
+  hashCode: 501029184
   material: {fileID: 8990355420700359615}
-  materialHashCode: -318246958
+  materialHashCode: -1303140000
   m_Version: 1.1.0
   m_SourceFontFileGUID: e62e388da4922064684303efadbf878a
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: e62e388da4922064684303efadbf878a, type: 3}

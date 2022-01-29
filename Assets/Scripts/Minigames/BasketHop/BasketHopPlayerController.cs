@@ -23,7 +23,7 @@ public class BasketHopPlayerController : PlayerController
             Rigidbody acorn = Instantiate(scriptableObject.acorn, transform.position + scriptableObject.offset, Random.rotation).GetComponent<Rigidbody>();
             acorn.AddForce(scriptableObject.force * acorn.mass, ForceMode.Impulse);
 
-            acorn.GetComponent<Acorn>().player = Player;
+            acorn.GetComponent<BasketHopAcorn>().player = Player;
         }
     }
 
