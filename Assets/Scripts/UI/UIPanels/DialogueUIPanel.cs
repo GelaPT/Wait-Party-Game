@@ -10,6 +10,7 @@ public class DialogueUIPanel : UIPanel
     [Header("Texts")]
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI commandsText;
+    public TextMeshProUGUI skipText;
     [Header("Images")]
     public Image dialogueBox;
     public Image npcSprite;
@@ -31,7 +32,7 @@ public class DialogueUIPanel : UIPanel
     {
         dialogueText.SetText(dialogue.text[0]);
 
-        if((int)dialogue.sprite != -1)
+        if ((int)dialogue.sprite != -1)
         {
             npcSprite.sprite = DialoguesManager.Instance.npcSprites[(int)dialogue.sprite];
             npcSpriteAnimator.SetTrigger("FadeIn");
@@ -49,8 +50,16 @@ public class DialogueUIPanel : UIPanel
 
         npcSpriteTransform.anchoredPosition = new Vector2(pos, -32);
 
-        if (dialogue.mode == DialogueMode.Player) commandsText.SetText("<sprite index= 0>  Next");
-        else commandsText.SetText("");
+        if (dialogue.mode == DialogueMode.Player)
+        {
+            commandsText.SetText("<sprite index= 0>  Next");
+            skipText.SetText("");
+        }
+        else
+        {
+            commandsText.SetText("");
+            skipText.SetText("<sprite index= 3> Skip");
+        }
 
         //animator stuff
         dialogueBoxAnimator.SetTrigger("FadeIn");

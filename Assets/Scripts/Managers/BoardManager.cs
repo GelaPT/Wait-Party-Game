@@ -35,6 +35,6 @@ public class BoardManager : Singleton<BoardManager>
         //dialoguesManager.EndDialogue();
         TutorialCamera.gameObject.SetActive(false);
         BoardCamera.gameObject.SetActive(true);
-        UIManager.Instance.SwitchPanel("BoardPanel");
+        UIManager.Instance.SwitchPanel("MinigamesPanel");
     }
 }

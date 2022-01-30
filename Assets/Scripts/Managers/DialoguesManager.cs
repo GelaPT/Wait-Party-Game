@@ -40,6 +40,8 @@ public class Dialogue
 
 public class DialoguesManager : Singleton<DialoguesManager>
 {
+    public PlayableDirector cutsceneDirector;
+
     [HideInInspector] public Dialogue[] dialogues;
     public Sprite[] npcSprites;
     
@@ -66,6 +68,11 @@ public class DialoguesManager : Singleton<DialoguesManager>
             {
                 NextDialogue();
             }
+        }
+
+        if (cutsceneDirector.time < cutsceneDirector.duration - 1 && InputManager.GetButton(0, InputButton.Y, 0.3f))
+        {
+            cutsceneDirector.time = cutsceneDirector.duration - 1;
         }
     }
 

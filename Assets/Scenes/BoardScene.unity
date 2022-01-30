@@ -24989,6 +24989,10 @@ PrefabInstance:
       propertyPath: director
       value: 
       objectReference: {fileID: 2066939497}
+    - target: {fileID: 6904782437669788594, guid: 9775df87fe1a89d44ae024595d4c9ac2, type: 3}
+      propertyPath: cutsceneDirector
+      value: 
+      objectReference: {fileID: 2066939497}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9775df87fe1a89d44ae024595d4c9ac2, type: 3}
 --- !u!1001 &7792634756470680433
