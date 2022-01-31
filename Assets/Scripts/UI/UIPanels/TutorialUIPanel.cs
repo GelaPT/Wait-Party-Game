@@ -21,17 +21,6 @@ public class GameButton
     public GameButtonIcon buttonIcon;
 }
 
-[System.Serializable]
-public class Minigame
-{
-    public string scene;
-    public string title;
-    public string tutorial;
-    public string description;
-    public string category;
-    public GameButton[] buttons;
-}
-
 public class TutorialUIPanel : UIPanel
 {
     public TextMeshProUGUI minigameTitle;
@@ -44,18 +33,16 @@ public class TutorialUIPanel : UIPanel
 
     private bool isTutorial;
 
-    private Minigame[] minigames;
-    private Minigame currentMinigame;
-
     protected override void Awake()
     {
         base.Awake();
-        minigames = JsonTools.GetMinigames();
     }
 
     public override void OpenPanel()
     {
         base.OpenPanel();
+
+        Minigame currentMinigame = MinigamesManager.Instance.currentMinigame;
 
         for (int i = 0; i < 4; i++)
         {

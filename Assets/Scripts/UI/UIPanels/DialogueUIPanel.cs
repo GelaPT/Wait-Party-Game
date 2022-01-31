@@ -5,8 +5,6 @@ using TMPro;
 
 public class DialogueUIPanel : UIPanel
 {
-    public static DialogueUIPanel instance;
-
     [Header("Texts")]
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI commandsText;
@@ -23,8 +21,6 @@ public class DialogueUIPanel : UIPanel
 
     private void Start()
     {
-        if (instance == null) instance = this;
-
         //EndDialogue();
     }
 

@@ -49,6 +49,8 @@ public class DialoguesManager : Singleton<DialoguesManager>
     private int dialogueIndex = 0;
     private int player;
 
+    private DialogueUIPanel dialoguePanel;
+
     protected override void Awake()
     {
         base.Awake();
@@ -56,9 +58,14 @@ public class DialoguesManager : Singleton<DialoguesManager>
         dialogues = JsonTools.GetDialogues();
     }
 
+    private void Start()
+    {
+        dialoguePanel = UIManager.Instance.GetPanel("DialoguePanel") as DialogueUIPanel;
+    }
+
     private void Update()
     {
-        if (UIManager.Instance != null && UIManager.Instance.CurrentPanel != DialogueUIPanel.instance) return;
+        if (UIManager.Instance != null && UIManager.Instance.CurrentPanel.name != "DialoguesPanel") return;
 
         if (curDialogue == null) return;
 
@@ -84,22 +91,22 @@ public class DialoguesManager : Singleton<DialoguesManager>
     public void BeginDialogue(string dialogueName, int player = -1)
     {
         Dialogue dialogue = GetDialogue(dialogueName);
-        UIManager.Instance.SwitchPanel(DialogueUIPanel.instance);
+        UIManager.Instance.SwitchPanel("DialoguePanel");
         dialogueIndex = 0;
         curDialogue = dialogue;
-        DialogueUIPanel.instance.StartDialogue(dialogue);
+        dialoguePanel.StartDialogue(dialogue);
         this.player = player;
         HideNpc(false);
     }
 
     public void HideNpc(bool hide)
     {
-        DialogueUIPanel.instance.HideNpc(hide);
+        dialoguePanel.HideNpc(hide);
     }
 
     public void HideDialogue(bool hide)
     {
-        DialogueUIPanel.instance.HideDialogue(hide);
+        dialoguePanel.HideDialogue(hide);
         if (!hide) NextDialogue();
     }
 
@@ -109,16 +116,16 @@ public class DialoguesManager : Singleton<DialoguesManager>
 
         if(dialogueIndex < curDialogue.text.Length)
         {
-            DialogueUIPanel.instance.UpdateDialogue(curDialogue.text[dialogueIndex]);
+            dialoguePanel.UpdateDialogue(curDialogue.text[dialogueIndex]);
             return;
         }
 
-        DialogueUIPanel.instance.EndDialogue();
+        dialoguePanel.EndDialogue();
     }
 
     public void EndDialogue()
     {
-        DialogueUIPanel.instance.EndDialogue();
+        dialoguePanel.EndDialogue();
     }
 
     public Dialogue GetDialogue(string name)

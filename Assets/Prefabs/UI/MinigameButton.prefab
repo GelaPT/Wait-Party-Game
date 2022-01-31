@@ -147,7 +147,6 @@ GameObject:
   - component: {fileID: 1120637058606323469}
   - component: {fileID: 6727996692031700969}
   - component: {fileID: 7158824640556090564}
-  - component: {fileID: 7037015022742147578}
   m_Layer: 5
   m_Name: MinigameButton
   m_TagString: Untagged
@@ -258,16 +257,3 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7037015022742147578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8707468346304308740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 828f52e630a7a384182bc2fafb33eb39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minigameTitle: {fileID: 4123494443153898843}

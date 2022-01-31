@@ -1,20 +1,31 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+[System.Serializable]
+public class Minigame
+{
+    public string scene;
+    public string title;
+    public string tutorial;
+    public string description;
+    public string category;
+    public GameButton[] buttons;
+}
+
 public class MinigamesManager : Singleton<MinigamesManager>
 {
-    public struct Minigame
+    public Minigame[] minigames;
+    public Minigame currentMinigame;
+
+    protected override void Awake()
     {
-        public string name;
-        public string description;
-        public string scene;
+        base.Awake();
+        minigames = JsonTools.GetMinigames();
     }
 
-    public List<Minigame> minigames = new();
-
-    public void LoadMinigame()
+    public void LoadMinigame(string scene)
     {
-
+        Debug.Log(scene);
     }
 
     public void UnloadMinigame()
@@ -22,8 +33,8 @@ public class MinigamesManager : Singleton<MinigamesManager>
 
     }
 
-    public void UpdatePlayerStats()
+    /*public void UpdatePlayerStats()
     {
 
-    }
+    }*/
 }

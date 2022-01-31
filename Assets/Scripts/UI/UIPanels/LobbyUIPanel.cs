@@ -136,10 +136,10 @@ public class LobbyUIPanel : UIPanel
             usedCharacters.Add(PlayerManager.Instance.Players[i].Character.name);
         }
 
-        LevelManager.Instance.LoadLevel("BasketHopMinigame");
-        LevelManager.Instance.UnloadLevel("LobbyScene");
+        /*LevelManager.Instance.LoadLevel("BasketHopMinigame");
+        LevelManager.Instance.UnloadLevel("LobbyScene");*/
 
-        UIManager.Instance.SwitchPanel(DialogueUIPanel.instance);
+        UIManager.Instance.SwitchPanel("MinigamesPanel");
     }
 
     public override void OpenPanel()

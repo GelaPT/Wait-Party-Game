@@ -20,6 +20,7 @@ public class UIPanel : MonoBehaviour
     protected CanvasGroup canvasGroup;
 
     protected bool isOpened = false;
+    protected bool isFullyOpened = false;
 
     [HideInInspector] public List<Selectable> selectables = new();
 
@@ -47,6 +48,7 @@ public class UIPanel : MonoBehaviour
         canvasGroup.blocksRaycasts = false;
 
         isOpened = false;
+        isFullyOpened = false;
 
         HandleAnimator(false);
     }
@@ -54,6 +56,9 @@ public class UIPanel : MonoBehaviour
     public virtual void FinishedOpening()
     {
         onPanelFinishOpen?.Invoke();
+
+        isFullyOpened = true;
+
         if (startSelectable) EventSystem.current.SetSelectedGameObject(startSelectable.gameObject);
     }
 

@@ -170,6 +170,7 @@ MonoBehaviour:
   managers:
   - {fileID: 1005193308607102599, guid: bcf27ad2a1ef3fd498d5f7b65e7357ac, type: 3}
   - {fileID: 1164308441118366733, guid: c0a0c00946d3cf04cb91e2fabaa6b7dd, type: 3}
+  - {fileID: 8649019710594904981, guid: bf26ab53d8c52134cbaa1b623294f536, type: 3}
   - {fileID: 91066650465925908, guid: 7788aafd01f53dd498762413e4471e60, type: 3}
   - {fileID: 2985058077462775793, guid: 67e3d382957f5834fbe7f4c137b23866, type: 3}
   - {fileID: 3870346923401024070, guid: 7f0c0d944f5856e49a4dfb5394743a7d, type: 3}
