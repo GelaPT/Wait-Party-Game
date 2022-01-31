@@ -10,7 +10,7 @@ public class BasketHopManager : MGSingleton<BasketHopManager>
 
     private float minigameTimer = 0.0f;
 
-    protected override void Init()
+    private void Start()
     {
         base.Init();
 

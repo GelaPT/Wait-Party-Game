@@ -42,7 +42,7 @@ public class CannonDodgePlayerController : PlayerController
 
         BaseVelocity = speed * new Vector3(direction.x, 0, direction.y);
 
-        Velocity = Vector3.Lerp(Velocity, BaseVelocity, 0.5f);
+        Velocity = BaseVelocity;
 
         rb.velocity = Velocity;
         rb.angularVelocity = new Vector3(0, 0, 0);
