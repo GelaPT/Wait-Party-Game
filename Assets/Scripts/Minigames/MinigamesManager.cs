@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 [System.Serializable]
 public class Minigame
@@ -23,14 +22,20 @@ public class MinigamesManager : Singleton<MinigamesManager>
         minigames = JsonTools.GetMinigames();
     }
 
-    public void LoadMinigame(string scene)
+    public void LoadMinigame(Minigame minigame)
     {
-        Debug.Log(scene);
+        currentMinigame = minigame;
+
+        LevelManager.Instance.LoadLevel(currentMinigame.scene);
+        LevelManager.Instance.UnloadLevel("LobbyScene");
     }
 
     public void UnloadMinigame()
     {
+        LevelManager.Instance.LoadLevel("LobbyScene");
+        LevelManager.Instance.UnloadLevel(currentMinigame.scene);
 
+        currentMinigame = null;
     }
 
     /*public void UpdatePlayerStats()

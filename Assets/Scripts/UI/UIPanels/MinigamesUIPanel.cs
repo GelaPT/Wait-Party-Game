@@ -15,7 +15,10 @@ public class MinigamesUIPanel : UIPanel
         {
             GameObject minigameButton = Instantiate(minigameButtonPrefab, gridPanel);
             minigameButton.GetComponentInChildren<TextMeshProUGUI>().SetText(minigame.title);
-            minigameButton.GetComponent<Button>().onClick.AddListener(() => MinigamesManager.Instance.LoadMinigame(minigame.scene));
+            minigameButton.GetComponent<Button>().onClick.AddListener(() => { 
+                MinigamesManager.Instance.LoadMinigame(minigame);
+                UIManager.Instance.SwitchPanel("TutorialPanel");
+            });
         }
     }
 
