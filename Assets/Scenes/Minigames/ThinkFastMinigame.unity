@@ -861,13 +861,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorBlend: 0
-  _jump: 0
-  _stun: 0
-  _crouch: 0
-  _victory: 0
-  _defeated: 0
-  _caught: 0
-  _animationTestInt: 0
 --- !u!95 &589780921
 Animator:
   serializedVersion: 4
@@ -1077,13 +1070,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorBlend: 0
-  _jump: 0
-  _stun: 0
-  _crouch: 0
-  _victory: 0
-  _defeated: 0
-  _caught: 0
-  _animationTestInt: 0
 --- !u!95 &621660402
 Animator:
   serializedVersion: 4
@@ -1445,7 +1431,6 @@ GameObject:
   m_Component:
   - component: {fileID: 735465940}
   - component: {fileID: 735465939}
-  - component: {fileID: 735465938}
   - component: {fileID: 735465941}
   m_Layer: 0
   m_Name: Player1Camera
@@ -1454,14 +1439,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &735465938
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735465937}
-  m_Enabled: 1
 --- !u!20 &735465939
 Camera:
   m_ObjectHideFlags: 0
@@ -3128,13 +3105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorBlend: 0
-  _jump: 0
-  _stun: 0
-  _crouch: 0
-  _victory: 0
-  _defeated: 0
-  _caught: 0
-  _animationTestInt: 0
 --- !u!95 &1657961594
 Animator:
   serializedVersion: 4
@@ -3813,13 +3783,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorBlend: 0
-  _jump: 0
-  _stun: 0
-  _crouch: 0
-  _victory: 0
-  _defeated: 0
-  _caught: 0
-  _animationTestInt: 0
 --- !u!95 &1926658866
 Animator:
   serializedVersion: 4

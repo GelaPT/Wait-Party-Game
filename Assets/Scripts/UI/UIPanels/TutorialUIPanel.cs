@@ -61,8 +61,6 @@ public class TutorialUIPanel : UIPanel
     public override void FinishedOpening()
     {
         base.FinishedOpening();
-
-        Time.timeScale = 0;
     }
 
     private void Update()

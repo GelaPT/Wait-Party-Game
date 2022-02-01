@@ -64,7 +64,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public int GetPlayerID(Gamepad gamepad)
     {
-        for(int i = 0; i < Players.Length;  i++)
+        for(int i = 0; i < Players.Length; i++)
         {
             if (Players[i] == null) continue;
             if (Players[i].Gamepad == gamepad) return i;
@@ -75,7 +75,13 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public int GetPlayerID(Player player)
     {
-        return GetPlayerID(player.Gamepad);
+        for(int i = 0; i < Players.Length; i++)
+        {
+            if (Players[i] == null) continue;
+            if (Players[i] == player) return i;
+        }
+
+        return -1;
     }
 
     public int GetFreePlayer()

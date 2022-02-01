@@ -15,10 +15,40 @@ EditorBuildSettings:
     path: Assets/Scenes/BoardScene.unity
     guid: 308bded23395cc04abc7510c3f1f7a89
   - enabled: 1
+    path: Assets/Scenes/Minigames/AvoidTheLightMinigame.unity
+    guid: 5cff0571e7d265848afe8c1214fc37f8
+  - enabled: 1
     path: Assets/Scenes/Minigames/BasketHopMinigame.unity
     guid: c1b0665c1ef3e554683dc02054aa97f5
   - enabled: 1
     path: Assets/Scenes/Minigames/CannonDodgeMinigame.unity
     guid: 821655c4160598147a7ee7850f82dea8
+  - enabled: 1
+    path: Assets/Scenes/Minigames/CarRaceMinigame.unity
+    guid: 8adf1389be90b6d4f8c12e619a61c0ad
+  - enabled: 1
+    path: Assets/Scenes/Minigames/DDRMinigame.unity
+    guid: 2075ec5581d042742b2e67edec641db3
+  - enabled: 1
+    path: Assets/Scenes/Minigames/DodgeBallMinigame.unity
+    guid: e42fb4841414e0b4fa5489c026b7e22d
+  - enabled: 1
+    path: Assets/Scenes/Minigames/DownTheRiverMinigame.unity
+    guid: c9434616eba09f14c883e06965e45265
+  - enabled: 1
+    path: Assets/Scenes/Minigames/JustActNaturalMinigame.unity
+    guid: 9cbb63e3386b46b44b312e4e8b33a8cf
+  - enabled: 1
+    path: Assets/Scenes/Minigames/LakeBattleMinigame.unity
+    guid: e8ca1930f0d98244ca6bd90cb0a98ba8
+  - enabled: 1
+    path: Assets/Scenes/Minigames/MessyMazeMinigame.unity
+    guid: b77552c18a94b6e45864e6540677f30e
+  - enabled: 1
+    path: Assets/Scenes/Minigames/ThinkFastMinigame.unity
+    guid: c6982ff7eff29f04e83dd26a64d02ac0
+  - enabled: 1
+    path: Assets/Scenes/Minigames/WipeOutMinigame.unity
+    guid: 935aa156a6179c042b24a766dad10202
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: dd1e0398d4abf9546be3fc5de75bb992, type: 2}

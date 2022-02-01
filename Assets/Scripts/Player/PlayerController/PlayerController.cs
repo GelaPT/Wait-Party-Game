@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour
 
     public Vector3 Velocity { get; set; }
 
+    public Vector3 BaseAngularVelocity { get; set; }
+
+    public Vector3 AngularVelocity { get; set; }
+
     public Animator Animator { get; set; }
 
     public AIController AIController { get; set; }
@@ -38,12 +42,12 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public virtual void Update()
+    protected virtual void Update()
     {
         if(Player.AI) AIController.UpdateAI();
     }
 
-    public virtual void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
 
     }

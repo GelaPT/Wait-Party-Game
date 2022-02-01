@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CannonDodgePlayerController : PlayerController
@@ -24,7 +22,7 @@ public class CannonDodgePlayerController : PlayerController
         }
     }
 
-    public override void Update()
+    protected override void Update()
     {
         base.Update();
 
@@ -55,8 +53,6 @@ public class CannonDodgePlayerController : PlayerController
         Animator.SetBool("isStunned", true);
         Invoke("DestroySelf", 2.5f);
     }
-
-    public override void Respawn() { }
 
     private void DestroySelf()
     {

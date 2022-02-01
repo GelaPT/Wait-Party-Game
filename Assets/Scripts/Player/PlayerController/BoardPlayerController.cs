@@ -19,12 +19,12 @@ public class BoardPlayerController : PlayerController
 
     }
 
-    public override void Update()
+    protected override void Update()
     {
 
     }
 
-    public override void FixedUpdate()
+    protected override void FixedUpdate()
     {
 
     }

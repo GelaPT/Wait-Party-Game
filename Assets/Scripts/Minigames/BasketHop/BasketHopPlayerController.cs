@@ -13,7 +13,7 @@ public class BasketHopPlayerController : PlayerController
         }
     }
 
-    public override void Update()
+    protected override void Update()
     {
         base.Update();
 
@@ -26,10 +26,4 @@ public class BasketHopPlayerController : PlayerController
             acorn.GetComponent<BasketHopAcorn>().player = Player;
         }
     }
-
-    public override void FixedUpdate() { }
-
-    public override void Kill() { }
-
-    public override void Respawn() { }
 }

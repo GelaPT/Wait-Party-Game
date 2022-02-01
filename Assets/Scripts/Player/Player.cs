@@ -30,7 +30,7 @@ public class Player
         Gamepad = gamepad;
     }
 
-    public void Spawn<TOne, TTwo>(Transform playerPosition, RuntimeAnimatorController runtimeAnimatorController) 
+    public void Spawn<TOne, TTwo>(Transform playerPosition, RuntimeAnimatorController runtimeAnimatorController)
         where TOne : PlayerController
         where TTwo : CameraController
     {
