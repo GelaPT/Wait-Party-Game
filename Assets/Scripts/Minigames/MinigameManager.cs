@@ -37,7 +37,7 @@ public class MinigameManager : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (onTutorial) return;
+
     }
 
     public virtual List<MinigameStats> EndMinigame()

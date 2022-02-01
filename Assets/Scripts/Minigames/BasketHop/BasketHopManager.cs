@@ -50,7 +50,7 @@ public class BasketHopManager : MGSingleton<BasketHopManager>
                 Debug.Log(stat.player.ID + 1 + ": " + stat.place + " place with " + stat.points + " points!");
             }
 
-            Time.timeScale = 0.0f;
+            MinigamesManager.Instance.UnloadMinigame();
         }
     }
 

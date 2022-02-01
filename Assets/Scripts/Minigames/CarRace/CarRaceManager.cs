@@ -39,9 +39,7 @@ public class CarRaceManager : MGSingleton<CarRaceManager>
         finishTimer += Time.deltaTime;
 
         if(finished == 4)
-        {
-            Debug.Log("Acabou o jogo");
-            
+        {            
             var final = EndMinigame();
 
             foreach (var stat in final)
@@ -50,6 +48,7 @@ public class CarRaceManager : MGSingleton<CarRaceManager>
             }
 
             Time.timeScale = 0.0f;
+            MinigamesManager.Instance.UnloadMinigame();
         }
 
         if (finishTimer > 15000.0f)

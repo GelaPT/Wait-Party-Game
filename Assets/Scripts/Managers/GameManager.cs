@@ -1,11 +1,9 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    private StateManager stateManager;
-    private LevelManager levelManager;
-
     public GameObject[] managers;
 
     private List<GameObject> instancedManagers;
@@ -17,9 +15,7 @@ public class GameManager : Singleton<GameManager>
 
         InstantiateManagers();
 
-        stateManager = StateManager.Instance;
-        levelManager = LevelManager.Instance;
-        levelManager.LoadLevel("LobbyScene");
+        LevelManager.Instance.LoadLevel("LobbyScene");
     }
 
     private void InstantiateManagers()
@@ -37,6 +33,18 @@ public class GameManager : Singleton<GameManager>
         base.OnDestroy();
         for (var i = 0; i < instancedManagers.Count; i++) Destroy(instancedManagers[i]);
         instancedManagers.Clear();
+    }
+
+    public void ResetGame()
+    {
+        for (int i = instancedManagers.Count - 1; i >= 0; i--)
+        {
+            DestroyImmediate(instancedManagers[i]);
+        }
+
+        instancedManagers.Clear();
+
+        InstantiateManagers();
     }
 
     public void Pause(bool pause)

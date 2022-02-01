@@ -26,14 +26,16 @@ public class MinigamesManager : Singleton<MinigamesManager>
     {
         currentMinigame = minigame;
 
-        LevelManager.Instance.LoadLevel(currentMinigame.scene);
         LevelManager.Instance.UnloadLevel("LobbyScene");
+        LevelManager.Instance.LoadLevel(currentMinigame.scene);
     }
 
     public void UnloadMinigame()
     {
-        LevelManager.Instance.LoadLevel("LobbyScene");
         LevelManager.Instance.UnloadLevel(currentMinigame.scene);
+        LevelManager.Instance.LoadLevel("LobbyScene");
+
+        GameManager.Instance.ResetGame();
 
         currentMinigame = null;
     }
