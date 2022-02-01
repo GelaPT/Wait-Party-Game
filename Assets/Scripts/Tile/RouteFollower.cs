@@ -56,10 +56,8 @@ public class RouteFollower : MonoBehaviour
         bool jump = paths.ownTile.GetComponent<Tile>().jump[pathIndex];
         animator.SetBool("isJumping", jump);
         animator.SetBool("isWalking", !jump);
-        if(jump)
-            yield return new WaitForSeconds(jumpwait);
 
-
+        //mover o personagem em si
         while (pathAlpha < 1)
         {
             pathAlpha += Time.deltaTime * speed / walkTime;
@@ -82,16 +80,22 @@ public class RouteFollower : MonoBehaviour
             yield return null;
         }
 
+        //após chegar ao fim do caminho
         pathAlpha = 0f;
         moving = false;
 
         //teste, fazer ele andar pelo mapa todo pelo caminho 0 sempre
-        if (jump)
+        SetRoute(paths.ownTile.GetComponent<Tile>().nextTile[pathIndex].route, 0); //pegar a route do nextTile[0]
+        
+        if (paths.ownTile.GetComponent<Tile>().jump[pathIndex])
+        {
+            animator.SetBool("isJumping", true);
+        }
+        else if(animator.GetBool("isJumping") && !paths.ownTile.GetComponent<Tile>().jump[pathIndex])
         {
             animator.SetBool("isJumping", false);
-            yield return new WaitForSeconds(0.35f);
+            yield return new WaitForSeconds(jumpwait);
         }
-        SetRoute(paths.ownTile.GetComponent<Tile>().nextTile[pathIndex].route, 0); //pegar a route do nextTile[0]
         Move();
     }
 }

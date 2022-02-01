@@ -19628,19 +19628,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 565899094877285589, guid: 74cf79f30cd5bcf429a6492e5cafa11b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.597
+      value: -8.243
       objectReference: {fileID: 0}
     - target: {fileID: 565899094877285589, guid: 74cf79f30cd5bcf429a6492e5cafa11b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.567
+      value: 1.163
       objectReference: {fileID: 0}
     - target: {fileID: 565899094877285589, guid: 74cf79f30cd5bcf429a6492e5cafa11b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.937
+      value: -9.159
       objectReference: {fileID: 0}
     - target: {fileID: 670460398471653169, guid: 74cf79f30cd5bcf429a6492e5cafa11b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.731
+      value: -1.085
       objectReference: {fileID: 0}
     - target: {fileID: 670460398471653169, guid: 74cf79f30cd5bcf429a6492e5cafa11b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19648,7 +19648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 670460398471653169, guid: 74cf79f30cd5bcf429a6492e5cafa11b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.625
+      value: -1.058
       objectReference: {fileID: 0}
     - target: {fileID: 1031971199747687622, guid: 74cf79f30cd5bcf429a6492e5cafa11b, type: 3}
       propertyPath: Type
@@ -25041,9 +25041,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6fe04fb1f91fb42b775dc1784e527d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: {fileID: 1085530631}
+  paths: {fileID: 1085530631}
   pathIndex: 0
-  walkTime: 5
+  walkTime: 2.5
   moving: 1
   jumpwait: 0.58
 --- !u!95 &1973695113
