@@ -23,6 +23,11 @@ public class UIManager : Singleton<UIManager>
     {
         base.Awake();
         GetComponentsInChildren(true, panels);
+        ResetCameraAnimator();
+    }
+
+    public void ResetCameraAnimator()
+    {
         StartCoroutine("TryFindCamera");
     }
 

@@ -33,7 +33,6 @@ public class MinigamesManager : Singleton<MinigamesManager>
     public void UnloadMinigame()
     {
         LevelManager.Instance.UnloadLevel(currentMinigame.scene);
-        LevelManager.Instance.LoadLevel("LobbyScene");
 
         GameManager.Instance.ResetGame();
 

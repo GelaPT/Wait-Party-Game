@@ -72,12 +72,8 @@
             "category": "2v2",
             "controls": [
                 {
-                    "description": "Move",
+                    "description": "Move/Aim",
                     "button": 4
-                },
-                {
-                    "description": "Aim",
-                    "button": 5
                 },
                 {
                     "description": "Throw",

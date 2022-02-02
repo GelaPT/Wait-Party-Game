@@ -28,6 +28,11 @@ public class AIPlayer : Player
         FakeInput[(int)button] = true;
     }
 
+    public void ReleaseButton(InputButton button)
+    {
+        FakeInput[(int)button] = false;
+    }
+
     public void MoveAxis(InputAxis axis, Vector2 fakeAxis)
     {
         FakeInputAxis[(int)axis] = fakeAxis;

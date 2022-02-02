@@ -39,6 +39,8 @@ public class GameManager : Singleton<GameManager>
         LevelManager.Instance.LoadLevel("LobbyScene");
 
         UIManager.Instance.SwitchPanel("MainPanel");
+
+        UIManager.Instance.ResetCameraAnimator();
     }
 
     public void Pause(bool pause)

@@ -642,19 +642,10 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 7.85
-        value: {x: 401.54498, y: 24.529, z: 7.594}
-        inSlope: {x: 0, y: -21.584461, z: 0}
-        outSlope: {x: 0, y: -21.584461, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
         time: 8.816667
         value: {x: 395.548, y: -10.594, z: 0.337}
-        inSlope: {x: 0, y: -7.4981337, z: 0}
-        outSlope: {x: 0, y: -7.4981337, z: 0}
+        inSlope: {x: 9.06148, y: -4.988428, z: 0.119}
+        outSlope: {x: 9.06148, y: -4.988428, z: 0.119}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -713,19 +704,10 @@ AnimationClip:
         inWeight: {x: 0.15523222, y: 0.14349079, z: 0.18810834}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 7.85
-        value: {x: 14.15111, y: 1.1837692, z: 18.3952}
-        inSlope: {x: 1.1147915, y: 1.8796682, z: -0.22145769}
-        outSlope: {x: 1.1147915, y: 1.8796682, z: -0.22145769}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
         time: 7.95
-        value: {x: 14.436708, y: 1.3281047, z: 18.894667}
-        inSlope: {x: 0.54399765, y: 1.0351776, z: 0}
-        outSlope: {x: 0.54399765, y: 1.0351776, z: 0}
+        value: {x: 14.436708, y: -0.2819987, z: 18.894667}
+        inSlope: {x: 3.8489175, y: 2.1153786, z: -0.7083086}
+        outSlope: {x: 3.8489175, y: 2.1153786, z: -0.7083086}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
