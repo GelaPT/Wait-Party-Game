@@ -1,17 +1,17 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
     public GameObject[] managers;
 
-    private List<GameObject> instancedManagers;
+    private List<GameObject> instancedManagers = new List<GameObject>();
 
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
-        instancedManagers = new List<GameObject>();
 
         InstantiateManagers();
 
@@ -31,20 +31,14 @@ public class GameManager : Singleton<GameManager>
     protected override void OnDestroy()
     {
         base.OnDestroy();
-        for (var i = 0; i < instancedManagers.Count; i++) Destroy(instancedManagers[i]);
+        if (instancedManagers.Count > 0) for (var i = 0; i < instancedManagers.Count; i++) Destroy(instancedManagers[i]);
         instancedManagers.Clear();
     }
 
-    public void ResetGame()
-    {
-        for (int i = instancedManagers.Count - 1; i >= 0; i--)
-        {
-            DestroyImmediate(instancedManagers[i]);
-        }
+    public void ResetGame() { 
+        LevelManager.Instance.LoadLevel("LobbyScene");
 
-        instancedManagers.Clear();
-
-        InstantiateManagers();
+        UIManager.Instance.SwitchPanel("MainPanel");
     }
 
     public void Pause(bool pause)

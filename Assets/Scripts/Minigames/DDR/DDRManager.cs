@@ -1,23 +1,29 @@
-using System.Collections;
+using UnityEngine;
+
+public class DDRManager : MGSingleton<DDRManager>
+{
+    public RuntimeAnimatorController animatorController;
+
+    private void Start()
+    {
+        base.Init();
+
+        for (int i = 0; i < 4; i++)
+        {
+            PlayerManager.Instance.Players[i].Spawn<DDRPlayerController, CameraController>(playerSpawns[i], animatorController);
+        }
+    }
+}
+
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThinkFastManager : MGSingleton<ThinkFastManager>
+public class DDRManager : MonoBehaviour
 {
-    public enum ThinkFastButton : int
-    {
-        Triangle = 0,
-        Heart = 1,
-        Square = 2,
-        NotTriangle = 3,
-        NotHeart = 4,
-        NotSquare = 5,
-        None = 6
-    }
-
     public RuntimeAnimatorController animatorController;
 
-    public float[] playerTimer = new float[4];
+    public float ;
 
     public ThinkFastButton currentButton = ThinkFastButton.None;
 
@@ -52,13 +58,13 @@ public class ThinkFastManager : MGSingleton<ThinkFastManager>
         if (isRound)
         {
             roundTimer += Time.deltaTime;
-            
-            if(roundTimer > roundSpan)
+
+            if (roundTimer > roundSpan)
             {
                 breakTimer = 0.0f;
 
                 currentButton = ThinkFastButton.None;
-                
+
                 thinkFastUI.ChangeIcon(currentButton);
 
                 breakSpan = Random.Range(2.0f, 4.0f);
@@ -70,7 +76,7 @@ public class ThinkFastManager : MGSingleton<ThinkFastManager>
         {
             breakTimer += Time.deltaTime;
 
-            if(breakTimer > breakSpan)
+            if (breakTimer > breakSpan)
             {
                 roundTimer = 0.0f;
 
@@ -97,7 +103,7 @@ public class ThinkFastManager : MGSingleton<ThinkFastManager>
     public void PlayerPressButton(Player player, ThinkFastButton button)
     {
         if (!isRound) return;
-        
+
         int points = (int)((roundSpan - roundTimer) * 100);
 
         switch (currentButton)
@@ -149,3 +155,4 @@ public class ThinkFastManager : MGSingleton<ThinkFastManager>
         }
     }
 }
+*/

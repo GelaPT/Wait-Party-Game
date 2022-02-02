@@ -20,7 +20,7 @@ public class ThinkFastAIController : AIController
 
         if (answerSpan == 0.0f)
         {
-            answerSpan = Random.Range(1.2f, 1.7f);
+            answerSpan = Random.Range(0.5f, 2.2f);
             answerTimer = 0.0f;
             return;
         }

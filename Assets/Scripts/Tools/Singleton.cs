@@ -9,7 +9,7 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
     protected virtual void Awake()
     {
         if (Instance == null) Instance = (T)this;
-        else Debug.LogError("Multiple Instances of: " + this);
+        else Destroy(this);
     }
 
     protected virtual void OnDestroy()
