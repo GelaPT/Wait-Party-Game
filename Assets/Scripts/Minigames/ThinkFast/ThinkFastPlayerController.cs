@@ -17,6 +17,8 @@ public class ThinkFastPlayerController : PlayerController
 
     protected override void Update()
     {
+        if (ThinkFastManager.Instance.ended) return;
+
         base.Update();
 
         buttonTimer += Time.deltaTime;

@@ -33,6 +33,15 @@ public class UICharacterParent : MonoBehaviour
         }
     }
 
+    public void PlayAnimation(bool won)
+    {
+        foreach(GameObject _char in characters)
+        {
+            if (!_char.activeSelf) continue;
+            _char.GetComponentInChildren<Animator>().SetTrigger(won ? "Won" : "Lost");
+        }
+    }
+
     public void StopReadyAnimation()
     {
         foreach (GameObject _char in characters)

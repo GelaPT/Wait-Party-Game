@@ -27,6 +27,23 @@ public class BasketHopManager : MGSingleton<BasketHopManager>
     {
         base.Update();
 
+        if (ended) return;
+
+        minigameTimer += Time.deltaTime;
+        if(minigameTimer > 60.0f)
+        {
+            minigameTimer = -500.0f;
+            UIManager.Instance.ShowResults(EndMinigame());
+
+            uiPanel.gameObject.SetActive(false);
+
+            Physics.gravity /= 2;
+
+            ended = true;
+
+            return;
+        }
+
         for(int i = 0; i < 4; i++)
         {
             uiPanel.scores[i].SetText(stats[i].points < 10 ? "0" + stats[i].points : stats[i].points.ToString());
@@ -38,26 +55,6 @@ public class BasketHopManager : MGSingleton<BasketHopManager>
         int sec = timeSpan.Seconds;
 
         uiPanel.timer.SetText(min + "'" + sec + "''");
-
-        minigameTimer += Time.deltaTime;
-        if(minigameTimer > 60.0f)
-        {
-            minigameTimer = -500.0f;
-            var final = EndMinigame();
-
-            foreach (var stat in final)
-            {
-                Debug.Log(stat.player.ID + 1 + ": " + stat.place + " place with " + stat.points + " points!");
-            }
-
-            MinigamesManager.Instance.UnloadMinigame();
-        }
-    }
-
-    public override List<MinigameStats> EndMinigame()
-    {
-        Physics.gravity /= 2;
-        return base.EndMinigame();
     }
 
     public void Score(Player player)

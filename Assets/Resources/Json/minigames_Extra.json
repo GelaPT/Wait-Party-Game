@@ -1,0 +1,208 @@
+{
+    "Items": [
+        {
+            "scene": "AvoidTheLightMinigame",
+            "title": "Avoid the Light",
+            "tutorial": "avoidthelight",
+            "description": "The team must avoid getting caught by the light the solo player controls.",
+            "category": "1v3",
+            "controls": [
+                {
+                    "description": "Move",
+                    "button": 4
+                }
+            ]
+        },
+        {
+            "scene": "BasketHopMinigame",
+            "title": "Basket Hop",
+            "tutorial": "baskethop",
+            "description": "Score the most points by throwing the ball in the basket.",
+            "category": "FFA",
+            "controls": [
+                {
+                    "description": "Throw",
+                    "button": 0
+                }
+            ]
+        },
+        {
+            "scene": "CannonDodgeMinigame",
+            "title": "Cannon Dodge",
+            "tutorial": "cannondodge",
+            "description": "Be the last standing by avoiding the acorn cannon balls.",
+            "category": "FFA",
+            "controls": [
+                {
+                    "description": "Move",
+                    "button": 4
+                }
+            ]
+        },
+        {
+            "scene": "DDRMinigame",
+            "title": "Dance Party",
+            "tutorial": "danceparty",
+            "description": "Be the best dancer by tapping the buttons at the correct timing.",
+            "category": "FFA",
+            "controls": [
+                {
+                    "description": "Left",
+                    "button": 2
+                },
+                {
+                    "description": "Up",
+                    "button": 3
+                },
+                {
+                    "description": "Down",
+                    "button": 0
+                },
+                {
+                    "description": "Right",
+                    "button": 1
+                }
+            ]
+        },
+        {
+            "scene": "DodgeBallMinigame",
+            "title": "Dodgeball",
+            "tutorial": "dodgeball",
+            "description": "Try to hit your adversary by throwing the acorn across the field.",
+            "category": "2v2",
+            "controls": [
+                {
+                    "description": "Move/Aim",
+                    "button": 4
+                },
+                {
+                    "description": "Throw",
+                    "button": 0
+                }
+            ]
+        },
+        {
+            "scene": "DownTheRiverMinigame",
+            "title": "Down the River",
+            "tutorial": "downtheriver",
+            "description": "Avoid the obstacles by paddling together and reach the end of the river.",
+            "category": "COOP",
+            "controls": [
+                {
+                    "description": "Paddle",
+                    "button": 0
+                }
+            ]
+        },
+        {
+            "scene": "JustActNaturalMinigame",
+            "title": "Just Act Natural",
+            "tutorial": "justactnatural",
+            "description": "The team must collect all acorns without being caught by the solo player.",
+            "category": "1v3",
+            "controls": [
+                {
+                    "description": "Move",
+                    "button": 4
+                },
+                {
+                    "description": "Catch",
+                    "button": 0
+                }
+            ]
+        },
+        {
+            "scene": "LakeBattleMinigame",
+            "title": "Lake Battle",
+            "tutorial": "lakebattle",
+            "description": "One player moves the boat while the other tries to shoot at the other team.",
+            "category": "2v2",
+            "controls": [
+                {
+                    "description": "Move/Aim",
+                    "button": 4
+                },
+                {
+                    "description": "Shoot",
+                    "button": 0
+                }
+            ]
+        },
+        {
+            "scene": "CarRaceMinigame",
+            "title": "Lake Race",
+            "tutorial": "lakerace",
+            "description": "Be the first to complete 3 laps around the track.",
+            "category": "FFA",
+            "controls": [
+                {
+                    "description": "Steer",
+                    "button": 4
+                },
+                {
+                    "description": "Accelerate",
+                    "button": 0
+                },
+                {
+                    "description": "Reverse",
+                    "button": 1
+                }
+            ]
+        },
+        {
+            "scene": "MessyMazeMinigame",
+            "title": "Messy Maze",
+            "tutorial": "messymaze",
+            "description": "Avoid the Mess Monster and collect all the acorns in the maze.",
+            "category": "COOP",
+            "controls": [
+                {
+                    "description": "Move",
+                    "button": 4
+                }
+            ]
+        },
+        {
+            "scene": "ThinkFastMinigame",
+            "title": "Think Fast",
+            "tutorial": "thinkfast",
+            "description": "Be the fastest to press the buttons in the correct order.",
+            "category": "FFA",
+            "controls": [
+                {
+                    "description": "Square",
+                    "button": 2
+                },
+                {
+                    "description": "Triangle",
+                    "button": 0
+                },
+                {
+                    "description": "Heart",
+                    "button": 1
+                }
+            ]
+        },
+        {
+            "scene": "WipeOutMinigame",
+            "title": "Wipe Out",
+            "tutorial": "wipeout",
+            "description": "Be the last one standing by avoiding the obstacles.",
+            "category": "FFA",
+            "controls": [
+                {
+                    "description": "Move",
+                    "button": 4
+                },
+                {
+                    "description": "Jump",
+                    "button": 0
+                },
+                {
+                    "description": "Crouch",
+                    "button": 1
+                }
+            ]
+        }        
+    ]
+}

@@ -32,6 +32,8 @@ public class CarRaceManager : MGSingleton<CarRaceManager>
 
     protected override void Update()
     {
+        if (ended) return;
+
         base.Update();
 
         if (finished == 0) return;
@@ -39,22 +41,17 @@ public class CarRaceManager : MGSingleton<CarRaceManager>
         finishTimer += Time.deltaTime;
 
         if(finished == 4)
-        {            
-            var final = EndMinigame();
-
-            foreach (var stat in final)
-            {
-                Debug.Log(stat.player.ID + 1 + ": " + stat.place + " place with " + stat.points + " points!");
-            }
-
-            Time.timeScale = 0.0f;
-            MinigamesManager.Instance.UnloadMinigame();
+        {
+            UIManager.Instance.ShowResults(EndMinigame());
+            Physics.gravity /= 8.0f;
+            ended = true;
         }
 
-        if (finishTimer > 15000.0f)
+        if (finishTimer > 30.0f)
         {
-            Debug.Log("Acabou o jogo por tempo");
-            Time.timeScale = 0.0f;
+            UIManager.Instance.ShowResults(EndMinigame());
+            Physics.gravity /= 8.0f;
+            ended = true;
         }
     }
 

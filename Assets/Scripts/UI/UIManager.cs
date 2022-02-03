@@ -106,4 +106,11 @@ public class UIManager : Singleton<UIManager>
     {
         Application.Quit();
     }
+
+    public void ShowResults(List<MinigameManager.MinigameStats> stats)
+    {
+        ResultsUIPanel resultPanel = GetPanel("ResultsPanel") as ResultsUIPanel;
+        resultPanel.stats = stats;
+        SwitchPanel(resultPanel);
+    }
 }

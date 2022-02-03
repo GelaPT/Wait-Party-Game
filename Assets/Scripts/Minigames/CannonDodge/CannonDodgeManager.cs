@@ -23,6 +23,8 @@ public class CannonDodgeManager : MGSingleton<CannonDodgeManager>
 
     protected override void Update()
     {
+        if (ended) return;
+
         base.Update();
 
         waveTimer += Time.deltaTime;
@@ -46,14 +48,9 @@ public class CannonDodgeManager : MGSingleton<CannonDodgeManager>
 
         if(deadPlayers == 3)
         {
-            var final = EndMinigame();
+            UIManager.Instance.ShowResults(EndMinigame());
 
-            foreach (var stat in final)
-            {
-                Debug.Log(stat.player.ID + 1 + ": " + stat.place + " place with " + stat.points + " points!");
-            }
-
-            Time.timeScale = 0.0f;
+            ended = true;
         }
     }
 

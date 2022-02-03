@@ -24,6 +24,8 @@ public class CannonDodgePlayerController : PlayerController
 
     protected override void Update()
     {
+        if (CannonDodgeManager.Instance.ended) return;
+
         base.Update();
 
         if (isStunned) return;

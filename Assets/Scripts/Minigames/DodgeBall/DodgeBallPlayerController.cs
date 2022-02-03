@@ -53,6 +53,8 @@ public class DodgeBallPlayerController : PlayerController
 
     protected override void Update()
     {
+        if (DodgeBallManager.Instance.ended) return;
+
         base.Update();
 
         if (isStunned) return;

@@ -142,6 +142,7 @@ public class LobbyUIPanel : UIPanel
     public override void OpenPanel()
     {
         base.OpenPanel();
+        ClearPlayers();
         UICharacterSelections[0].RegisterPlayer();
         UICharacterSelections[0].ChangeCharacter("Random");
         InputManager.AddButtonTimer(0, InputButton.A, 0.3f);
@@ -173,6 +174,9 @@ public class LobbyUIPanel : UIPanel
             selection.UnreadyPlayer();
             selection.UnregisterPlayer();
         }
+
+        for (int i = 0; i < 4; i++) readyPlayer[i] = false;
+
         PlayerManager.Instance.ClearPlayers();
     }
 }

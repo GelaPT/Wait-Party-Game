@@ -33,6 +33,8 @@ public class CarRacePlayerController : PlayerController
 
     protected override void Update()
     {
+        if (CarRaceManager.Instance.ended) return;
+
         base.Update();
 
         bool isGrounded = false;

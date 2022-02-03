@@ -15,9 +15,11 @@ public class BasketHopPlayerController : PlayerController
 
     protected override void Update()
     {
+        if (BasketHopManager.Instance.ended) return;
+
         base.Update();
 
-        if(InputManager.GetButton(Player.ID, InputButton.A, 1.0f))
+        if (InputManager.GetButton(Player.ID, InputButton.A, 1.0f))
         {
             Animator.SetTrigger("ThrowBall");
             Rigidbody acorn = Instantiate(scriptableObject.acorn, transform.position + scriptableObject.offset, Random.rotation).GetComponent<Rigidbody>();

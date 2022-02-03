@@ -65,25 +65,25 @@ public class MinigamesUIPanel : UIPanel
 
         if (InputManager.GetAxisAndButton(0, InputAxis.Left, InputAxisDir.N, InputButton.Up, 0.15f))
         {
-            eventSystem.SetSelectedGameObject(currentSelected.FindSelectableOnUp().gameObject);
+            eventSystem.SetSelectedGameObject(currentSelected.FindSelectableOnUp()?.gameObject);
             currentSelected = eventSystem.currentSelectedGameObject.GetComponent<Button>();
         }
 
         if (InputManager.GetAxisAndButton(0, InputAxis.Left, InputAxisDir.S, InputButton.Down, 0.15f))
         {
-            eventSystem.SetSelectedGameObject(currentSelected.FindSelectableOnDown().gameObject);
+            eventSystem.SetSelectedGameObject(currentSelected.FindSelectableOnDown()?.gameObject);
             currentSelected = eventSystem.currentSelectedGameObject.GetComponent<Button>();
         }
 
         if (InputManager.GetAxisAndButton(0, InputAxis.Left, InputAxisDir.W, InputButton.Left, 0.15f))
         {
-            eventSystem.SetSelectedGameObject(currentSelected.FindSelectableOnLeft().gameObject);
+            eventSystem.SetSelectedGameObject(currentSelected.FindSelectableOnLeft()?.gameObject);
             currentSelected = eventSystem.currentSelectedGameObject.GetComponent<Button>();
         }
 
         if (InputManager.GetAxisAndButton(0, InputAxis.Left, InputAxisDir.E, InputButton.Right, 0.15f))
         {
-            eventSystem.SetSelectedGameObject(currentSelected.FindSelectableOnRight().gameObject);
+            eventSystem.SetSelectedGameObject(currentSelected.FindSelectableOnRight()?.gameObject);
         }
     }
 

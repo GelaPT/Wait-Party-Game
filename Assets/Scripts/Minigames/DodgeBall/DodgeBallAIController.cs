@@ -37,14 +37,16 @@ public class DodgeBallAIController : AIController
                     player = Random.Range(0, 2) == 0 ? 1 : 3;
                 }
 
-                Vector3 playerPos = PlayerManager.Instance.Players[player].PlayerController.transform.position;
+                Vector3 playerPos = Vector3.zero;
+
+                if (PlayerManager.Instance.Players[player].PlayerController != null)
+                    playerPos = PlayerManager.Instance.Players[player].PlayerController.transform.position;
 
                 Vector3 dir = playerPos - transform.position;
 
                 dir.Normalize();
 
                 Player.MoveAxis(InputAxis.Left, new Vector2(dir.x, dir.z));
-                Debug.Log(InputManager.GetAxis(Player, InputAxis.Left));
             }
         } 
         else

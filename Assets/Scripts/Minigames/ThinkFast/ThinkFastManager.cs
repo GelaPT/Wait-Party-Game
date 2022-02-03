@@ -86,11 +86,11 @@ public class ThinkFastManager : MGSingleton<ThinkFastManager>
 
         if (round == 0)
         {
-            var final = EndMinigame();
+            UIManager.Instance.ShowResults(EndMinigame());
 
-            foreach (var stat in final) Debug.Log(stat.player.ID + 1 + ": " + stat.place + " place with " + stat.points + " points!");
+            thinkFastUI.gameObject.SetActive(false);
 
-            MinigamesManager.Instance.UnloadMinigame();
+            ended = true;
         }
     }
 
