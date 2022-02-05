@@ -8,9 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Soil
-  m_Shader: {fileID: -6465566751694194690, guid: b6efa15191956874ebae8a8486d3d54e, type: 3}
-  m_ShaderKeywords: SHADOWS_SHADOWMASK _ADDITIONAL_LIGHTS _ADDITIONAL_LIGHT_SHADOWS
-    _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _SHADOWS_SOFT
+  m_Shader: {fileID: -6465566751694194690, guid: affa4bebbdcd20d4aaac4cb2e17c5a47, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -68,6 +67,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture:
+        m_Texture: {fileID: 2800000, guid: 3058b4ba31df67249af06def819f6b90, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -110,6 +113,9 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _RimBrightness: 1
+    - _RimPower: 5
+    - _RimStep: 0.3
     - _Rim_Amount: 0
     - _Rim_Force: 0
     - _Rim_Threshold: 1
@@ -122,6 +128,8 @@ Material:
     - _Surface: 0
     - _Tiling: 1.28
     - _TintStrength: 1
+    - _ToonRampOffset: 0.3
+    - _ToonRampSmoothness: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
@@ -129,11 +137,15 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Bend_Direction: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorAdd: {r: 0, g: 0, b: 0, a: 0}
+    - _ColorMultiply: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Rim_Color: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Specular_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Tiling: {r: 1.28, g: 1.28, b: 0, a: 0}
     - _Tint: {r: 0, g: 0, b: 0, a: 1}
+    - _ToonRampTinting: {r: 0.8431373, g: 0.8431373, b: 0.8431373, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8523137094213297717
 MonoBehaviour:
