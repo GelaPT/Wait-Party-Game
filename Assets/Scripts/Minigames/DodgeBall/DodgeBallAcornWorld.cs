@@ -19,6 +19,7 @@ public class DodgeBallAcornWorld : MonoBehaviour
                 collision.gameObject.GetComponent<DodgeBallPlayerController>().Kill();
                 Destroy(gameObject);
                 DodgeBallManager.Instance.GiveBall(team == 0 ? 1 : 0);
+                AudioManager.Instance.PlaySound("sfx_collision");
             }
         } 
         else if (collision.gameObject.name == "Colliders")

@@ -23,6 +23,8 @@ public class CannonDodgeAcorn : MonoBehaviour
         if (!other.CompareTag("Player")) return;
 
         PlayerController player = other.GetComponent<PlayerController>();
+        
+        AudioManager.Instance.PlaySound("sfx_collision");
 
         CannonDodgeManager.Instance.Kill(player as CannonDodgePlayerController);
     }

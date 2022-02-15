@@ -61,6 +61,7 @@ public class LobbyUIPanel : UIPanel
                 {
                     if (InputManager.GetButton(i, InputButton.A, 0.3f))
                     {
+                        AudioManager.Instance.PlaySound("ui_click");
                         UICharacterSelections[i].ReadyPlayer();
                         readyPlayer[i] = true;
                     }

@@ -36,10 +36,13 @@ public class ThinkFastPlayerController : PlayerController
                 || thinkFast.currentButton == ThinkFastManager.ThinkFastButton.NotSquare)
             {
                 Animator.SetTrigger("PressLeft");
+                AudioManager.Instance.PlaySound("sfx_button");
+                AudioManager.Instance.PlaySound("sfx_positivefeedback");
             }
             else
             {
                 Animator.SetTrigger("PressWrong");
+                AudioManager.Instance.PlaySound("sfx_negativefeedback");
             }
 
             buttonTimer = 0.0f;
@@ -54,10 +57,13 @@ public class ThinkFastPlayerController : PlayerController
                 || thinkFast.currentButton == ThinkFastManager.ThinkFastButton.NotHeart)
             {
                 Animator.SetTrigger("PressFront");
+                AudioManager.Instance.PlaySound("sfx_button");
+                AudioManager.Instance.PlaySound("sfx_positivefeedback");
             }
             else
             {
                 Animator.SetTrigger("PressWrong");
+                AudioManager.Instance.PlaySound("sfx_negativefeedback");
             }
 
             buttonTimer = 0.0f;
@@ -72,10 +78,13 @@ public class ThinkFastPlayerController : PlayerController
                 || thinkFast.currentButton == ThinkFastManager.ThinkFastButton.NotHeart)
             {
                 Animator.SetTrigger("PressRight");
+                AudioManager.Instance.PlaySound("sfx_button");
+                AudioManager.Instance.PlaySound("sfx_positivefeedback");
             }
             else
             {
                 Animator.SetTrigger("PressWrong");
+                AudioManager.Instance.PlaySound("sfx_negativefeedback");
             }
 
             buttonTimer = 0.0f;

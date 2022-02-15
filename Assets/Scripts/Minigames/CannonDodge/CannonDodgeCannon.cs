@@ -11,6 +11,7 @@ public class CannonDodgeCannon : MonoBehaviour
     private void ShootAcorn()
     {
         Instantiate(acorn, acornSpawn.position, Quaternion.Euler(0, transform.rotation.eulerAngles.y, 90));
+        AudioManager.Instance.PlaySound("sfx_cannon");
         particle.SetActive(true);
     }
 

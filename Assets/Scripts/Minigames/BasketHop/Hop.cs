@@ -34,5 +34,6 @@ public class Hop : MonoBehaviour
         if (!other.CompareTag("Acorn")) return;
 
         other.GetComponent<BasketHopAcorn>().Score();
+        AudioManager.Instance.PlaySound("sfx_collectitem");
     }
 }

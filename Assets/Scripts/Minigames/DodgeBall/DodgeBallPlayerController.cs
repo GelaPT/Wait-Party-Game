@@ -145,6 +145,8 @@ public class DodgeBallPlayerController : PlayerController
 
     public void ThrowBall()
     {
+        AudioManager.Instance.PlaySound("sfx_throwball");
+
         balls--;
 
         Destroy(acorn);

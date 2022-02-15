@@ -45,6 +45,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2890c99fccdb8354d82cfdbc5b959ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundsArray:
+  - name: music_minigame
+    clip: {fileID: 8300000, guid: 86f85081a30b93c4ba6490b2b0cf484b, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: music_mainmenu
+    clip: {fileID: 8300000, guid: f19cd45b704902f4e9ffb8483058ae9a, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: ui_click
+    clip: {fileID: 8300000, guid: b0cc2a748aa53b040b633405e8fbe7fa, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ui_select
+    clip: {fileID: 8300000, guid: 69126594e35c9824585a64c504355a54, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sfx_collectitem
+    clip: {fileID: 8300000, guid: 91943349e5c08d94c9b7f7ce64ff82ac, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sfx_throwball
+    clip: {fileID: 8300000, guid: d3398e96dfca429498c2adaebd1bbfd2, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sfx_negativefeedback
+    clip: {fileID: 8300000, guid: 222658e8676c50e4faffe6d64f58827e, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sfx_positivefeedback
+    clip: {fileID: 8300000, guid: 1e4ed148e06bf3440b276f8021709b43, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sfx_collision
+    clip: {fileID: 8300000, guid: 36b80202cb9aa46499b6ad1d11486765, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sfx_cannon
+    clip: {fileID: 8300000, guid: b21cb73dc8f21034d8d1368cf6233a20, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sfx_button
+    clip: {fileID: 8300000, guid: 28c64f7f29a92fd4c9fc076c86149de9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!81 &495051845342308895
 AudioListener:
   m_ObjectHideFlags: 0

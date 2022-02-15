@@ -54,6 +54,7 @@ public class UICharacterSelection : MonoBehaviour {
 
             eventSystem.SetSelectedGameObject(selectable.gameObject);
             eventSystem.currentSelectedGameObject.GetComponent<Button>().onClick.Invoke();
+            AudioManager.Instance.PlaySound("ui_select");
         }
 
         if ((InputManager.GetAxisDir(player, InputAxis.Left, InputAxisDir.W) || InputManager.GetButton(player, InputButton.Left)) && InputManager.CanMoveAgainRaw(player, InputAxis.Left, InputAxisDir.W, 0.1f) && InputManager.CanPressAgainRaw(player, InputButton.Left, 0.1f))
@@ -70,6 +71,7 @@ public class UICharacterSelection : MonoBehaviour {
 
             eventSystem.SetSelectedGameObject(selectable.gameObject);
             eventSystem.currentSelectedGameObject.GetComponent<Button>().onClick.Invoke();
+            AudioManager.Instance.PlaySound("ui_select");
         }
 
         // TODO: Add Up and Down

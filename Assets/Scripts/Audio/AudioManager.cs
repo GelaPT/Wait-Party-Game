@@ -5,11 +5,17 @@ using System.Linq;
 
 public class AudioManager : Singleton<AudioManager>
 {
-    [SerializeField] private readonly List<Sound> sounds = new();
+    public Sound[] soundsArray;
+    private readonly List<Sound> sounds = new();
 
     protected override void Awake()
     {
         base.Awake();
+        foreach (var sound in soundsArray)
+        {
+            sounds.Add(sound);
+        }
+
         foreach(var sound in sounds)
         {
             sound.BuildAudioSource(gameObject.AddComponent<AudioSource>());
@@ -30,5 +36,48 @@ public class AudioManager : Singleton<AudioManager>
     {
         Sound sound;
         if ((sound = sounds.FirstOrDefault(s => s.name == soundName)) == null) return;
+
+        sound.source.Stop();
+    }
+
+    public void PauseSound(string soundName)
+    {
+        Sound sound;
+        if ((sound = sounds.FirstOrDefault(s => s.name == soundName)) == null) return;
+
+        sound.source.Pause();
+    }
+
+    public void StopAnySound()
+    {
+        foreach (Sound sound in sounds)
+        {
+            if (sound.source != null)
+            {
+                sound.source.Stop();
+            }
+        }
+    }
+
+    public void PauseAnySound()
+    {
+        foreach (Sound sound in sounds)
+        {
+            if (sound.source != null)
+            {
+                sound.source.Pause();
+            }
+        }
+    }
+
+    public void ResumeAnySound()
+    {
+        foreach (Sound sound in sounds)
+        {
+            if (sound.source != null)
+            {
+                sound.source.UnPause();
+            }
+        }
     }
 }

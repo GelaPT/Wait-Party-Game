@@ -31,6 +31,7 @@ public class BasketHopAIController : AIController
             case Hop.HopSide.Left:
                 if (hop.transform.position.x - transform.position.x < distance && hop.transform.position.x - transform.position.x > 0.0f)
                 {
+                    AudioManager.Instance.PlaySound("sfx_throwball");
                     Player.PressButton(InputButton.A);
                     hasValue = false;
                 }
@@ -38,6 +39,7 @@ public class BasketHopAIController : AIController
             case Hop.HopSide.Right:
                 if (hop.transform.position.x - transform.position.x > -distance && hop.transform.position.x - transform.position.x < 0.0f)
                 {
+                    AudioManager.Instance.PlaySound("sfx_throwball");
                     Player.PressButton(InputButton.A);
                     hasValue = false;
                 }

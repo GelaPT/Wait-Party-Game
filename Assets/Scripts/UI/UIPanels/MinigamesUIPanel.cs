@@ -61,30 +61,36 @@ public class MinigamesUIPanel : UIPanel
         if(InputManager.GetButton(0, InputButton.A, 0.3f))
         {
             currentSelected.onClick.Invoke();
+            AudioManager.Instance.PlaySound("ui_click");
         }
 
         if (InputManager.GetAxisAndButton(0, InputAxis.Left, InputAxisDir.N, InputButton.Up, 0.15f))
         {
             eventSystem.SetSelectedGameObject(currentSelected.FindSelectableOnUp()?.gameObject);
             currentSelected = eventSystem.currentSelectedGameObject.GetComponent<Button>();
+            AudioManager.Instance.PlaySound("ui_select");
         }
 
         if (InputManager.GetAxisAndButton(0, InputAxis.Left, InputAxisDir.S, InputButton.Down, 0.15f))
         {
             eventSystem.SetSelectedGameObject(currentSelected.FindSelectableOnDown()?.gameObject);
             currentSelected = eventSystem.currentSelectedGameObject.GetComponent<Button>();
+            AudioManager.Instance.PlaySound("ui_select");
         }
 
         if (InputManager.GetAxisAndButton(0, InputAxis.Left, InputAxisDir.W, InputButton.Left, 0.15f))
         {
             eventSystem.SetSelectedGameObject(currentSelected.FindSelectableOnLeft()?.gameObject);
             currentSelected = eventSystem.currentSelectedGameObject.GetComponent<Button>();
+            AudioManager.Instance.PlaySound("ui_select");
         }
 
         if (InputManager.GetAxisAndButton(0, InputAxis.Left, InputAxisDir.E, InputButton.Right, 0.15f))
         {
             eventSystem.SetSelectedGameObject(currentSelected.FindSelectableOnRight()?.gameObject);
+            AudioManager.Instance.PlaySound("ui_select");
         }
+        
     }
 
     private Selectable[,] GetMinigameButtonArray()

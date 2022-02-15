@@ -28,6 +28,8 @@ public class MinigamesManager : Singleton<MinigamesManager>
 
         LevelManager.Instance.UnloadLevel("LobbyScene");
         LevelManager.Instance.LoadLevel(currentMinigame.scene);
+        AudioManager.Instance.StopAnySound();
+        AudioManager.Instance.PlaySound("music_minigame");
     }
 
     public void UnloadMinigame()
@@ -37,6 +39,8 @@ public class MinigamesManager : Singleton<MinigamesManager>
         GameManager.Instance.ResetGame();
 
         currentMinigame = null;
+
+        AudioManager.Instance.StopSound("music_minigame");
     }
 
     /*public void UpdatePlayerStats()

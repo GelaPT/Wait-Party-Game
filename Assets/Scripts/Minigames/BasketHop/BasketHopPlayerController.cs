@@ -22,6 +22,7 @@ public class BasketHopPlayerController : PlayerController
         if (InputManager.GetButton(Player.ID, InputButton.A, 1.0f))
         {
             Animator.SetTrigger("ThrowBall");
+            AudioManager.Instance.PlaySound("sfx_throwball");
             Rigidbody acorn = Instantiate(scriptableObject.acorn, transform.position + scriptableObject.offset, Random.rotation).GetComponent<Rigidbody>();
             acorn.AddForce(scriptableObject.force * acorn.mass, ForceMode.Impulse);
 

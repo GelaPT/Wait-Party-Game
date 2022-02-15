@@ -21,7 +21,15 @@ public class ResultsUIPanel : UIPanel
 
         for (int i = 0; i < 4; i++)
         {
-            UICharacterParents[i].ChangeModel(PlayerManager.Instance.Players[i].Character.characterUI);
+            foreach (var stat in stats)
+            {
+                if(stat.place - 1 == i)
+                    UICharacterParents[i].ChangeModel(PlayerManager.Instance.Players[stat.player.ID].Character.characterUI);
+            }
+        }
+        
+        for (int i = 0; i < 4; i++)
+        {
             if (stats[i].place == 1) UICharacterParents[i].PlayAnimation(true);
             if (stats[i].place != 1) UICharacterParents[i].PlayAnimation(false);
             scores[i].SetText(stats[i].points.ToString());
